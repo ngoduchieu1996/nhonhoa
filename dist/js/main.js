@@ -1,5 +1,5 @@
 $(".has-sub").click(function () {
-  $(this).siblings().find(".sub-menu").hide(500);
+  $(this).siblings().find(".sub-menu").hide(300);
 
-  $(this).find(".sub-menu").slideToggle(500).css("display", "flex");
+  $(this).find(".sub-menu").slideToggle(300);
 });

@@ -1,0 +1,33 @@
+.badge {
+  border-radius: 0.4rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 90%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  line-height: 1.3rem;
+
+  &-info {
+    background-color: $Info;
+  }
+
+  &-warning {
+    background-color: $Warning;
+  }
+
+  &-primary {
+    background-color: $primary;
+  }
+
+  &-danger {
+    background-color: $Danger;
+   
+  }
+
+  &-label-warning {
+    background-color: #e7804f;
+  }
+}
