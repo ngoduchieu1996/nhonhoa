@@ -1,22 +1,3 @@
-<<<<<<< HEAD
-/* Error: Can't find stylesheet to import.
- *   ,
- * 2 | @import "./partial/";
- *   |         ^^^^^^^^^^^^
- *   '
- *   style.scss 2:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 2 \2502  @import \"./partial/\";\d\a   \2502          ^^^^^^^^^^^^\a   \2575 \a   style.scss 2:9  root stylesheet";
-}
-=======
 @charset "UTF-8";
 *,
 *::before,
@@ -3068,6 +3049,14 @@ body {
   color: yellow;
 }
 
+@keyframes bounceUp {
+  from {
+    transform: translateX(5rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 .nav-bar {
   display: flex;
   background: linear-gradient(to right, #008cc5, #00bcda);
@@ -3156,7 +3145,6 @@ body {
   background-color: #e5e5e5;
 }
 
-<<<<<<< HEAD
 .main-table {
   padding: 1.5rem 0;
 }
@@ -3313,48 +3301,98 @@ body {
   background-color: #e7804f;
 }
 
-=======
-/* Fixed sidenav, full height */
 .sidenav {
-  height: 100%;
-  width: 300px;
+  width: 5rem;
+  height: 100vh;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   background-color: white;
-  /* overflow-x: hidden;
-  padding-top: 20px; */
-}
-
-/* Style the sidenav links and the dropdown button */
-.sidenav a,
-.dropdown-btn,
-h2 {
-  font-family: "Open Sans", sans-serif;
-  padding: 3% 8px 6px 16px;
-  text-decoration: none;
-  font-size: 14px;
-  color: rgba(117, 117, 117, 0.9);
-  display: block;
-  border: none;
-  background: none;
-  width: 100%;
-  height: 46px;
-  text-align: left;
-  cursor: pointer;
-  outline: none;
-}
-
-.sidenav {
+  transition: width 0.5s;
+  box-shadow: 0 0 1rem #ccc;
+  overflow-x: hidden;
+  overflow-y: scroll;
   position: relative;
   z-index: 1;
 }
-
-/* On mouse-over */
+.sidenav::-webkit-scrollbar {
+  display: none;
+}
+.sidenav .show-on-hover {
+  display: none;
+  white-space: nowrap;
+}
+.sidenav:hover {
+  width: 30rem;
+}
+.sidenav:hover .show-on-hover {
+  display: block;
+}
+.sidenav:hover a.show-menu::before {
+  display: block;
+}
+.sidenav:hover .hidden-ul {
+  left: 0;
+  width: 100%;
+}
+.sidenav a {
+  font-size: 14px;
+  color: rgba(117, 117, 117, 0.9);
+  display: inline-flex;
+  align-items: center;
+  padding: 1.3rem 0;
+  width: 100%;
+}
 .sidenav a:hover {
   color: black;
   background-color: #eaeaea;
+  text-decoration: none;
+}
+.sidenav a.show-menu {
+  position: relative;
+}
+.sidenav a.show-menu::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  top: 50%;
+  right: 1.5rem;
+  position: absolute;
+  transform: translateY(-50%);
+  display: none;
+}
+.sidenav a.back {
+  padding-left: 1.6rem;
+  display: flex;
+  align-items: center;
+}
+.sidenav a.back span::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 1rem;
+}
+.sidenav .icon-menu {
+  padding: 0 1.6rem;
+  flex-basis: 15%;
+  max-width: 15%;
+  min-width: 5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidenav .icon-menu i {
+  font-size: 2rem;
+}
+
+.side_title {
+  padding: 1rem 1.6rem;
+}
+.side_title h2 {
+  color: black;
+  font-size: 2rem;
+  margin: 0;
 }
 
 /* Add an active class to the active dropdown button */
@@ -3363,7 +3401,6 @@ h2 {
   color: white;
 }
 
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
   display: none;
   background-color: #262626;
@@ -3371,58 +3408,35 @@ h2 {
 }
 
 /* Optional: Style the caret down icon */
-.fa-chevron-right {
-  float: right;
-  padding-right: 8px;
-  padding-top: 2%;
-}
-
 .logo_size {
   width: 25px;
   height: 25px;
+  margin-right: 1.5rem;
 }
 
 .side_title {
   background-color: #eaeaea;
 }
 
-.side_title h2 {
-  color: black;
-  font-size: 2rem;
-  margin: 0;
-  padding-top: 4%;
-}
-
-.sidenav ul li span {
-  margin-right: 10px;
-  font-size: 2rem;
-  display: inline-block;
-  width: 25px;
-  text-align: center;
-}
-
-.hidden-ul li a {
-  padding-top: 6%;
-  /* position: absolute; */
-}
-
 .hidden-ul {
   position: absolute;
   top: 0;
-  height: auto;
+  height: 100%;
   z-index: 100;
   background-color: white;
-  min-height: 100%;
   padding-left: 0px;
+  width: calc(100% - 5rem);
+  left: 5rem;
 }
 
-.hidden-ul li {
-  margin-left: 15%;
+.hidden-ul li a {
+  padding-left: 5rem;
+  line-height: 1.6;
+}
+.hidden-ul li a > span {
+  margin-right: 1rem;
 }
 
-.hidden-ul a {
-  padding-left: 0px;}
->>>>>>> 0521eb268c07983b658878917149c1ea9bad09f6
 .login {
   position: relative;
 }
@@ -3528,4 +3542,3 @@ h2 {
 }
 
 /*# sourceMappingURL=style.css.map */
->>>>>>> 67fcc41c4610da7e6a7a94a18718cdbcf55c3c85
