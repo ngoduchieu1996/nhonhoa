@@ -3133,6 +3133,7 @@ i {
   background-color: #e5e5e5;
 }
 
+<<<<<<< HEAD
 /* Fixed sidenav, full height */
 .sidenav {
   height: 100%;
@@ -3241,6 +3242,98 @@ h2 {
 
 .hidden-ul a {
   padding-left: 0px;
+=======
+.login {
+  position: relative;
+}
+.login img {
+  width: 100%;
+}
+.login .wrapper-login img {
+  height: 100vh;
+}
+.login-button {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 30px;
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  opacity: 0.7;
+  box-shadow: 10px 10px 30px #000;
+  background-image: linear-gradient(to right, #008cc5, #00bcda);
+  z-index: 1;
+}
+.login-button img {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+.login-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 260px;
+  height: 260px;
+  border-radius: 5px;
+  background: rgba(145, 142, 142, 0.3);
+  box-shadow: 1px 1px 25px #e1dfdf;
+  padding: 20px;
+  width: 380px;
+  height: 280px;
+}
+.login-form .close-btn {
+  position: absolute;
+  cursor: pointer;
+  font-family: "Open Sans Condensed", sans-serif;
+  line-height: 18px;
+  top: 3px;
+  right: 3px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  border-radius: 10px;
+  opacity: 0.5;
+  transition: all 0.2s ease-in-out;
+}
+.login-form .well {
+  min-height: 20px;
+}
+.login-form .new-input {
+  border: 1px solid #D2D4DE;
+  border-radius: 4px;
+  box-shadow: none;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 6px 12px 4px;
+  width: 100%;
+  padding-top: 9px;
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+.login-form .btn_login {
+  border: none !important;
+  background: rgba(107, 255, 3, 0.3);
+}
+.login .design_by {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+>>>>>>> dev
 }
 
 /*# sourceMappingURL=style.css.map */
