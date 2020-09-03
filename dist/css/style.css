@@ -3133,7 +3133,6 @@ i {
   background-color: #e5e5e5;
 }
 
-<<<<<<< HEAD
 /* Fixed sidenav, full height */
 .sidenav {
   height: 100%;
@@ -3241,8 +3240,7 @@ h2 {
 }
 
 .hidden-ul a {
-  padding-left: 0px;
-=======
+  padding-left: 0px;}
 .login {
   position: relative;
 }
@@ -3333,7 +3331,6 @@ h2 {
   left: 50%;
   transform: translateX(-50%);
   color: white;
->>>>>>> dev
 }
 
 /*# sourceMappingURL=style.css.map */
