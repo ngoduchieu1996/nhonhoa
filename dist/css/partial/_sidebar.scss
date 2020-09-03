@@ -1,116 +1,150 @@
+.sidenav {
+  width: 5rem;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  transition: width 0.5s;
+  box-shadow: 0 0 1rem #ccc;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  z-index: 1;
 
-        /* Fixed sidenav, full height */
-        .sidenav {
-            height: 100%;
-            width: 300px;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: white;
-            /* overflow-x: hidden;
-            padding-top: 20px; */
-        }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
-        /* Style the sidenav links and the dropdown button */
-        .sidenav a,
-        .dropdown-btn,
-        h2 {
-            font-family: 'Open Sans', sans-serif;
-            padding: 3% 8px 6px 16px;
-            text-decoration: none;
-            font-size: 14px;
-            color: rgba(117, 117, 117, .9);
-            display: block;
-            border: none;
-            background: none;
-            width: 100%;
-            height: 46px;
-            text-align: left;
-            cursor: pointer;
-            outline: none;
-        }
+  .show-on-hover {
+    display: none;
+    white-space: nowrap;
+  }
 
-        .sidenav {
-            position: relative;
-            z-index: 1;
-        }
+  &:hover {
+    width: 30rem;
+  }
 
+  &:hover .show-on-hover {
+    display: block;
+  }
 
-        /* On mouse-over */
-        .sidenav a:hover {
-            color: black;
-            background-color: #eaeaea;
-        }
+  &:hover a.show-menu::before {
+    display: block;
+  }
 
+  &:hover .hidden-ul {
+    left: 0;
+    width: 100%;
+  }
 
-        /* Add an active class to the active dropdown button */
-        .active {
-            background-color: green;
-            color: white;
-        }
+  a {
+    font-size: 14px;
+    color: rgba(117, 117, 117, 0.9);
+    display: inline-flex;
+    align-items: center;
+    padding: 1.3rem 0;
+    width: 100%;
 
-        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-        .dropdown-container {
-            display: none;
-            background-color: #262626;
-            padding-left: 8px;
-        }
+    &:hover {
+      color: black;
+      background-color: #eaeaea;
+      text-decoration: none;
+    }
+  }
 
-        /* Optional: Style the caret down icon */
-        .fa-chevron-right {
-            float: right;
-            padding-right: 8px;
-            padding-top: 2%;
-        }
+  a.show-menu {
+    position: relative;
 
-        .logo_size {
-            width: 25px;
-            height: 25px;
-        }
+    &::before {
+      content: "\f105";
+      font-family: $fontAwesome;
+      font-weight: 900;
+      @include absolute(top 50% right 1.5rem);
+      transform: translateY(-50%);
+      display: none;
+    }
+  }
 
-        .side_title {
-            background-color: #eaeaea;
+  a.back {
+    padding-left: 1.6rem;
+    display: flex;
+    align-items: center;
 
-        }
+    span {
+      &::before {
+        content: "\f104";
+        font-family: $fontAwesome;
+        font-weight: 900;
+        margin-right: 1rem;
+      }
+    }
+  }
 
-        .side_title h2 {
-            color: black;
-            font-size: 2rem;
-            margin: 0;
-            padding-top: 4%;
-        }
+  .icon-menu {
+    padding: 0 1.6rem;
+    flex-basis: 15%;
+    max-width: 15%;
+    min-width: 5rem;
+    @include centerText;
 
-        .sidenav ul li span {
-            margin-right: 10px;
-            font-size: 2rem;
-            display: inline-block;
-            width: 25px;
-            text-align: center;
-            
-        }
+    i {
+      font-size: 2rem;
+    }
+  }
+}
 
-        .hidden-ul li a {
-            padding-top: 6%;
-            /* position: absolute; */
-        }
+.side_title {
+  padding: 1rem 1.6rem;
 
+  h2 {
+    color: black;
+    font-size: 2rem;
+    margin: 0;
+  }
+}
 
-        .hidden-ul {
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
 
-            position: absolute;
-            top: 0;            
-            height: auto;
-            z-index: 100;
-            background-color: white;
-            min-height: 100%;
-            padding-left: 0px;
-        }
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
 
-        .hidden-ul li {
-            margin-left: 15%;
-        }
+/* Optional: Style the caret down icon */
 
-        .hidden-ul a{
-            padding-left: 0px;
-        }
+.logo_size {
+  width: 25px;
+  height: 25px;
+  margin-right: 1.5rem;
+}
+
+.side_title {
+  background-color: #eaeaea;
+}
+
+.hidden-ul {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  z-index: 100;
+  background-color: white;
+  padding-left: 0px;
+  width: calc(100% - 5rem);
+  left: 5rem;
+}
+
+.hidden-ul li a {
+  padding-left: 5rem;
+  line-height: 1.6;
+
+  & > span {
+    margin-right: 1rem;
+  }
+}
