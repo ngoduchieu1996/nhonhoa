@@ -1,0 +1,13 @@
+body {
+  font-family: $fontRoboto;
+}
+
+.t {
+  &-white {
+    color: #fff;
+  }
+
+  &-l-yellow {
+    color: yellow;
+  }
+}

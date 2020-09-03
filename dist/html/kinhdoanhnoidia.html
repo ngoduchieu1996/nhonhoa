@@ -1,0 +1,1939 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>P.KINH DOANH - NỘI ĐỊA</title>
+
+    <!-- Css -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../font/fontawesome-free-5.14.0-web/css/all.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <nav class="nav-bar t-white">
+      <div class="logo fz-26 fw-7 text-upper">
+        <a href="#">NHƠN HÒA</a>
+      </div>
+
+      <button id="open-side-bar">
+        <i class="fas fa-bars t-white"></i>
+      </button>
+
+      <div class="nav-bar__menu">
+        <ul>
+          <li class="nav-bar__menu-link has-sub">
+            <div class="icon">
+              <i class="fas fa-list"></i>
+            </div>
+
+            <span>Kế hoạch</span>
+
+            <div class="sub-menu">
+              <div class="d-flex-bw">
+                <div class="w-5">
+                  <a href="">Kế hoạch</a>
+                </div>
+
+                <div class="w-5">
+                  <a href="">CCDC</a>
+                </div>
+
+                <div class="w-5">
+                  <a href="">Gia Công</a>
+                </div>
+
+                <div class="w-5">
+                  <a href="">Cấp Hàng</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-bar__menu-link has-sub">
+            <div class="icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+
+            <span>Kinh doanh</span>
+
+            <div class="sub-menu d-flex-bw">
+              <div class="d-flex-bw">
+                <div class="w-5">
+                  <a href="">Nội địa </a>
+                </div>
+
+                <div class="w-5">
+                  <a href="">Xuất khẩu</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-bar__menu-link">
+            <a href="">
+              <div class="icon">
+                <i class="fas fa-warehouse"></i>
+              </div>
+
+              <span>Kho</span>
+            </a>
+          </li>
+
+          <li class="nav-bar__menu-link has-sub">
+            <div class="icon">
+              <i class="fas fa-industry"></i>
+            </div>
+
+            <span>Xưởng</span>
+
+            <div class="sub-menu">
+              <div class="d-flex-bw">
+                <div class="col-4"><a href="">Xưởng 1</a></div>
+                <div class="col-4"><a href="">Xưởng 2</a></div>
+                <div class="col-4"><a href="">Xưởng 3</a></div>
+                <div class="col-4"><a href="">Xưởng 4</a></div>
+                <div class="col-4"><a href="">Xưởng 5</a></div>
+                <div class="col-4"><a href="">Xưởng 6</a></div>
+                <div class="col-4"><a href="">Xưởng 7</a></div>
+                <div class="col-4"><a href="">Xưởng 8</a></div>
+                <div class="col-4"><a href="">Xưởng 9</a></div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-bar__menu-link has-sub">
+            <div class="icon">
+              <i class="far fa-id-card"></i>
+            </div>
+
+            <span>Kiểm định</span>
+
+            <div class="sub-menu">
+              <div class="d-flex-bw">
+                <div class="col-4">
+                  <a href="#">Xưởng 4 </a>
+                </div>
+
+                <div class="col-4">
+                  <a href="">Xưởng 5</a>
+                </div>
+
+                <div class="col-4">
+                  <a href="">Xưởng 6</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-bar__menu-link">
+            <a href="">
+              <div class="icon">
+                <i class="fas fa-tools"></i>
+              </div>
+
+              <span>Công cụ dụng cụ</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-bar__cta d-flex align-center">
+        <div>
+          <a href="#" title="Khóa">
+            <i class="fas fa-lock"></i>
+          </a>
+        </div>
+
+        <div>
+          <a href="#" title="Ghi chú">
+            <i class="fas fa-th t-l-yellow"></i>
+          </a>
+        </div>
+
+        <div>
+          <a href="#" title="Thông báo">
+            <i class="fas fa-align-justify"></i>
+          </a>
+        </div>
+
+        <div>
+          <a href="" title="Cấu hình chung">
+            <i class="fas fa-cogs"></i>
+          </a>
+        </div>
+
+        <figure class="user-logo">
+          <img src="../asset/default_usr.png" alt="logo user" />
+          <p class="fz-12 fw-5">Admin</p>
+        </figure>
+      </div>
+    </nav>
+
+    <main>
+      <div class="page-container">
+        <div class="tab-panel-1">
+          <div class="d-flex-bw row">
+            <div class="col-md-6 col-12">
+              <div class="kehoachsanxuat">
+                <svg class="w-10" height="200">
+                  <defs>
+                    <filter x="-100%" y="-100%" width="300%" height="300%" id="rablfilter5">
+                      <feGaussianBlur in="SourceAlpha" stdDeviation="2"></feGaussianBlur>
+                      <feOffset dx="0" dy="0"></feOffset>
+                      <feComponentTransfer>
+                        <feFuncA type="linear" slope="0"></feFuncA>
+                      </feComponentTransfer>
+                      <feMerge>
+                        <feMergeNode></feMergeNode>
+                        <feMergeNode in="SourceGraphic"></feMergeNode>
+                      </feMerge>
+                    </filter>
+                    <filter x="-100%" y="-100%" width="300%" height="300%" id="rablfilter4">
+                      <feGaussianBlur in="SourceAlpha" stdDeviation="2"></feGaussianBlur>
+                      <feOffset dx="0" dy="0"></feOffset>
+                      <feComponentTransfer>
+                        <feFuncA type="linear" slope="0.4"></feFuncA>
+                      </feComponentTransfer>
+                      <feMerge>
+                        <feMergeNode></feMergeNode>
+                        <feMergeNode in="SourceGraphic"></feMergeNode>
+                      </feMerge>
+                    </filter>
+                    <filter x="-100%" y="-100%" width="300%" height="300%" id="rablfilter3">
+                      <feGaussianBlur in="SourceAlpha" stdDeviation="1"></feGaussianBlur>
+                      <feOffset dx="0" dy="2"></feOffset>
+                      <feComponentTransfer>
+                        <feFuncA type="linear" slope="0.2"></feFuncA>
+                      </feComponentTransfer>
+                      <feMerge>
+                        <feMergeNode></feMergeNode>
+                        <feMergeNode in="SourceGraphic"></feMergeNode>
+                      </feMerge>
+                    </filter>
+                    <filter x="-100%" y="-100%" width="300%" height="300%" id="rablfilter2">
+                      <feGaussianBlur in="SourceAlpha" stdDeviation="2"></feGaussianBlur>
+                      <feOffset dx="0" dy="1"></feOffset>
+                      <feComponentTransfer>
+                        <feFuncA type="linear" slope="0.4"></feFuncA>
+                      </feComponentTransfer>
+                      <feMerge>
+                        <feMergeNode></feMergeNode>
+                        <feMergeNode in="SourceGraphic"></feMergeNode>
+                      </feMerge>
+                    </filter>
+                    <filter x="-100%" y="-100%" width="300%" height="300%" id="rablfilter1">
+                      <feGaussianBlur in="SourceAlpha" stdDeviation="0"></feGaussianBlur>
+                      <feOffset dx="0" dy="1"></feOffset>
+                      <feComponentTransfer>
+                        <feFuncA type="linear" slope="0.4"></feFuncA>
+                      </feComponentTransfer>
+                      <feMerge>
+                        <feMergeNode></feMergeNode>
+                        <feMergeNode in="SourceGraphic"></feMergeNode>
+                      </feMerge>
+                    </filter>
+                    <clipPath id="rablfilter0">
+                      <rect x="35.5" y="83.5" width="443" height="64"></rect>
+                    </clipPath>
+                  </defs>
+                  <g>
+                    <rect
+                      x="0"
+                      y="0"
+                      width="564"
+                      height="200"
+                      fill="#ffffff"
+                      fill-opacity="1"
+                      stroke="#ffffff"
+                      stroke-opacity="0"
+                      stroke-width="0"
+                    ></rect>
+                    <text
+                      x="0"
+                      y="15"
+                      style="
+                        cursor: default;
+                        user-select: none;
+                        -webkit-font-smoothing: antialiased;
+                        font-family: Roboto;
+                        font-size: 16px;
+                      "
+                      fill="#757575"
+                      dx="0px"
+                    >
+                      Kế hoạch sản xuất
+                    </text>
+                    <text
+                      x="0"
+                      y="36"
+                      style="
+                        cursor: default;
+                        user-select: none;
+                        -webkit-font-smoothing: antialiased;
+                        font-family: Roboto;
+                        font-size: 14px;
+                      "
+                      fill="#BDBDBD"
+                      dx="0px"
+                    >
+                      Xưởng lắp ráp: tháng 6 năm 2020 - tháng 9 năm 2020
+                    </text>
+                    <rect
+                      x="518.546875"
+                      y="83.5"
+                      width="12"
+                      height="12"
+                      rx="2"
+                      ry="2"
+                      fill="#4285f4"
+                    ></rect>
+                    <text
+                      x="538.546875"
+                      y="97.5"
+                      style="
+                        cursor: default;
+                        user-select: none;
+                        -webkit-font-smoothing: antialiased;
+                        font-family: Roboto;
+                      "
+                      fill="#757575"
+                      dx="0px"
+                    >
+                      K40
+                    </text>
+                    <rect
+                      x="518.546875"
+                      y="117.5"
+                      width="12"
+                      height="12"
+                      rx="2"
+                      ry="2"
+                      fill="#db4437"
+                    ></rect>
+                    <text
+                      x="538.546875"
+                      y="131.5"
+                      style="
+                        cursor: default;
+                        user-select: none;
+                        -webkit-font-smoothing: antialiased;
+                        font-family: Roboto;
+                      "
+                      fill="#757575"
+                      dx="0px"
+                    >
+                      K50
+                    </text>
+                    <rect
+                      x="518.546875"
+                      y="151.5"
+                      width="12"
+                      height="12"
+                      rx="2"
+                      ry="2"
+                      fill="#f4b400"
+                    ></rect>
+                    <text
+                      x="538.546875"
+                      y="165.5"
+                      style="
+                        cursor: default;
+                        user-select: none;
+                        -webkit-font-smoothing: antialiased;
+                        font-family: Roboto;
+                      "
+                      fill="#757575"
+                      dx="0px"
+                    >
+                      K60
+                    </text>
+                    <rect
+                      x="35.5"
+                      y="83.5"
+                      width="443"
+                      height="64"
+                      fill="#ffffff"
+                      fill-opacity="1"
+                      stroke="#ffffff"
+                      stroke-opacity="0"
+                      stroke-width="1"
+                    ></rect>
+                  </g>
+                  <g>
+                    <line
+                      x1="35.5"
+                      x2="478.5"
+                      y1="147.5"
+                      y2="147.5"
+                      stroke="#9E9E9E"
+                      stroke-width="1"
+                    ></line>
+                    <line
+                      x1="35.5"
+                      x2="478.5"
+                      y1="83.5"
+                      y2="83.5"
+                      stroke="#E0E0E0"
+                      stroke-width="1"
+                    ></line>
+                  </g>
+                  <g>
+                    <path
+                      d="M 69.87214611872145 114.281216 A 2 2 0 0 1 71.87214611872145 116.281216 L 71.87214611872145 147 A 0 0 0 0 1 71.87214611872145 147 L 48 147 A 0 0 0 0 1 48 147 L 48 116.281216 A 2 2 0 0 1 50 114.281216 Z"
+                      fill="#4285f4"
+                      clip-path="url(#rablfilter0)"
+                      filter="url(#rablfilter2)"
+                    ></path>
+                    <path
+                      d="M 94.74429223744292 139.357184 A 2 2 0 0 1 96.74429223744292 141.357184 L 96.74429223744292 147 A 0 0 0 0 1 96.74429223744292 147 L 72.87214611872145 147 A 0 0 0 0 1 72.87214611872145 147 L 72.87214611872145 141.357184 A 2 2 0 0 1 74.87214611872145 139.357184 Z"
+                      fill="#f4c7c3"
+                      clip-path="url(#rablfilter0)"
+                    ></path>
+                    <path
+                      d="M 119.61643835616437 134.278912 A 2 2 0 0 1 121.61643835616437 136.278912 L 121.61643835616437 147 A 0 0 0 0 1 121.61643835616437 147 L 97.74429223744292 147 A 0 0 0 0 1 97.74429223744292 147 L 97.74429223744292 136.278912 A 2 2 0 0 1 99.74429223744292 134.278912 Z"
+                      fill="#fce9b3"
+                      clip-path="url(#rablfilter0)"
+                    ></path>
+                    <path
+                      d="M 184.66666666666663 108.221184 A 2 2 0 0 1 186.66666666666663 110.221184 L 186.66666666666663 147 A 0 0 0 0 1 186.66666666666663 147 L 162.79452054794518 147 A 0 0 0 0 1 162.79452054794518 147 L 162.79452054794518 110.221184 A 2 2 0 0 1 164.79452054794518 108.221184 Z"
+                      fill="#c6dafc"
+                      clip-path="url(#rablfilter0)"
+                    ></path>
+                    <path
+                      d="M 209.5388127853881 137.67884800000002 A 2 2 0 0 1 211.5388127853881 139.67884800000002 L 211.5388127853881 147 A 0 0 0 0 1 211.5388127853881 147 L 187.66666666666663 147 A 0 0 0 0 1 187.66666666666663 147 L 187.66666666666663 139.67884800000002 A 2 2 0 0 1 189.66666666666663 137.67884800000002 Z"
+                      fill="#f4c7c3"
+                      clip-path="url(#rablfilter0)"
+                    ></path>
+                    <path
+                      d="M 234.41095890410952 130.6432 A 2 2 0 0 1 236.41095890410952 132.6432 L 236.41095890410952 147 A 0 0 0 0 1 236.41095890410952 147 L 212.5388127853881 147 A 0 0 0 0 1 212.5388127853881 147 L 212.5388127853881 132.6432 A 2 2 0 0 1 214.5388127853881 130.6432 Z"
+                      fill="#fce9b3"
+                      clip-path="url(#rablfilter0)"
+                    ></path>
+                    <path
+                      d="M 299.46118721461187 95.206656 A 2 2 0 0 1 301.46118721461187 97.206656 L 301.46118721461187 147 A 0 0 0 0 1 301.46118721461187 147 L 277.58904109589037 147 A 0 0 0 0 1 277.58904109589037 147 L 277.58904109589037 97.206656 A 2 2 0 0 1 279.58904109589037 95.206656 Z"
+                      fill="#c6dafc"
+                      clip-path="url(#rablfilter0)"
+                    ></path>
+                    <path
+                      d="M 324.3333333333333 132.429824 A 2 2 0 0 1 326.3333333333333 134.429824 L 326.3333333333333 147 A 0 0 0 0 1 326.3333333333333 147 L 302.46118721461187 147 A 0 0 0 0 1 302.46118721461187 147 L 302.46118721461187 134.429824 A 2 2 0 0 1 304.46118721461187 132.429824 Z"
+                      fill="#f4c7c3"
+                      clip-path="url(#rablfilter0)"
+                    ></path>
+                    <path
+                      d="M 349.2054794520548 122.51673600000001 A 2 2 0 0 1 351.2054794520548 124.51673600000001 L 351.2054794520548 147 A 0 0 0 0 1 351.2054794520548 147 L 327.3333333333333 147 A 0 0 0 0 1 327.3333333333333 147 L 327.3333333333333 124.51673600000001 A 2 2 0 0 1 329.3333333333333 122.51673600000001 Z"
+                      fill="#fce9b3"
+                      clip-path="url(#rablfilter0)"
+                    ></path>
+                    <path
+                      d="M 416.25570776255705 147.5 A 0 0 0 0 1 416.25570776255705 147.5 L 416.25570776255705 147.5 A 0 0 0 0 1 416.25570776255705 147.5 L 392.3835616438356 147.5 A 0 0 0 0 1 392.3835616438356 147.5 L 392.3835616438356 147.5 A 0 0 0 0 1 392.3835616438356 147.5 Z"
+                      fill="#c6dafc"
+                      clip-path="url(#rablfilter0)"
+                    ></path>
+                    <path
+                      d="M 441.1278538812785 147.5 A 0 0 0 0 1 441.1278538812785 147.5 L 441.1278538812785 147.5 A 0 0 0 0 1 441.1278538812785 147.5 L 417.25570776255705 147.5 A 0 0 0 0 1 417.25570776255705 147.5 L 417.25570776255705 147.5 A 0 0 0 0 1 417.25570776255705 147.5 Z"
+                      fill="#f4c7c3"
+                      clip-path="url(#rablfilter0)"
+                    ></path>
+                    <path
+                      d="M 466 147.5 A 0 0 0 0 1 466 147.5 L 466 147.5 A 0 0 0 0 1 466 147.5 L 442.1278538812785 147.5 A 0 0 0 0 1 442.1278538812785 147.5 L 442.1278538812785 147.5 A 0 0 0 0 1 442.1278538812785 147.5 Z"
+                      fill="#fce9b3"
+                      clip-path="url(#rablfilter0)"
+                    ></path>
+                  </g>
+                  <g></g>
+                  <g>
+                    <text
+                      x="84.8082191780822"
+                      y="164.5"
+                      style="
+                        cursor: default;
+                        user-select: none;
+                        -webkit-font-smoothing: antialiased;
+                        font-family: Roboto;
+                        font-size: 12px;
+                      "
+                      fill="#757575"
+                      dx="-22.4296875px"
+                    >
+                      06-2020
+                    </text>
+                    <text
+                      x="199.60273972602738"
+                      y="164.5"
+                      style="
+                        cursor: default;
+                        user-select: none;
+                        -webkit-font-smoothing: antialiased;
+                        font-family: Roboto;
+                        font-size: 12px;
+                      "
+                      fill="#757575"
+                      dx="-22.4296875px"
+                    >
+                      07-2020
+                    </text>
+                    <text
+                      x="314.3972602739726"
+                      y="164.5"
+                      style="
+                        cursor: default;
+                        user-select: none;
+                        -webkit-font-smoothing: antialiased;
+                        font-family: Roboto;
+                        font-size: 12px;
+                      "
+                      fill="#757575"
+                      dx="-22.4296875px"
+                    >
+                      08-2020
+                    </text>
+                    <text
+                      x="429.1917808219178"
+                      y="164.5"
+                      style="
+                        cursor: default;
+                        user-select: none;
+                        -webkit-font-smoothing: antialiased;
+                        font-family: Roboto;
+                        font-size: 12px;
+                      "
+                      fill="#757575"
+                      dx="-22.4296875px"
+                    >
+                      09-2020
+                    </text>
+                    <text
+                      x="257"
+                      y="196.5"
+                      style="
+                        cursor: default;
+                        user-select: none;
+                        -webkit-font-smoothing: antialiased;
+                        font-family: Roboto;
+                        font-size: 12px;
+                      "
+                      fill="#424242"
+                      dx="-16.95703125px"
+                    >
+                      Tháng
+                    </text>
+                    <text
+                      x="29.5"
+                      y="151.5"
+                      style="
+                        cursor: default;
+                        user-select: none;
+                        -webkit-font-smoothing: antialiased;
+                        font-family: Roboto;
+                        font-size: 12px;
+                      "
+                      fill="#757575"
+                      dx="-6.8203125px"
+                    >
+                      0
+                    </text>
+                    <text
+                      x="29.5"
+                      y="87.5"
+                      style="
+                        cursor: default;
+                        user-select: none;
+                        -webkit-font-smoothing: antialiased;
+                        font-family: Roboto;
+                        font-size: 12px;
+                      "
+                      fill="#757575"
+                      dx="-28.025390625px"
+                    >
+                      500K
+                    </text>
+                  </g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                </svg>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-12">
+              <div class="xuat-nhap-kho h-10">
+                <svg class="w-10" height="200" aria-label="A chart." style="overflow: hidden">
+                  <defs id="_ABSTRACT_RENDERER_ID_12">
+                    <clipPath id="_ABSTRACT_RENDERER_ID_13">
+                      <rect x="78" y="38" width="423" height="124"></rect>
+                    </clipPath>
+                    <filter id="_ABSTRACT_RENDERER_ID_14">
+                      <feGaussianBlur in="SourceAlpha" stdDeviation="2"></feGaussianBlur>
+                      <feOffset dx="1" dy="1"></feOffset>
+                      <feComponentTransfer>
+                        <feFuncA type="linear" slope="0.1"></feFuncA>
+                      </feComponentTransfer>
+                      <feMerge>
+                        <feMergeNode></feMergeNode>
+                        <feMergeNode in="SourceGraphic"></feMergeNode>
+                      </feMerge>
+                    </filter>
+                  </defs>
+                  <rect
+                    x="0"
+                    y="0"
+                    width="579"
+                    height="200"
+                    stroke="none"
+                    stroke-width="0"
+                    fill="#ffffff"
+                  ></rect>
+                  <g>
+                    <text
+                      text-anchor="start"
+                      x="78"
+                      y="16.933333333333334"
+                      font-family="Roboto"
+                      font-size="16"
+                      stroke="none"
+                      stroke-width="0"
+                      fill="#757575"
+                    >
+                      Xuất - Nhập kho
+                    </text>
+                    <rect
+                      x="78"
+                      y="3.333333333333332"
+                      width="423"
+                      height="16"
+                      stroke="none"
+                      stroke-width="0"
+                      fill-opacity="0"
+                      fill="#ffffff"
+                    ></rect>
+                  </g>
+                  <g>
+                    <rect
+                      x="326"
+                      y="23"
+                      width="175"
+                      height="12"
+                      stroke="none"
+                      stroke-width="0"
+                      fill-opacity="0"
+                      fill="#ffffff"
+                    ></rect>
+                    <g>
+                      <rect
+                        x="326"
+                        y="23"
+                        width="80"
+                        height="12"
+                        stroke="none"
+                        stroke-width="0"
+                        fill-opacity="0"
+                        fill="#ffffff"
+                      ></rect>
+                      <g>
+                        <text
+                          text-anchor="start"
+                          x="355"
+                          y="33.2"
+                          font-family="Arial"
+                          font-size="12"
+                          stroke="none"
+                          stroke-width="0"
+                          fill="#222222"
+                        >
+                          Nhập kho
+                        </text>
+                      </g>
+                      <rect
+                        x="326"
+                        y="29"
+                        width="24"
+                        height="6"
+                        stroke="none"
+                        stroke-width="0"
+                        fill-opacity="0.3"
+                        fill="#3366cc"
+                      ></rect>
+                      <path
+                        d="M326,29L350,29"
+                        stroke="#3366cc"
+                        stroke-width="2"
+                        fill-opacity="1"
+                        fill="none"
+                      ></path>
+                    </g>
+                    <g>
+                      <rect
+                        x="425"
+                        y="23"
+                        width="76"
+                        height="12"
+                        stroke="none"
+                        stroke-width="0"
+                        fill-opacity="0"
+                        fill="#ffffff"
+                      ></rect>
+                      <g>
+                        <text
+                          text-anchor="start"
+                          x="454"
+                          y="33.2"
+                          font-family="Arial"
+                          font-size="12"
+                          stroke="none"
+                          stroke-width="0"
+                          fill="#222222"
+                        >
+                          Xuất kho
+                        </text>
+                      </g>
+                      <rect
+                        x="425"
+                        y="29"
+                        width="24"
+                        height="6"
+                        stroke="none"
+                        stroke-width="0"
+                        fill-opacity="0.3"
+                        fill="#dc3912"
+                      ></rect>
+                      <path
+                        d="M425,29L449,29"
+                        stroke="#dc3912"
+                        stroke-width="2"
+                        fill-opacity="1"
+                        fill="none"
+                      ></path>
+                    </g>
+                  </g>
+                  <g>
+                    <rect
+                      x="78"
+                      y="38"
+                      width="423"
+                      height="124"
+                      stroke="none"
+                      stroke-width="0"
+                      fill-opacity="0"
+                      fill="#ffffff"
+                    ></rect>
+                    <g clip-path="url(http://hvcg.hopto.org:8086/#_ABSTRACT_RENDERER_ID_13)">
+                      <g>
+                        <rect
+                          x="78"
+                          y="161"
+                          width="423"
+                          height="1"
+                          stroke="none"
+                          stroke-width="0"
+                          fill="#cccccc"
+                        ></rect>
+                        <rect
+                          x="78"
+                          y="120"
+                          width="423"
+                          height="1"
+                          stroke="none"
+                          stroke-width="0"
+                          fill="#cccccc"
+                        ></rect>
+                        <rect
+                          x="78"
+                          y="79"
+                          width="423"
+                          height="1"
+                          stroke="none"
+                          stroke-width="0"
+                          fill="#cccccc"
+                        ></rect>
+                        <rect
+                          x="78"
+                          y="38"
+                          width="423"
+                          height="1"
+                          stroke="none"
+                          stroke-width="0"
+                          fill="#cccccc"
+                        ></rect>
+                        <rect
+                          x="78"
+                          y="141"
+                          width="423"
+                          height="1"
+                          stroke="none"
+                          stroke-width="0"
+                          fill="#ebebeb"
+                        ></rect>
+                        <rect
+                          x="78"
+                          y="100"
+                          width="423"
+                          height="1"
+                          stroke="none"
+                          stroke-width="0"
+                          fill="#ebebeb"
+                        ></rect>
+                        <rect
+                          x="78"
+                          y="59"
+                          width="423"
+                          height="1"
+                          stroke="none"
+                          stroke-width="0"
+                          fill="#ebebeb"
+                        ></rect>
+                      </g>
+                      <g>
+                        <g>
+                          <path
+                            d="M78.5,161.5L78.5,161.5L78.5,161.418L148.83333333333331,157.08061L219.16666666666666,155.95065L289.5,59.55924L359.8333333333333,158.70175L430.16666666666663,161.5L500.5,161.5L500.5,161.5Z"
+                            stroke="none"
+                            stroke-width="0"
+                            fill-opacity="0.3"
+                            fill="#3366cc"
+                          ></path>
+                        </g>
+                        <g>
+                          <path
+                            d="M78.5,161.5L78.5,161.5L148.83333333333331,158.999L219.16666666666666,161.3647L289.5,161.09L359.8333333333333,161.5L430.16666666666663,161.5L500.5,161.5L500.5,161.5Z"
+                            stroke="none"
+                            stroke-width="0"
+                            fill-opacity="0.3"
+                            fill="#dc3912"
+                          ></path>
+                        </g>
+                      </g>
+                      <g>
+                        <rect
+                          x="78"
+                          y="161"
+                          width="423"
+                          height="1"
+                          stroke="none"
+                          stroke-width="0"
+                          fill="#333333"
+                        ></rect>
+                      </g>
+                      <g>
+                        <path
+                          d="M78.5,161.418L148.83333333333331,157.08061L219.16666666666666,155.95065L289.5,59.55924L359.8333333333333,158.70175L430.16666666666663,161.5L500.5,161.5"
+                          stroke="#3366cc"
+                          stroke-width="2"
+                          fill-opacity="1"
+                          fill="none"
+                        ></path>
+                        <path
+                          d="M78.5,161.5L148.83333333333331,158.999L219.16666666666666,161.3647L289.5,161.09L359.8333333333333,161.5L430.16666666666663,161.5L500.5,161.5"
+                          stroke="#dc3912"
+                          stroke-width="2"
+                          fill-opacity="1"
+                          fill="none"
+                        ></path>
+                      </g>
+                    </g>
+                    <g></g>
+                    <g>
+                      <g>
+                        <text
+                          text-anchor="middle"
+                          x="78.5"
+                          y="176.86666666666665"
+                          font-family="Arial"
+                          font-size="12"
+                          stroke="none"
+                          stroke-width="0"
+                          fill="#222222"
+                        >
+                          03-2020
+                        </text>
+                      </g>
+                      <g>
+                        <text
+                          text-anchor="middle"
+                          x="148.83333333333331"
+                          y="176.86666666666665"
+                          font-family="Arial"
+                          font-size="12"
+                          stroke="none"
+                          stroke-width="0"
+                          fill="#222222"
+                        >
+                          04-2020
+                        </text>
+                      </g>
+                      <g>
+                        <text
+                          text-anchor="middle"
+                          x="219.16666666666666"
+                          y="176.86666666666665"
+                          font-family="Arial"
+                          font-size="12"
+                          stroke="none"
+                          stroke-width="0"
+                          fill="#222222"
+                        >
+                          05-2020
+                        </text>
+                      </g>
+                      <g>
+                        <text
+                          text-anchor="middle"
+                          x="289.5"
+                          y="176.86666666666665"
+                          font-family="Arial"
+                          font-size="12"
+                          stroke="none"
+                          stroke-width="0"
+                          fill="#222222"
+                        >
+                          06-2020
+                        </text>
+                      </g>
+                      <g>
+                        <text
+                          text-anchor="middle"
+                          x="359.8333333333333"
+                          y="176.86666666666665"
+                          font-family="Arial"
+                          font-size="12"
+                          stroke="none"
+                          stroke-width="0"
+                          fill="#222222"
+                        >
+                          07-2020
+                        </text>
+                      </g>
+                      <g>
+                        <text
+                          text-anchor="middle"
+                          x="430.16666666666663"
+                          y="176.86666666666665"
+                          font-family="Arial"
+                          font-size="12"
+                          stroke="none"
+                          stroke-width="0"
+                          fill="#222222"
+                        >
+                          08-2020
+                        </text>
+                      </g>
+                      <g>
+                        <text
+                          text-anchor="middle"
+                          x="500.5"
+                          y="176.86666666666665"
+                          font-family="Arial"
+                          font-size="12"
+                          stroke="none"
+                          stroke-width="0"
+                          fill="#222222"
+                        >
+                          09-2020
+                        </text>
+                      </g>
+                      <g>
+                        <text
+                          text-anchor="end"
+                          x="66"
+                          y="165.7"
+                          font-family="Arial"
+                          font-size="12"
+                          stroke="none"
+                          stroke-width="0"
+                          fill="#444444"
+                        >
+                          0
+                        </text>
+                      </g>
+                      <g>
+                        <text
+                          text-anchor="end"
+                          x="66"
+                          y="124.7"
+                          font-family="Arial"
+                          font-size="12"
+                          stroke="none"
+                          stroke-width="0"
+                          fill="#444444"
+                        >
+                          200,000
+                        </text>
+                      </g>
+                      <g>
+                        <text
+                          text-anchor="end"
+                          x="66"
+                          y="83.7"
+                          font-family="Arial"
+                          font-size="12"
+                          stroke="none"
+                          stroke-width="0"
+                          fill="#444444"
+                        >
+                          400,000
+                        </text>
+                      </g>
+                      <g>
+                        <text
+                          text-anchor="end"
+                          x="66"
+                          y="42.7"
+                          font-family="Arial"
+                          font-size="12"
+                          stroke="none"
+                          stroke-width="0"
+                          fill="#444444"
+                        >
+                          600,000
+                        </text>
+                      </g>
+                    </g>
+                  </g>
+                  <g>
+                    <g>
+                      <text
+                        text-anchor="middle"
+                        x="289.5"
+                        y="193.5333333333333"
+                        font-family="Arial"
+                        font-size="12"
+                        stroke="none"
+                        stroke-width="0"
+                        fill="#333333"
+                      >
+                        Tháng
+                      </text>
+                      <rect
+                        x="78"
+                        y="183.33333333333331"
+                        width="423"
+                        height="12"
+                        stroke="none"
+                        stroke-width="0"
+                        fill-opacity="0"
+                        fill="#ffffff"
+                      ></rect>
+                    </g>
+                  </g>
+                  <g></g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main-table table-pill">
+          <h1 class="table-label">hóa đơn</h1>
+
+          <div class="table-wrapper">
+            <div class="table-content">
+              <table class="w-10">
+                <thead>
+                  <tr>
+                    <th>TT</th>
+                    <th>Số chứng từ</th>
+                    <th>Ngày lập</th>
+                    <th>Khách hàng</th>
+                    <th>Số hợp đồng</th>
+                    <th>Số hóa đơn</th>
+                    <th>Tổng SL</th>
+                    <th>Tổng tiền</th>
+                    <th>Nhóm ĐG</th>
+                    <th>Ghi chú</th>
+                    <th>Trạng thái</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>Công ty TNHH MTV TM Nguyễn Oanh</td>
+                    <td>
+                      <a href="#">04/HĐĐL-20</a>
+                    </td>
+                    <td>0002906</td>
+                    <td>550</td>
+                    <td>154.660.000</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-label-warning">Chưa thêm vào hợp đồng</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>Công ty Cổ Phần Thương Nghiệp Tổng Hợp Cần Thơ</td>
+                    <td>
+                      <a href="#">01/CTC.2020</a>
+                    </td>
+                    <td>0002904</td>
+                    <td>195</td>
+                    <td>45.485.000</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-label-warning">Chưa thêm vào hợp đồng</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>Công ty Cổ Phần Thương Nghiệp Tổng Hợp Cần Thơ</td>
+                    <td>
+                      <a href="#">01/CTC.2020</a>
+                    </td>
+                    <td>0002904</td>
+                    <td>195</td>
+                    <td>45.485.000</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-label-warning">Chưa thêm vào hợp đồng</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>DNTN Bùi Duy Thọ</td>
+                    <td>
+                      <a href="#">01/HĐĐL-20</a>
+                    </td>
+                    <td>0002903</td>
+                    <td>45</td>
+                    <td>32.485.000</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-label-warning">Chưa thêm vào hợp đồng</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>DNTN Bùi Duy Thọ</td>
+                    <td>
+                      <a href="#">01/HĐĐL-20</a>
+                    </td>
+                    <td>0002903</td>
+                    <td>45</td>
+                    <td>32.485.000</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-label-warning">Chưa thêm vào hợp đồng</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>DNTN Bùi Duy Thọ</td>
+                    <td>
+                      <a href="#">01/HĐĐL-20</a>
+                    </td>
+                    <td>0002903</td>
+                    <td>45</td>
+                    <td>32.485.000</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-label-warning">Chưa thêm vào hợp đồng</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>DNTN Bùi Duy Thọ</td>
+                    <td>
+                      <a href="#">01/HĐĐL-20</a>
+                    </td>
+                    <td>0002903</td>
+                    <td>45</td>
+                    <td>32.485.000</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-label-warning">Chưa thêm vào hợp đồng</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>DNTN Bùi Duy Thọ</td>
+                    <td>
+                      <a href="#">01/HĐĐL-20</a>
+                    </td>
+                    <td>0002903</td>
+                    <td>45</td>
+                    <td>32.485.000</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-label-warning">Chưa thêm vào hợp đồng</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>DNTN Bùi Duy Thọ</td>
+                    <td>
+                      <a href="#">01/HĐĐL-20</a>
+                    </td>
+                    <td>0002903</td>
+                    <td>45</td>
+                    <td>32.485.000</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-label-warning">Chưa thêm vào hợp đồng</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>DNTN Bùi Duy Thọ</td>
+                    <td>
+                      <a href="#">01/HĐĐL-20</a>
+                    </td>
+                    <td>0002903</td>
+                    <td>45</td>
+                    <td>32.485.000</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-label-warning">Chưa thêm vào hợp đồng</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>DNTN Bùi Duy Thọ</td>
+                    <td>
+                      <a href="#">01/HĐĐL-20</a>
+                    </td>
+                    <td>0002903</td>
+                    <td>45</td>
+                    <td>32.485.000</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-label-warning">Chưa thêm vào hợp đồng</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="text-right">
+            <a class="table-link-detail" href="#"> Xem chi tiết </a>
+          </div>
+        </div>
+
+        <div class="main-table">
+          <h1 class="table-label">Bản đồ khách hàng</h1>
+
+          <div class="table-map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d251637.95196238213!2d105.6189045!3d9.779349!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1599125832301!5m2!1svi!2s"
+              width="100%"
+              height="450"
+              frameborder="0"
+              style="border: 0"
+              allowfullscreen=""
+              aria-hidden="false"
+              tabindex="0"
+            ></iframe>
+          </div>
+
+          <div class="text-right">
+            <a class="table-link-detail" href="#"> Xem chi tiết </a>
+          </div>
+        </div>
+
+        <div class="main-table table-nhap-kho">
+          <h1 class="table-label">KẾ HOẠCH NHẬP KHO THÀNH PHẨM</h1>
+
+          <div class="table-wrapper">
+            <div class="table-content">
+              <table class="w-10">
+                <thead>
+                  <tr>
+                    <th>STT</th>
+                    <th>Mã tuần</th>
+                    <th>Từ ngày</th>
+                    <th>Đến ngày</th>
+                    <th>Xưởng</th>
+                    <th>Người tạo</th>
+                    <th>Update</th>
+                    <th>Ghi chú</th>
+                    <th>Tình trạng</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">T43.2020</a>
+                    </td>
+                    <td>31/08/2020</td>
+                    <td>05/09/2020</td>
+                    <td>
+                      <a href="#">K60</a>
+                    </td>
+                    <td>longbinh</td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                      <span class="badge badge-warning">Đang chờ</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="text-right">
+            <a class="table-link-detail" href="#"> Xem chi tiết </a>
+          </div>
+        </div>
+
+        <div class="main-table table-export">
+          <h1 class="table-label">kế hoạch xuất khẩu</h1>
+
+          <div class="table-wrapper">
+            <div class="table-content">
+              <table class="w-10">
+                <thead>
+                  <tr>
+                    <th>STT</th>
+                    <th>Mã hợp đồng</th>
+                    <th>Số hợp đồng</th>
+                    <th>Khách hàng</th>
+                    <th>Số lượng</th>
+                    <th>Ngày xếp</th>
+                    <th>Ngày nhập</th>
+                    <th>Ngày tu chỉnh</th>
+                    <th>Lần</th>
+                    <th>Ngày hợp đồng</th>
+                    <th>Ngày xuất</th>
+                    <th>Ngày lập phiếu</th>
+                    <th>Tổng</th>
+                    <th>Người tạo</th>
+                    <th>Update</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#"> 02 </a>
+                    </td>
+                    <td>202/HDXK-20/DX</td>
+                    <td>Dong Xing Nhon Hoa Sclae Co.,Ltd</td>
+                    <td>3.608</td>
+                    <td>05/09/2020</td>
+                    <td>04/09/2020</td>
+                    <td>20/08/2020</td>
+                    <td></td>
+                    <td>06/03/2020</td>
+                    <td>05/09/2020</td>
+                    <td>20/08/2020</td>
+                    <td></td>
+                    <td>hongthanh</td>
+                    <td>hongthanh</td>
+                  </tr>
+
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      <a href="#"> 01 </a>
+                    </td>
+                    <td>01</td>
+                    <td>WAITAT / H.L Co.,/Indonesia</td>
+                    <td>2.520</td>
+                    <td>05/09/2020</td>
+                    <td>04/09/2020</td>
+                    <td>20/08/2020</td>
+                    <td></td>
+                    <td>06/03/2020</td>
+                    <td>05/09/2020</td>
+                    <td>20/08/2020</td>
+                    <td></td>
+                    <td>minhtu</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="text-right">
+            <a class="table-link-detail" href="#"> Xem chi tiết </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Script -->
+    <script src="../lib/jquery-3.5.1.min.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

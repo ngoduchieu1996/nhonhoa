@@ -1,0 +1,162 @@
+.main-table {
+  padding: 1.5rem 0;
+
+  .table-label {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #000;
+    line-height: 3.4rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .table-wrapper {
+    background-color: #fff;
+    padding: 0.5rem;
+    box-shadow: 0 0.3rem 1rem #ccc;
+    margin-bottom: 2rem;
+  }
+
+  .table-content {
+    overflow-y: auto;
+    max-height: 37rem;
+  }
+
+  .table-link-detail {
+    font-size: 1.2rem;
+    padding: 1rem;
+    background-color: #518ca3;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    line-height: 1.7rem;
+
+    &:hover {
+      background-color: darken($color: #518ca3, $amount: 10%);
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    font-size: 1.4rem;
+    position: relative;
+    font-family: $fontRoboto;
+  }
+
+  thead th {
+    position: sticky;
+    top: -0.1rem;
+    background-color: #eeeeee;
+    white-space: nowrap;
+  }
+
+  table,
+  th,
+  td {
+    border: 0.1rem solid #ddd;
+    line-height: 1.5;
+  }
+
+  tbody tr {
+    cursor: pointer;
+    &:hover {
+      background-color: #d7e6e6;
+    }
+  }
+
+  th,
+  td {
+    padding: 0.3rem 0.5rem;
+  }
+
+  td {
+    font-weight: 500;
+
+    a {
+      color: $link;
+    }
+  }
+
+  th:first-child,
+  td:first-child {
+    width: 4%;
+    text-align: center;
+  }
+}
+
+.table-nhap-kho {
+  th:nth-last-child(2),
+  td:nth-last-child(2) {
+    width: 30%;
+  }
+
+  td:last-child {
+    text-align: center;
+  }
+}
+
+.table-plan {
+  th:nth-last-child(4),
+  td:nth-last-child(4) {
+    width: 23%;
+  }
+
+  th:last-child,
+  td:last-child {
+    width: 30%;
+  }
+
+  td:nth-child(3),
+  td:nth-child(4) {
+    background-color: #f2f2f2;
+  }
+}
+
+.table-export {
+  table {
+    font-size: 1.3rem;
+  }
+}
+
+//Kế hoạch SX-NK-Xk
+.table-plan-product {
+  th:last-child,
+  td:last-child {
+    text-align: center;
+  }
+
+  th:nth-last-child(2),
+  td:nth-last-child(2) {
+    width: 40%;
+  }
+}
+
+//Kế hoạch sản xuất tuần
+.table-weak-plan {
+  td:last-child {
+    text-align: center;
+  }
+
+  th:nth-last-child(2),
+  td:nth-last-child(2) {
+    width: 15%;
+  }
+}
+
+//Bảng hóa đơn
+.table-pill {
+  td:last-child {
+    text-align: center;
+
+    span.badge {
+      font-size: 1.1rem;
+      text-align: left;
+    }
+  }
+
+  th:nth-child(4),
+  td:nth-child(4) {
+    width: 30%;
+  }
+}
