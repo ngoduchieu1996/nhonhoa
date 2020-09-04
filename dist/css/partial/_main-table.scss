@@ -16,6 +16,7 @@
     padding: 0.5rem;
     box-shadow: 0 0.3rem 1rem #ccc;
     margin-bottom: 2rem;
+    position: relative;
   }
 
   .table-content {
@@ -82,6 +83,15 @@
   td:first-child {
     width: 4%;
     text-align: center;
+  }
+
+  .table-pagination {
+    background-color: #fff;
+    padding: 1rem;
+
+    &__title {
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -158,5 +168,61 @@
   th:nth-child(4),
   td:nth-child(4) {
     width: 30%;
+  }
+}
+
+//Bảng quản lý bán hàng
+.table-quanly-banhang {
+  .table-wrapper {
+    margin-bottom: 0;
+  }
+
+  th {
+    i {
+      transform: translateY(0.3rem);
+    }
+  }
+
+  tbody tr:hover td:last-child {
+    background-color: #d7e6e6;
+  }
+
+  td:last-child {
+    background-color: #ebebeb;
+    text-align: center;
+    width: 8%;
+
+    button {
+      color: #808080;
+      padding: 0.6rem;
+    }
+
+    button i {
+      font-size: 1.6rem;
+    }
+
+    button:not(:last-child) {
+      margin-right: 0.5rem;
+    }
+
+    button.edit:hover {
+      color: $Warning;
+      background: linear-gradient(#f6c23e6c, #f6c23e6c);
+    }
+
+    button.delete:hover {
+      color: $Danger;
+      background: linear-gradient(#e7493b4d, #e7493b4d);
+    }
+  }
+
+  td:nth-last-child(2) {
+    text-align: center;
+    width: 10%;
+
+    span {
+      text-align: left;
+      font-size: 1.06rem;
+    }
   }
 }

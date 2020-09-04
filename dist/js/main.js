@@ -26,5 +26,3 @@ for (let back of backs) {
     p.style.animation = "";
   });
 }
-
-$(".date-picker").datepicker();
