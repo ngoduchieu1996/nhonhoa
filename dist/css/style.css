@@ -3049,6 +3049,11 @@ body {
   color: yellow;
 }
 
+.form-control {
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.2rem;
+}
+
 @keyframes bounceUp {
   from {
     transform: translateX(5rem);
@@ -3437,6 +3442,17 @@ body {
   margin-right: 1rem;
 }
 
+.btn-blue {
+  background-color: #50abc2;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.2rem;
+  outline: none;
+  border: none;
+  font-weight: 600;
+}
+
 .login {
   position: relative;
 }
@@ -3530,7 +3546,7 @@ body {
 }
 
 .page-container {
-  margin-left: 6.5rem;
+  margin-left: 5rem;
   background-color: #f2f3f8;
   padding: 4rem;
 }
@@ -3539,6 +3555,70 @@ body {
 .xuat-nhap-kho {
   padding: 1rem;
   background-color: #fff;
+}
+
+#quanlyhoadon h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2rem;
+  margin-bottom: 3rem;
+}
+#quanlyhoadon .control-bar .left-form .form-item {
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+#quanlyhoadon .control-bar .left-form .form-control {
+  height: 100%;
+  position: relative;
+}
+#quanlyhoadon .control-bar .left-form ::placeholder {
+  font-size: 1rem;
+}
+#quanlyhoadon .control-bar .left-form ::-webkit-input-placeholder {
+  font-size: 1rem;
+}
+#quanlyhoadon .control-bar .left-form label {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+#quanlyhoadon .control-bar .right-form {
+  display: flex;
+}
+#quanlyhoadon .control-bar .right-form .form-control {
+  margin-left: 1rem;
+}
+
+.datepicker {
+  padding: 0;
+  border: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  font-family: "Roboto", sans-serif !important;
+}
+.datepicker-days {
+  margin-top: 1rem;
+  background-color: #fff;
+  border: 0.1rem solid #ccc;
+  box-shadow: 0 0 0.3rem #ccc;
+  border-radius: 0.4rem;
+}
+.datepicker th,
+.datepicker td {
+  padding: 0.8rem 1rem !important;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.2rem;
+}
+
+.datepicker-dropdown.datepicker-orient-top:before {
+  top: 4px;
+}
+
+.datepicker-dropdown.datepicker-orient-top:after {
+  top: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
