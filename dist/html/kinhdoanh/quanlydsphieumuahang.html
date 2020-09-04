@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DANH SÁCH PHIẾU MUA HÀNG</title>
+
+    <!-- Css -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../lib/css/datepicker.css" />
+
+    <link rel="stylesheet" href="../../font/fontawesome-free-5.14.0-web/css/all.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body>
+    <nav class="nav-bar t-white">
+      <div class="logo fz-26 fw-7 text-upper">
+        <a href="#">NHƠN HÒA</a>
+      </div>
+
+      <button id="open-side-bar">
+        <i class="fas fa-bars t-white"></i>
+      </button>
+
+      <div class="nav-bar__menu">
+        <ul>
+          <li class="nav-bar__menu-link has-sub">
+            <div class="icon">
+              <i class="fas fa-list"></i>
+            </div>
+
+            <span>Kế hoạch</span>
+
+            <div class="sub-menu">
+              <div class="d-flex-bw">
+                <div class="w-5">
+                  <a href="">Kế hoạch</a>
+                </div>
+
+                <div class="w-5">
+                  <a href="">CCDC</a>
+                </div>
+
+                <div class="w-5">
+                  <a href="">Gia Công</a>
+                </div>
+
+                <div class="w-5">
+                  <a href="">Cấp Hàng</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-bar__menu-link has-sub">
+            <div class="icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+
+            <span>Kinh doanh</span>
+
+            <div class="sub-menu d-flex-bw">
+              <div class="d-flex-bw">
+                <div class="w-5">
+                  <a href="kinhdoanhnoidia.html">Nội địa </a>
+                </div>
+
+                <div class="w-5">
+                  <a href="">Xuất khẩu</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-bar__menu-link">
+            <a href="">
+              <div class="icon">
+                <i class="fas fa-warehouse"></i>
+              </div>
+
+              <span>Kho</span>
+            </a>
+          </li>
+
+          <li class="nav-bar__menu-link has-sub">
+            <div class="icon">
+              <i class="fas fa-industry"></i>
+            </div>
+
+            <span>Xưởng</span>
+
+            <div class="sub-menu">
+              <div class="d-flex-bw">
+                <div class="col-4"><a href="">Xưởng 1</a></div>
+                <div class="col-4"><a href="">Xưởng 2</a></div>
+                <div class="col-4"><a href="">Xưởng 3</a></div>
+                <div class="col-4"><a href="">Xưởng 4</a></div>
+                <div class="col-4"><a href="">Xưởng 5</a></div>
+                <div class="col-4"><a href="">Xưởng 6</a></div>
+                <div class="col-4"><a href="">Xưởng 7</a></div>
+                <div class="col-4"><a href="">Xưởng 8</a></div>
+                <div class="col-4"><a href="">Xưởng 9</a></div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-bar__menu-link has-sub">
+            <div class="icon">
+              <i class="far fa-id-card"></i>
+            </div>
+
+            <span>Kiểm định</span>
+
+            <div class="sub-menu">
+              <div class="d-flex-bw">
+                <div class="col-4">
+                  <a href="#">Xưởng 4 </a>
+                </div>
+
+                <div class="col-4">
+                  <a href="">Xưởng 5</a>
+                </div>
+
+                <div class="col-4">
+                  <a href="">Xưởng 6</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-bar__menu-link">
+            <a href="">
+              <div class="icon">
+                <i class="fas fa-tools"></i>
+              </div>
+
+              <span>Công cụ dụng cụ</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-bar__cta d-flex align-center">
+        <div>
+          <a href="#" title="Khóa">
+            <i class="fas fa-lock"></i>
+          </a>
+        </div>
+
+        <div>
+          <a href="#" title="Ghi chú">
+            <i class="fas fa-th t-l-yellow"></i>
+          </a>
+        </div>
+
+        <div>
+          <a href="#" title="Thông báo">
+            <i class="fas fa-align-justify"></i>
+          </a>
+        </div>
+
+        <div>
+          <a href="" title="Cấu hình chung">
+            <i class="fas fa-cogs"></i>
+          </a>
+        </div>
+
+        <figure class="user-logo">
+          <img src="../../asset/default_usr.png" alt="logo user" />
+          <p class="fz-12 fw-5">Admin</p>
+        </figure>
+      </div>
+    </nav>
+
+    <main id="quanly-danhsach-phieumuahang">
+      <div class="page-container">
+        <h1>Quản lý danh sách phiếu mua hàng</h1>
+
+        <div class="control-bar">
+          <div class="d-flex-bw">
+            <div class="left-form">
+              <form action="" class="h-10">
+                <div class="d-flex h-10">
+                  <div class="form-item">
+                    <label for="search">Tìm kiếm</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      name=""
+                      id="search"
+                      placeholder="Nội dung tìm kiếm"
+                    />
+                  </div>
+
+                  <div class="form-item">
+                    <label for="start-date">Từ ngày</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      data-provide="datepicker"
+                      name=""
+                      id="start-date"
+                    />
+                  </div>
+
+                  <div class="form-item">
+                    <label for="end-date">Đến ngày</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      data-provide="datepicker"
+                      name=""
+                      id="end-date"
+                    />
+                  </div>
+
+                  <button class="btn-blue btn">Tìm kiếm</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="right-form">
+              <button class="btn-blue h-10 btn" id="open-add-form">
+                <i class="fas fa-plus fz-18"></i>
+              </button>
+
+              <select class="form-control">
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="add-new-pill">
+            <h2>Thêm mới hóa đơn</h2>
+
+            <div class="add-new-pill__form">
+              <form action="">
+                <div class="d-flex-bw row">
+                  <div class="col-12 col-md-4 mb-15">
+                    <div class="item d-flex-bw row">
+                      <div class="col-6">
+                        <label for="pill-number" class="required"> Số hóa đơn : </label>
+
+                        <input type="text" name="" id="pill-number" class="form-control w-10" />
+                      </div>
+
+                      <div class="col-6">
+                        <label for="pill-number" class="required"> Ngày lập : </label>
+
+                        <input
+                          type="text"
+                          data-provide="datepicker"
+                          name=""
+                          class="form-control w-10"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-8 mb-15">
+                    <div class="item d-flex-bw row">
+                      <div class="col-5 select-box">
+                        <label for="pill-number" class="required">Khách hàng : </label>
+
+                        <select class="chosen-select-main w-10" id="" name="">
+                          <option value="1">AG | Chi Cục TCĐLCL An Giang</option>
+                          <option value="">Chọn khách hàng</option>
+                          <option value="2">AH | Trần Quang Hải / BPKD</option>
+                          <option value="3">AL | Nguyễn Thành Long / BP_KD</option>
+                          <option value="4">BDT1 | DNTN Bùi Duy Thọ</option>
+                          <option value="5">BPCT | Phan Dũng Hải</option>
+                          <option value="6">BVQ11 | CTy TNHH SX -TM Nhơn Hoà</option>
+                          <option value="7">CAA18 | CTy TNHH SX &amp; TM Thanh Luân</option>
+                          <option value="8">CAA23 | CTy TNHH SX - TM VINAVITt</option>
+                          <option value="9">CAA27 | Cty TNHH Thành Phú</option>
+                          <option value="10">CAA31 | CTy TNHH TM Đại Phú</option>
+                          <option value="11">CAA34 | Công Ty TNHH TM Dương Kim Long</option>
+                          <option value="12">CAA40 | CTy TNHH TM Phú Châu</option>
+                          <option value="13">CAA43 | CTy TNHH TM Vạn Phúc</option>
+                          <option value="14">CAA46 | CTy TNHH TMDV Hợp Tiến</option>
+                          <option value="15">CAA49 | CTy TNHH TMDV Quang Thuận</option>
+                          <option value="16">CAA50 | CTy TNHH TMDV Tân Nam Đô</option>
+                          <option value="17">CAA51 | CTy TNHH-TMDV Toàn Đại Hưng</option>
+                          <option value="18">CAA52 | CTy TNHH SX-TM Bảo Tín</option>
+                          <option value="19">CAA53 | CTy TNHH TMDV Bình Thiên</option>
+                          <option value="20">CAA59 | CTy TNHH TM Cẩm Nguyên</option>
+                          <option value="21">CAA73 | CTy TNHH TM-DV-SX Bình Nam</option>
+                          <option value="22">CAA78 | CTy TNHHSX-TM Ba Lan</option>
+                          <option value="23">CAA79 | CTy TNHH Ba Lan</option>
+                          <option value="24">CAB10 | CTy Thiết Kế Mỹ Thuật Vĩnh Liên</option>
+                          <option value="25">CAB22 | CTy TNHH Tân Lợi Châu</option>
+                          <option value="26">CAB26 | CTy TNHH Hoá Việt Nam ( Vietchem )</option>
+                          <option value="27">CAB27 | CTy TNHH TM &amp; DV Quang Mười</option>
+                          <option value="28">CAB29 | CTy Bình Thiên</option>
+                          <option value="29">CAB32 | CTy TNHH SX TM In Minh Mẫn</option>
+                          <option value="30">CAB39 | CTy TNHH SX &amp; KD VINATOYO</option>
+                          <option value="31">CAB47 | CTy TNHH SX-TM-DV XNK PHƯƠNG LœI</option>
+                          <option value="32">CAB48 | CTy TNHH Tân Tiến Thành</option>
+                          <option value="33">CAB49 | CTy TNHH CN bao bì VISINGPARK</option>
+                          <option value="34">CAB58 | CTy TNHH TM-SX-DV Phong Nguyên</option>
+                          <option value="35">CAB60 | CTy Việt Tân</option>
+                          <option value="36">CAB62 | CTy NAM Long</option>
+                          <option value="37">CAB65 | Cty TNHH ANH THÍ</option>
+                        </select>
+
+                        <div class="chosen-container">
+                          <a class="chosen-single d-flex-bw">
+                            <span>Chọn khách hàng</span>
+                            <i class="fas fa-caret-down"></i>
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="col-5 select-box">
+                        <label for="pill-number" class="required">Chọn hợp đồng : </label>
+
+                        <select class="chosen-select-main w-10" id="" name=""></select>
+
+                        <div class="chosen-container">
+                          <a class="chosen-single d-flex-bw">
+                            <span>Chọn hợp đồng</span>
+                            <i class="fas fa-caret-down"></i>
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="col-2">
+                        <label for="">Tỷ lệ thuế (%):</label>
+
+                        <input type="number" class="form-control w-10" />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-4 mb-15">
+                    <div class="item d-flex-bw row">
+                      <div class="col-12 select-box">
+                        <label for="pill-number" class="required">Chọn nhóm đơn giá bán : </label>
+
+                        <select class="chosen-select-main w-10" id="" name=""></select>
+
+                        <div class="chosen-container">
+                          <a class="chosen-single d-flex-bw">
+                            <span>Chọn nhóm đơn giá bán</span>
+                            <i class="fas fa-caret-down"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-8 mb-15">
+                    <div class="item d-flex-bw row">
+                      <div class="col-12">
+                        <label for="">Ghi chú : </label>
+
+                        <textarea name="" id="" class="form-control w-10"></textarea>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 text-center">
+                    <button class="btn-danger btn">
+                      <i class="fas fa-plus-circle mr-5"></i>
+                      <span>Lưu</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="main-table table-quanly-banhang">
+          <div class="table-wrapper">
+            <div class="table-content">
+              <table class="w-10">
+                <thead>
+                  <tr>
+                    <th>TT</th>
+
+                    <th class="sort">Số chứng từ <i class="fas fa-sort-up ml-5"></i></th>
+
+                    <th class="sort">Ngày lập <i class="fas fa-sort-up ml-5"></i></th>
+
+                    <th class="sort">Khách hàng <i class="fas fa-sort-up ml-5"></i></th>
+
+                    <th class="sort">Số hợp đồng <i class="fas fa-sort-up ml-5"></i></th>
+
+                    <th class="sort">Số hóa đơn <i class="fas fa-sort-up ml-5"></i></th>
+
+                    <th>Tổng SL</th>
+
+                    <th class="sort">Tổng tiền <i class="fas fa-sort-up ml-5"></i></th>
+
+                    <th>Nhóm ĐG</th>
+
+                    <th>Ghi chú</th>
+
+                    <th>Trạng thái</th>
+
+                    <th>Tác vụ</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>Công ty TNHH MTV TM Nguyễn Oanh</td>
+
+                    <td>
+                      <a href="#"> 04/HĐĐL-20 </a>
+                    </td>
+
+                    <td>
+                      <a href="#">002906</a>
+                    </td>
+
+                    <td>550</td>
+
+                    <td>154.660.000</td>
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td>
+                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                    </td>
+
+                    <td>
+                      <button class="edit">
+                        <i class="far fa-edit"></i>
+                      </button>
+
+                      <button class="delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>Công Ty Cổ Phần Thương Nghiệp Tổng Hợp Cần Thơ</td>
+
+                    <td>
+                      <a href="#"> 04/HĐĐL-20 </a>
+                    </td>
+
+                    <td>
+                      <a href="#">002906</a>
+                    </td>
+
+                    <td>550</td>
+
+                    <td>154.660.000</td>
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td>
+                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                    </td>
+
+                    <td>
+                      <button class="edit">
+                        <i class="far fa-edit"></i>
+                      </button>
+
+                      <button class="delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>Công Ty Cổ Phần Thương Nghiệp Tổng Hợp Cần Thơ</td>
+
+                    <td>
+                      <a href="#"> 04/HĐĐL-20 </a>
+                    </td>
+
+                    <td>
+                      <a href="#">002906</a>
+                    </td>
+
+                    <td>550</td>
+
+                    <td>154.660.000</td>
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td>
+                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                    </td>
+
+                    <td>
+                      <button class="edit">
+                        <i class="far fa-edit"></i>
+                      </button>
+
+                      <button class="delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>4</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>DNTN Bùi Duy Thọ</td>
+
+                    <td>
+                      <a href="#"> 04/HĐĐL-20 </a>
+                    </td>
+
+                    <td>
+                      <a href="#">002906</a>
+                    </td>
+
+                    <td>550</td>
+
+                    <td>154.660.000</td>
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td>
+                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                    </td>
+
+                    <td>
+                      <button class="edit">
+                        <i class="far fa-edit"></i>
+                      </button>
+
+                      <button class="delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>5</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>DNTN Bùi Duy Thọ</td>
+
+                    <td>
+                      <a href="#"> 04/HĐĐL-20 </a>
+                    </td>
+
+                    <td>
+                      <a href="#">002906</a>
+                    </td>
+
+                    <td>550</td>
+
+                    <td>154.660.000</td>
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td>
+                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                    </td>
+
+                    <td>
+                      <button class="edit">
+                        <i class="far fa-edit"></i>
+                      </button>
+
+                      <button class="delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>6</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>DNTN Bùi Duy Thọ</td>
+
+                    <td>
+                      <a href="#"> 04/HĐĐL-20 </a>
+                    </td>
+
+                    <td>
+                      <a href="#">002906</a>
+                    </td>
+
+                    <td>550</td>
+
+                    <td>154.660.000</td>
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td>
+                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                    </td>
+
+                    <td>
+                      <button class="edit">
+                        <i class="far fa-edit"></i>
+                      </button>
+
+                      <button class="delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>7</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>DNTN Bùi Duy Thọ</td>
+
+                    <td>
+                      <a href="#"> 04/HĐĐL-20 </a>
+                    </td>
+
+                    <td>
+                      <a href="#">002906</a>
+                    </td>
+
+                    <td>550</td>
+
+                    <td>154.660.000</td>
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td>
+                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                    </td>
+
+                    <td>
+                      <button class="edit">
+                        <i class="far fa-edit"></i>
+                      </button>
+
+                      <button class="delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>8</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>DNTN Bùi Duy Thọ</td>
+
+                    <td>
+                      <a href="#"> 04/HĐĐL-20 </a>
+                    </td>
+
+                    <td>
+                      <a href="#">002906</a>
+                    </td>
+
+                    <td>550</td>
+
+                    <td>154.660.000</td>
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td>
+                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                    </td>
+
+                    <td>
+                      <button class="edit">
+                        <i class="far fa-edit"></i>
+                      </button>
+
+                      <button class="delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>9</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>DNTN Bùi Duy Thọ</td>
+
+                    <td>
+                      <a href="#"> 04/HĐĐL-20 </a>
+                    </td>
+
+                    <td>
+                      <a href="#">002906</a>
+                    </td>
+
+                    <td>550</td>
+
+                    <td>154.660.000</td>
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td>
+                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                    </td>
+
+                    <td>
+                      <button class="edit">
+                        <i class="far fa-edit"></i>
+                      </button>
+
+                      <button class="delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>10</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>DNTN Bùi Duy Thọ</td>
+
+                    <td>
+                      <a href="#"> 04/HĐĐL-20 </a>
+                    </td>
+
+                    <td>
+                      <a href="#">002906</a>
+                    </td>
+
+                    <td>550</td>
+
+                    <td>154.660.000</td>
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td>
+                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                    </td>
+
+                    <td>
+                      <button class="edit">
+                        <i class="far fa-edit"></i>
+                      </button>
+
+                      <button class="delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>11</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>DNTN Bùi Duy Thọ</td>
+
+                    <td>
+                      <a href="#"> 04/HĐĐL-20 </a>
+                    </td>
+
+                    <td>
+                      <a href="#">002906</a>
+                    </td>
+
+                    <td>550</td>
+
+                    <td>154.660.000</td>
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td>
+                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                    </td>
+
+                    <td>
+                      <button class="edit">
+                        <i class="far fa-edit"></i>
+                      </button>
+
+                      <button class="delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>12</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>DNTN Bùi Duy Thọ</td>
+
+                    <td>
+                      <a href="#"> 04/HĐĐL-20 </a>
+                    </td>
+
+                    <td>
+                      <a href="#">002906</a>
+                    </td>
+
+                    <td>550</td>
+
+                    <td>154.660.000</td>
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td>
+                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                    </td>
+
+                    <td>
+                      <button class="edit">
+                        <i class="far fa-edit"></i>
+                      </button>
+
+                      <button class="delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>13</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>Công Ty TNHH Đầu Tư Và TM An Hòa</td>
+
+                    <td>
+                      <a href="#"> 04/HĐĐL-20 </a>
+                    </td>
+
+                    <td>
+                      <a href="#">002906</a>
+                    </td>
+
+                    <td>550</td>
+
+                    <td>154.660.000</td>
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td>
+                      <span class="badge badge-success"> Đã thêm vào hợp đồng </span>
+                    </td>
+
+                    <td>
+                      <button class="edit">
+                        <i class="far fa-edit"></i>
+                      </button>
+
+                      <button class="delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>14</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>Công Ty TNHH Đầu Tư Và TM An Hòa</td>
+
+                    <td>
+                      <a href="#"> 04/HĐĐL-20 </a>
+                    </td>
+
+                    <td>
+                      <a href="#">002906</a>
+                    </td>
+
+                    <td>550</td>
+
+                    <td>154.660.000</td>
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td>
+                      <span class="badge badge-success"> Đã thêm vào hợp đồng </span>
+                    </td>
+
+                    <td>
+                      <button class="edit">
+                        <i class="far fa-edit"></i>
+                      </button>
+
+                      <button class="delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>15</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>Công Ty TNHH Đầu Tư Và TM An Hòa</td>
+
+                    <td>
+                      <a href="#"> 04/HĐĐL-20 </a>
+                    </td>
+
+                    <td>
+                      <a href="#">002906</a>
+                    </td>
+
+                    <td>550</td>
+
+                    <td>154.660.000</td>
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td>
+                      <span class="badge badge-success"> Đã thêm vào hợp đồng </span>
+                    </td>
+
+                    <td>
+                      <button class="edit">
+                        <i class="far fa-edit"></i>
+                      </button>
+
+                      <button class="delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>16</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>Công Ty TNHH Đầu Tư Và TM An Hòa</td>
+
+                    <td>
+                      <a href="#"> 04/HĐĐL-20 </a>
+                    </td>
+
+                    <td>
+                      <a href="#">002906</a>
+                    </td>
+
+                    <td>550</td>
+
+                    <td>154.660.000</td>
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td>
+                      <span class="badge badge-success"> Đã thêm vào hợp đồng </span>
+                    </td>
+
+                    <td>
+                      <button class="edit">
+                        <i class="far fa-edit"></i>
+                      </button>
+
+                      <button class="delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>18</td>
+                    <td>
+                      <a href="#">DA200825852</a>
+                    </td>
+                    <td>25/08/2020</td>
+                    <td>Công Ty TNHH Đầu Tư Và TM An Hòa</td>
+
+                    <td>
+                      <a href="#"> 04/HĐĐL-20 </a>
+                    </td>
+
+                    <td>
+                      <a href="#">002906</a>
+                    </td>
+
+                    <td>550</td>
+
+                    <td>154.660.000</td>
+
+                    <td></td>
+
+                    <td></td>
+
+                    <td>
+                      <span class="badge badge-success"> Đã thêm vào hợp đồng </span>
+                    </td>
+
+                    <td>
+                      <button class="edit">
+                        <i class="far fa-edit"></i>
+                      </button>
+
+                      <button class="delete">
+                        <i class="fas fa-trash-alt"></i>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="table-pagination d-flex-bw align-center">
+            <div class="table-pagination__title">
+              <p>
+                Hiển thị từ 1 đến <span class="render-number">20</span> trong
+                <span class="total">844</span> bản ghi
+              </p>
+            </div>
+
+            <div class="table-pagination__control">
+              <ul class="pagination">
+                <li class="to-first-page disable">
+                  <span>Trang đầu</span>
+                </li>
+
+                <li class="back disable">
+                  <span>&laquo;</span>
+                </li>
+
+                <li class="page active">
+                  <a href="#">1</a>
+                </li>
+
+                <li class="page">
+                  <a href="#">2</a>
+                </li>
+
+                <li class="page">
+                  <a href="#">3</a>
+                </li>
+
+                <li class="page">
+                  <a href="#">4</a>
+                </li>
+
+                <li class="page">
+                  <a href="#">5</a>
+                </li>
+
+                <li class="page">
+                  <a href="#">6</a>
+                </li>
+
+                <li class="page">
+                  <a href="#">7</a>
+                </li>
+
+                <li class="next">
+                  <span>&raquo;</span>
+                </li>
+
+                <li class="to-last-page">
+                  <span>Trang cuối</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="../../lib/jquery-3.5.1.min.js"></script>
+    <script src="../../lib/js/bootstrap-datepicker.js"></script>
+    <script src="../../js/datepicker.js"></script>
+    <script src="../../js/main.js"></script>
+  </body>
+</html>

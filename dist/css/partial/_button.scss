@@ -1,10 +1,18 @@
-.btn-blue {
-  background-color: #50abc2;
-  color: #fff;
+.btn {
   font-size: 1.2rem;
   padding: 0.6rem 1.2rem;
   border-radius: 0.2rem;
   outline: none;
   border: none;
   font-weight: 600;
+}
+
+.btn-blue {
+  background-color: #50abc2;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: $Danger;
+  color: #fff;
 }

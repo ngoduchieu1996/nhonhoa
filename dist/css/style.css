@@ -81,7 +81,7 @@ i {
   transform: rotate(-45deg) translate(0.2rem, -0.3rem);
 }
 
-.form-control {
+.form-control, .add-new-pill__form .chosen-container {
   background: #fff;
   border: 1px solid #ced4da;
   outline: none;
@@ -98,7 +98,7 @@ i {
   border: none;
   padding: 2rem;
 }
-.form-control:focus {
+.form-control:focus, .add-new-pill__form .chosen-container:focus {
   color: #495057;
   background-color: #fff;
   border-color: #80bdff;
@@ -3049,9 +3049,143 @@ body {
   color: yellow;
 }
 
-.form-control {
-  padding: 0.6rem 0.9rem;
+.form-control, .add-new-pill__form .chosen-container {
+  padding: 0.8rem 0.9rem;
   border-radius: 0.2rem;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a9a9a9;
+}
+
+::-webkit-scrollbar-track {
+  background: #0000;
+}
+
+.control-bar .left-form .form-item {
+  display: flex;
+  align-items: center;
+  margin-right: 0.5rem;
+}
+.control-bar .left-form .form-control, .control-bar .left-form .add-new-pill__form .chosen-container, .add-new-pill__form .control-bar .left-form .chosen-container {
+  height: 100%;
+  position: relative;
+}
+.control-bar .left-form ::placeholder {
+  font-size: 1.1rem;
+}
+.control-bar .left-form ::-webkit-input-placeholder {
+  font-size: 1rem;
+}
+.control-bar .left-form label {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.control-bar .right-form {
+  display: flex;
+}
+.control-bar .right-form .form-control, .control-bar .right-form .add-new-pill__form .chosen-container, .add-new-pill__form .control-bar .right-form .chosen-container {
+  margin-left: 1rem;
+}
+.control-bar .right-form button i {
+  transition: transform 0.5s;
+}
+
+.datepicker {
+  padding: 0;
+  border: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  font-family: "Roboto", sans-serif !important;
+}
+.datepicker-days {
+  margin-top: 1rem;
+  background-color: #fff;
+  border: 0.1rem solid #ccc;
+  box-shadow: 0 0 0.3rem #ccc;
+  border-radius: 0.4rem;
+}
+.datepicker th,
+.datepicker td {
+  padding: 0.8rem 1rem !important;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.2rem;
+}
+
+.datepicker-dropdown.datepicker-orient-top:before {
+  top: 4px;
+}
+
+.datepicker-dropdown.datepicker-orient-top:after {
+  top: 5px;
+}
+
+.add-new-pill {
+  padding-top: 1rem;
+  display: none;
+}
+.add-new-pill h2 {
+  background-color: #17a2b8;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 3.5rem;
+  color: #fff;
+}
+.add-new-pill__form {
+  padding: 1rem 1.5rem;
+  background-color: #fff;
+  box-shadow: 0 0.5rem 0.5rem #ccc;
+}
+.add-new-pill__form .item {
+  height: 100%;
+}
+.add-new-pill__form select {
+  display: none;
+}
+.add-new-pill__form label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.8rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.add-new-pill__form label.required::after {
+  content: "(*)";
+  color: red;
+  letter-spacing: 0.1rem;
+  margin-left: 0.5rem;
+}
+.add-new-pill__form textarea,
+.add-new-pill__form button {
+  height: 3.4rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.add-new-pill__form .select-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.add-new-pill__form .chosen-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 3.4rem;
+  cursor: pointer;
+}
+.add-new-pill__form .chosen-container .chosen-single {
+  font-size: 1.1rem;
+  width: 100%;
 }
 
 @keyframes bounceUp {
@@ -3067,6 +3201,9 @@ body {
   background: linear-gradient(to right, #008cc5, #00bcda);
   align-items: center;
   padding: 0 1.6rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
 }
 .nav-bar .logo {
   padding: 0 0.5rem;
@@ -3167,6 +3304,7 @@ body {
   padding: 0.5rem;
   box-shadow: 0 0.3rem 1rem #ccc;
   margin-bottom: 2rem;
+  position: relative;
 }
 .main-table .table-content {
   overflow-y: auto;
@@ -3223,6 +3361,13 @@ body {
   width: 4%;
   text-align: center;
 }
+.main-table .table-pagination {
+  background-color: #fff;
+  padding: 1rem;
+}
+.main-table .table-pagination__title {
+  font-size: 1.2rem;
+}
 
 .table-nhap-kho th:nth-last-child(2),
 .table-nhap-kho td:nth-last-child(2) {
@@ -3278,6 +3423,47 @@ body {
   width: 30%;
 }
 
+.table-quanly-banhang .table-wrapper {
+  margin-bottom: 0;
+}
+.table-quanly-banhang th i {
+  transform: translateY(0.3rem);
+}
+.table-quanly-banhang tbody tr:hover td:last-child {
+  background-color: #d7e6e6;
+}
+.table-quanly-banhang td:last-child {
+  background-color: #ebebeb;
+  text-align: center;
+  width: 8%;
+}
+.table-quanly-banhang td:last-child button {
+  color: #808080;
+  padding: 0.6rem;
+}
+.table-quanly-banhang td:last-child button i {
+  font-size: 1.6rem;
+}
+.table-quanly-banhang td:last-child button:not(:last-child) {
+  margin-right: 0.5rem;
+}
+.table-quanly-banhang td:last-child button.edit:hover {
+  color: #f6c23e;
+  background: linear-gradient(#f6c23e6c, #f6c23e6c);
+}
+.table-quanly-banhang td:last-child button.delete:hover {
+  color: #e74a3b;
+  background: linear-gradient(#e7493b4d, #e7493b4d);
+}
+.table-quanly-banhang td:nth-last-child(2) {
+  text-align: center;
+  width: 10%;
+}
+.table-quanly-banhang td:nth-last-child(2) span {
+  text-align: left;
+  font-size: 1.06rem;
+}
+
 .badge {
   border-radius: 0.4rem;
   color: #fff;
@@ -3304,6 +3490,9 @@ body {
 }
 .badge-label-warning {
   background-color: #e7804f;
+}
+.badge-success {
+  background-color: #1cc88a;
 }
 
 .sidenav {
@@ -3400,12 +3589,6 @@ body {
   margin: 0;
 }
 
-/* Add an active class to the active dropdown button */
-.active {
-  background-color: green;
-  color: white;
-}
-
 .dropdown-container {
   display: none;
   background-color: #262626;
@@ -3442,15 +3625,48 @@ body {
   margin-right: 1rem;
 }
 
-.btn-blue {
-  background-color: #50abc2;
-  color: #fff;
+.btn {
   font-size: 1.2rem;
   padding: 0.6rem 1.2rem;
   border-radius: 0.2rem;
   outline: none;
   border: none;
   font-weight: 600;
+}
+
+.btn-blue {
+  background-color: #50abc2;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #e74a3b;
+  color: #fff;
+}
+
+.pagination {
+  display: flex;
+  font-size: 1.1rem;
+}
+.pagination li {
+  color: #76838f;
+  font-weight: 600;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+}
+.pagination li:hover {
+  color: #007bff;
+  background: linear-gradient(#eff0f571, #eff0f571);
+}
+.pagination li.active {
+  background: #eff0f5;
+}
+.pagination li.disable {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.pagination li.disable:hover {
+  background: none;
 }
 
 .login {
@@ -3461,6 +3677,7 @@ body {
 }
 .login .wrapper-login img {
   height: 100vh;
+  object-fit: cover;
 }
 .login-button {
   cursor: pointer;
@@ -3487,6 +3704,7 @@ body {
   height: auto;
 }
 .login-form {
+  opacity: 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -3537,12 +3755,82 @@ body {
   border: none !important;
   background: rgba(107, 255, 3, 0.3);
 }
+.login-form .btn_login:hover {
+  background: rgba(107, 255, 3, 0.5);
+}
 .login .design_by {
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   color: white;
+}
+.login #before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: none;
+}
+.login .btn {
+  font-weight: bold;
+}
+.login-form:hover {
+  box-shadow: 1px 1px 50px #fff4f4;
+}
+.login .form-scale-in {
+  animation: scale-in 0.5s ease forwards;
+  animation-delay: 0.5s;
+}
+@keyframes scale-in {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 2;
+  }
+}
+.login .form-scale-out {
+  animation: scale-out 0.5s ease forwards;
+}
+@keyframes scale-out {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+.login .login-btn-animation1 {
+  animation: loginBtn1 0.5s ease forwards;
+}
+@keyframes loginBtn1 {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.login .login-btn-animation2 {
+  animation: loginBtn2 0.5s ease forwards;
+}
+@keyframes loginBtn2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.7;
+  }
 }
 
 .page-container {
@@ -3562,63 +3850,6 @@ body {
   font-weight: 700;
   line-height: 2rem;
   margin-bottom: 3rem;
-}
-#quanlyhoadon .control-bar .left-form .form-item {
-  display: flex;
-  align-items: center;
-  margin-right: 0.5rem;
-}
-#quanlyhoadon .control-bar .left-form .form-control {
-  height: 100%;
-  position: relative;
-}
-#quanlyhoadon .control-bar .left-form ::placeholder {
-  font-size: 1rem;
-}
-#quanlyhoadon .control-bar .left-form ::-webkit-input-placeholder {
-  font-size: 1rem;
-}
-#quanlyhoadon .control-bar .left-form label {
-  margin-right: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0;
-}
-#quanlyhoadon .control-bar .right-form {
-  display: flex;
-}
-#quanlyhoadon .control-bar .right-form .form-control {
-  margin-left: 1rem;
-}
-
-.datepicker {
-  padding: 0;
-  border: none !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  font-family: "Roboto", sans-serif !important;
-}
-.datepicker-days {
-  margin-top: 1rem;
-  background-color: #fff;
-  border: 0.1rem solid #ccc;
-  box-shadow: 0 0 0.3rem #ccc;
-  border-radius: 0.4rem;
-}
-.datepicker th,
-.datepicker td {
-  padding: 0.8rem 1rem !important;
-  width: 3rem;
-  height: 3rem;
-  font-size: 1.2rem;
-}
-
-.datepicker-dropdown.datepicker-orient-top:before {
-  top: 4px;
-}
-
-.datepicker-dropdown.datepicker-orient-top:after {
-  top: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
