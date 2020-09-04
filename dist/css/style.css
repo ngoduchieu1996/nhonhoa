@@ -3487,6 +3487,7 @@ body {
   height: auto;
 }
 .login-form {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -3537,12 +3538,26 @@ body {
   border: none !important;
   background: rgba(107, 255, 3, 0.3);
 }
+.login-form .btn_login:hover {
+  background: rgba(107, 255, 3, 0.5);
+}
 .login .design_by {
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   color: white;
+}
+.login #before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: none;
 }
 
 .page-container {

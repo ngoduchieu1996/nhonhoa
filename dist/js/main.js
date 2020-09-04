@@ -27,4 +27,23 @@ for (let back of backs) {
   });
 }
 
-$(".date-picker").datepicker();
+//start login page js
+const loginBtn = document.querySelector('.login-button');
+const loginForm = document.querySelector('.login-form');
+const before = document.getElementById('before');
+const closeBtn = document.querySelector('.close-btn');
+console.log(loginBtn);
+console.log(loginForm);
+console.log(before);
+console.log(closeBtn);
+loginBtn.addEventListener('click',()=>{
+    loginBtn.style.display='none';
+    loginForm.style.display='block';
+    before.style.display='block';
+});
+closeBtn.addEventListener('click', ()=>{
+    loginBtn.style.display='block';
+    loginForm.style.display='none';
+    before.style.display='none';
+});
+//end login page
