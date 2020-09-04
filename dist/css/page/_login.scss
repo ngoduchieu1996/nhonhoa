@@ -6,6 +6,7 @@
     .wrapper-login{
         img{
             height: 100vh;
+            object-fit: cover;
         }
     }
     &-button{
@@ -33,7 +34,7 @@
         }
     }
     &-form{
-        display: none;
+        opacity: 0;
         position: absolute;
         top: 0;
         left: 0;
@@ -103,7 +104,64 @@
         top: 0;
         left: 0;
         z-index: 0;
-        display:none;
+        display: none;
     }
+    .btn{
+        font-weight: bold;
+    }
+    &-form:hover {
+        box-shadow: 1px 1px 50px #fff4f4;
+    }
+    .form-scale-in{
+        animation: scale-in .5s ease forwards;
+        animation-delay: .5s;
+    }
+    @keyframes scale-in {
+        from {
+            transform: scale(0);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+            z-index: 2;
+        }
+    }
+    .form-scale-out{
+        animation: scale-out .5s ease forwards;
+    }
+    @keyframes scale-out {
+        from {
+            transform: scale(1);
+            opacity: 1;
+        }
+        to {
+            transform: scale(0);
+            opacity: 0;
+        }
+    }
+    .login-btn-animation1{
+        animation:loginBtn1 0.5s ease forwards;
+    }
+    @keyframes loginBtn1 {
+        from {
+            opacity: 0.7;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+    .login-btn-animation2{
+        animation:loginBtn2 0.5s ease forwards;
+    }
+    @keyframes loginBtn2 {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 0.7;
+        }
+    }
+
 }
 
