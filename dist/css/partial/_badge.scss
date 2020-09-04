@@ -24,10 +24,13 @@
 
   &-danger {
     background-color: $Danger;
-   
   }
 
   &-label-warning {
     background-color: #e7804f;
+  }
+
+  &-success {
+    background-color: $success;
   }
 }
