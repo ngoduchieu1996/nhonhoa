@@ -27,6 +27,8 @@ for (let back of backs) {
   });
 }
 
+
+
 //start login page js
 const loginBtn = document.querySelector('.login-button');
 const loginForm = document.querySelector('.login-form');
@@ -49,3 +51,4 @@ closeBtn.addEventListener('click', ()=>{
     loginBtn.classList.remove("login-btn-animation1");
 });
 //end login page
+

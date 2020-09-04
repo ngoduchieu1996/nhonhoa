@@ -13,6 +13,163 @@ body {
 }
 
 .form-control {
-  padding: 0.6rem 0.9rem;
+  padding: 0.8rem 0.9rem;
   border-radius: 0.2rem;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a9a9a9;
+}
+
+::-webkit-scrollbar-track {
+  background: #0000;
+}
+
+.control-bar {
+  .left-form {
+    .form-item {
+      display: flex;
+      align-items: center;
+      margin-right: 0.5rem;
+    }
+
+    .form-control {
+      height: 100%;
+      position: relative;
+    }
+
+    ::placeholder {
+      font-size: 1.1rem;
+    }
+
+    ::-webkit-input-placeholder {
+      font-size: 1rem;
+    }
+
+    label {
+      margin-right: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+  }
+
+  .right-form {
+    display: flex;
+
+    .form-control {
+      margin-left: 1rem;
+    }
+
+    button i {
+      transition: transform 0.5s;
+    }
+  }
+}
+
+.datepicker {
+  padding: 0;
+  border: none !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+  font-family: $fontRoboto !important;
+
+  &-days {
+    margin-top: 1rem;
+    background-color: #fff;
+    border: 0.1rem solid #ccc;
+    box-shadow: 0 0 0.3rem #ccc;
+    border-radius: 0.4rem;
+  }
+
+  th,
+  td {
+    padding: 0.8rem 1rem !important;
+    @include box(3rem);
+    font-size: 1.2rem;
+  }
+}
+
+.datepicker-dropdown.datepicker-orient-top:before {
+  top: 4px;
+}
+
+.datepicker-dropdown.datepicker-orient-top:after {
+  top: 5px;
+}
+
+.add-new-pill {
+  padding-top: 1rem;
+  display: none;
+
+  h2 {
+    background-color: #17a2b8;
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 3.5rem;
+    color: #fff;
+  }
+
+  &__form {
+    padding: 1rem 1.5rem;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 0.5rem #ccc;
+
+    .item {
+      height: 100%;
+    }
+
+    select {
+      display: none;
+    }
+
+    label {
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 1.8rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+
+      &.required::after {
+        content: "(*)";
+        color: red;
+        letter-spacing: 0.1rem;
+        margin-left: 0.5rem;
+      }
+    }
+
+    textarea,
+    button {
+      height: 3.4rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+    .select-box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .chosen-container {
+      @extend .form-control;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      height: 3.4rem;
+      cursor: pointer;
+
+      .chosen-single {
+        font-size: 1.1rem;
+        width: 100%;
+      }
+    }
+  }
 }
