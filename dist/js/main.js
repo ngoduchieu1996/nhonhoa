@@ -26,3 +26,29 @@ for (let back of backs) {
     p.style.animation = "";
   });
 }
+
+
+
+//start login page js
+const loginBtn = document.querySelector('.login-button');
+const loginForm = document.querySelector('.login-form');
+const before = document.getElementById('before');
+const closeBtn = document.querySelector('.close-btn');
+loginBtn.addEventListener('click',()=>{
+    loginForm.classList.add("form-scale-in");
+    loginForm.classList.remove("form-scale-out");
+    loginBtn.classList.add("login-btn-animation1");
+    loginBtn.classList.remove("login-btn-animation2");
+    setTimeout(()=> {
+      before.style.display='block';
+    }, 500);
+});
+closeBtn.addEventListener('click', ()=>{
+    before.style.display='none';
+    loginForm.classList.add("form-scale-out");
+    loginForm.classList.remove("form-scale-in");
+    loginBtn.classList.add("login-btn-animation2");
+    loginBtn.classList.remove("login-btn-animation1");
+});
+//end login page
+
