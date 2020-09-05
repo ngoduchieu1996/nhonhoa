@@ -3067,6 +3067,44 @@ body {
   background: #0000;
 }
 
+.bread-cumb {
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bread-cumb .manage-page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+.bread-cumb__content {
+  background-color: #fff;
+  padding: 1.5rem;
+  font-size: 1.05rem;
+  color: #232323;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.bread-cumb__content a:hover {
+  color: #4e73df;
+}
+.bread-cumb__content .root-page {
+  margin-right: 1rem;
+}
+.bread-cumb__content .root-page::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 0.8rem;
+}
+.bread-cumb__content .root-page::after {
+  content: "/";
+  font-weight: 600;
+  margin-left: 0.8rem;
+}
+
 .control-bar .left-form .form-item {
   display: flex;
   align-items: center;
@@ -3328,6 +3366,9 @@ body {
   position: relative;
   font-family: "Roboto", sans-serif;
 }
+.main-table table.lock {
+  overflow-x: scroll;
+}
 .main-table thead th {
   position: sticky;
   top: -0.1rem;
@@ -3423,47 +3464,6 @@ body {
   width: 30%;
 }
 
-.table-quanly-banhang .table-wrapper {
-  margin-bottom: 0;
-}
-.table-quanly-banhang th i {
-  transform: translateY(0.3rem);
-}
-.table-quanly-banhang tbody tr:hover td:last-child {
-  background-color: #d7e6e6;
-}
-.table-quanly-banhang td:last-child {
-  background-color: #ebebeb;
-  text-align: center;
-  width: 8%;
-}
-.table-quanly-banhang td:last-child button {
-  color: #808080;
-  padding: 0.6rem;
-}
-.table-quanly-banhang td:last-child button i {
-  font-size: 1.6rem;
-}
-.table-quanly-banhang td:last-child button:not(:last-child) {
-  margin-right: 0.5rem;
-}
-.table-quanly-banhang td:last-child button.edit:hover {
-  color: #f6c23e;
-  background: linear-gradient(#f6c23e6c, #f6c23e6c);
-}
-.table-quanly-banhang td:last-child button.delete:hover {
-  color: #e74a3b;
-  background: linear-gradient(#e7493b4d, #e7493b4d);
-}
-.table-quanly-banhang td:nth-last-child(2) {
-  text-align: center;
-  width: 10%;
-}
-.table-quanly-banhang td:nth-last-child(2) span {
-  text-align: left;
-  font-size: 1.06rem;
-}
-
 .badge {
   border-radius: 0.4rem;
   color: #fff;
@@ -3500,35 +3500,17 @@ body {
   height: 100vh;
   position: fixed;
   z-index: 1;
-  top: 0;
+  top: 5.7rem;
   left: 0;
   background-color: white;
   transition: width 0.5s;
   box-shadow: 0 0 1rem #ccc;
   overflow-x: hidden;
   overflow-y: scroll;
-  position: relative;
   z-index: 1;
 }
 .sidenav::-webkit-scrollbar {
   display: none;
-}
-.sidenav .show-on-hover {
-  display: none;
-  white-space: nowrap;
-}
-.sidenav:hover {
-  width: 30rem;
-}
-.sidenav:hover .show-on-hover {
-  display: block;
-}
-.sidenav:hover a.show-menu::before {
-  display: block;
-}
-.sidenav:hover .hidden-ul {
-  left: 0;
-  width: 100%;
 }
 .sidenav a {
   font-size: 14px;
@@ -3578,6 +3560,39 @@ body {
 }
 .sidenav .icon-menu i {
   font-size: 2rem;
+}
+
+.sidenav-lock {
+  width: 30rem;
+}
+.sidenav-lock .show-on-hover {
+  display: block;
+  white-space: nowrap;
+}
+.sidenav-lock a.show-menu::before {
+  display: block;
+}
+.sidenav-lock .hidden-ul {
+  left: 0;
+  width: 100%;
+}
+
+.sidebar-hover .show-on-hover {
+  display: none;
+  white-space: nowrap;
+}
+.sidebar-hover:hover {
+  width: 30rem;
+}
+.sidebar-hover:hover .show-on-hover {
+  display: block;
+}
+.sidebar-hover:hover a.show-menu::before {
+  display: block;
+}
+.sidebar-hover:hover .hidden-ul {
+  left: 0;
+  width: 100%;
 }
 
 .side_title {
@@ -3837,6 +3852,7 @@ body {
   margin-left: 5rem;
   background-color: #f2f3f8;
   padding: 4rem;
+  transition: all 0.5s;
 }
 
 .kehoachsanxuat,
@@ -3845,11 +3861,45 @@ body {
   background-color: #fff;
 }
 
-#quanlyhoadon h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 2rem;
-  margin-bottom: 3rem;
+#quanly-banhang .table-quanly-banhang .table-wrapper {
+  margin-bottom: 0;
+}
+#quanly-banhang .table-quanly-banhang th i {
+  transform: translateY(0.3rem);
+}
+#quanly-banhang .table-quanly-banhang tbody tr:hover td:last-child {
+  background-color: #d7e6e6;
+}
+#quanly-banhang .table-quanly-banhang td:last-child {
+  background-color: #ebebeb;
+  text-align: center;
+  width: 8%;
+}
+#quanly-banhang .table-quanly-banhang td:last-child button {
+  color: #808080;
+  padding: 0.6rem;
+}
+#quanly-banhang .table-quanly-banhang td:last-child button i {
+  font-size: 1.6rem;
+}
+#quanly-banhang .table-quanly-banhang td:last-child button:not(:last-child) {
+  margin-right: 0.5rem;
+}
+#quanly-banhang .table-quanly-banhang td:last-child button.edit:hover {
+  color: #f6c23e;
+  background: linear-gradient(#f6c23e6c, #f6c23e6c);
+}
+#quanly-banhang .table-quanly-banhang td:last-child button.delete:hover {
+  color: #e74a3b;
+  background: linear-gradient(#e7493b4d, #e7493b4d);
+}
+#quanly-banhang .table-quanly-banhang td:nth-last-child(2) {
+  text-align: center;
+  width: 10%;
+}
+#quanly-banhang .table-quanly-banhang td:nth-last-child(2) span {
+  text-align: left;
+  font-size: 1.06rem;
 }
 
 /*# sourceMappingURL=style.css.map */
