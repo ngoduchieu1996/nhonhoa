@@ -45,6 +45,10 @@
     font-family: $fontRoboto;
   }
 
+  table.lock {
+    overflow-x: scroll;
+  }
+
   thead th {
     position: sticky;
     top: -0.1rem;
@@ -168,61 +172,5 @@
   th:nth-child(4),
   td:nth-child(4) {
     width: 30%;
-  }
-}
-
-//Bảng quản lý bán hàng
-.table-quanly-banhang {
-  .table-wrapper {
-    margin-bottom: 0;
-  }
-
-  th {
-    i {
-      transform: translateY(0.3rem);
-    }
-  }
-
-  tbody tr:hover td:last-child {
-    background-color: #d7e6e6;
-  }
-
-  td:last-child {
-    background-color: #ebebeb;
-    text-align: center;
-    width: 8%;
-
-    button {
-      color: #808080;
-      padding: 0.6rem;
-    }
-
-    button i {
-      font-size: 1.6rem;
-    }
-
-    button:not(:last-child) {
-      margin-right: 0.5rem;
-    }
-
-    button.edit:hover {
-      color: $Warning;
-      background: linear-gradient(#f6c23e6c, #f6c23e6c);
-    }
-
-    button.delete:hover {
-      color: $Danger;
-      background: linear-gradient(#e7493b4d, #e7493b4d);
-    }
-  }
-
-  td:nth-last-child(2) {
-    text-align: center;
-    width: 10%;
-
-    span {
-      text-align: left;
-      font-size: 1.06rem;
-    }
   }
 }

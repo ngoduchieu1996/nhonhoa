@@ -3,40 +3,17 @@
   height: 100vh;
   position: fixed;
   z-index: 1;
-  top: 0;
+  top: 5.7rem;
   left: 0;
   background-color: white;
   transition: width 0.5s;
   box-shadow: 0 0 1rem #ccc;
   overflow-x: hidden;
   overflow-y: scroll;
-  position: relative;
   z-index: 1;
 
   &::-webkit-scrollbar {
     display: none;
-  }
-
-  .show-on-hover {
-    display: none;
-    white-space: nowrap;
-  }
-
-  &:hover {
-    width: 30rem;
-  }
-
-  &:hover .show-on-hover {
-    display: block;
-  }
-
-  &:hover a.show-menu::before {
-    display: block;
-  }
-
-  &:hover .hidden-ul {
-    left: 0;
-    width: 100%;
   }
 
   a {
@@ -92,6 +69,48 @@
     i {
       font-size: 2rem;
     }
+  }
+}
+
+.sidenav-lock {
+  width: 30rem;
+
+  .show-on-hover {
+    display: block;
+    white-space: nowrap;
+  }
+
+  a.show-menu::before {
+    display: block;
+  }
+
+  .hidden-ul {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.sidebar-hover {
+  .show-on-hover {
+    display: none;
+    white-space: nowrap;
+  }
+
+  &:hover {
+    width: 30rem;
+  }
+
+  &:hover .show-on-hover {
+    display: block;
+  }
+
+  &:hover a.show-menu::before {
+    display: block;
+  }
+
+  &:hover .hidden-ul {
+    left: 0;
+    width: 100%;
   }
 }
 
