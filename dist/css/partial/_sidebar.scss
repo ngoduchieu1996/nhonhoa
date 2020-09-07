@@ -130,7 +130,13 @@
   padding-left: 8px;
 }
 
-/* Optional: Style the caret down icon */
+.side-nav__menu li.active {
+  background-color: #eaeaea;
+
+  & > * {
+    color: $blue;
+  }
+}
 
 .logo_size {
   width: 25px;
