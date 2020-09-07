@@ -1,0 +1,51 @@
+#quanly-dongiaban {
+  .control-bar {
+    .left-form {
+      .form-item {
+        margin-right: 1.5rem;
+      }
+    }
+
+
+    button.open-form {
+      margin-top: 1.5rem;
+      padding: 1.5rem;
+    }
+  }
+
+  .form-don-gia {
+    @include fixed(top 50% left 50%);
+    transform: translate(-50%, -50%);
+    z-index: 150;
+    width: 80%;
+    display: none;
+
+    h2 {
+      background-image: linear-gradient(to right, #008cc5, #00bcda);
+      font-size: 1.6rem;
+      font-weight: 700;
+      padding: 1rem 1.5rem;
+      color: #fff;
+    }
+
+    .form-container {
+      padding: 3rem 3.5rem;
+      background-color: #fff;
+      min-height: 30rem;
+    }
+
+    button.close {
+      @include absolute(top 1rem right 1rem);
+      color: #fff;
+
+      i {
+        font-size: 2rem;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+        transform-origin: center;
+      }
+    }
+  }
+}

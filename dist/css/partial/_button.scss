@@ -1,6 +1,6 @@
 .btn {
   font-size: 1.2rem;
-  padding: 0.6rem 1.2rem;
+  padding: 1rem 1.2rem;
   border-radius: 0.2rem;
   outline: none;
   border: none;
@@ -10,9 +10,49 @@
 .btn-blue {
   background-color: #50abc2;
   color: #fff;
+
+  &:hover {
+    background-color: darken($color: #50abc2, $amount: 10%);
+  }
 }
 
 .btn-danger {
   background-color: $Danger;
   color: #fff;
+
+  &:hover {
+    background-color: lighten($color: $Danger, $amount: 5%);
+  }
+}
+
+.btn-function {
+  text-align: center;
+
+  button {
+    color: #808080;
+    padding: 0.6rem;
+  }
+
+  button i {
+    font-size: 1.6rem;
+  }
+
+  button:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+
+  button.edit:hover {
+    color: $Warning;
+    background: linear-gradient(#f6c23e1f, #f6c23e1f);
+  }
+
+  button.delete:hover {
+    color: $Danger;
+    background: linear-gradient(#e7493b4d, #e7493b4d);
+  }
+
+  button.copy:hover {
+    color: $Info;
+    background: linear-gradient(#36b8cc23, #36b8cc23);
+  }
 }
