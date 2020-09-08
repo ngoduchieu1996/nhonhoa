@@ -14,10 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../../lib/css/datepicker.css" />
+    <link rel="stylesheet" href="../../../lib/css/datepicker.css" />
 
-    <link rel="stylesheet" href="../../font/fontawesome-free-5.14.0-web/css/all.css" />
-    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../../font/fontawesome-free-5.14.0-web/css/all.css" />
+    <link rel="stylesheet" href="../../../css/style.css" />
   </head>
   <body>
     <nav class="nav-bar t-white">
@@ -29,159 +29,386 @@
         <i class="fas fa-bars t-white"></i>
       </button>
 
-      <div class="nav-bar__menu">
-        <ul>
-          <li class="nav-bar__menu-link has-sub">
-            <div class="icon">
-              <i class="fas fa-list"></i>
+      <div class="nav-bar__menu hide-for-tablet">
+        <div class="block">
+          <div class="nav-bar__menu-list">
+            <ul class="">
+              <li class="nav-bar__menu-link has-sub">
+                <div class="icon">
+                  <i class="fas fa-list"></i>
+                </div>
+
+                <span>Kế hoạch</span>
+
+                <div class="sub-menu">
+                  <div class="d-flex-bw">
+                    <div class="w-5">
+                      <a href="">Kế hoạch</a>
+                    </div>
+
+                    <div class="w-5">
+                      <a href="">CCDC</a>
+                    </div>
+
+                    <div class="w-5">
+                      <a href="">Gia Công</a>
+                    </div>
+
+                    <div class="w-5">
+                      <a href="">Cấp Hàng</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-bar__menu-link has-sub">
+                <div class="icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+
+                <span>Kinh doanh</span>
+
+                <div class="sub-menu d-flex-bw">
+                  <div class="d-flex-bw">
+                    <div class="w-5">
+                      <a href="kinhdoanhnoidia.html">Nội địa </a>
+                    </div>
+
+                    <div class="w-5">
+                      <a href="">Xuất khẩu</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-bar__menu-link">
+                <a href="">
+                  <div class="icon">
+                    <i class="fas fa-warehouse"></i>
+                  </div>
+
+                  <span>Kho</span>
+                </a>
+              </li>
+
+              <li class="nav-bar__menu-link has-sub">
+                <div class="icon">
+                  <i class="fas fa-industry"></i>
+                </div>
+
+                <span>Xưởng</span>
+
+                <div class="sub-menu">
+                  <div class="d-flex-bw">
+                    <div class="col-4"><a href="">Xưởng 1</a></div>
+                    <div class="col-4"><a href="">Xưởng 2</a></div>
+                    <div class="col-4"><a href="">Xưởng 3</a></div>
+                    <div class="col-4"><a href="">Xưởng 4</a></div>
+                    <div class="col-4"><a href="">Xưởng 5</a></div>
+                    <div class="col-4"><a href="">Xưởng 6</a></div>
+                    <div class="col-4"><a href="">Xưởng 7</a></div>
+                    <div class="col-4"><a href="">Xưởng 8</a></div>
+                    <div class="col-4"><a href="">Xưởng 9</a></div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-bar__menu-link has-sub">
+                <div class="icon">
+                  <i class="far fa-id-card"></i>
+                </div>
+
+                <span>Kiểm định</span>
+
+                <div class="sub-menu">
+                  <div class="d-flex-bw">
+                    <div class="col-4">
+                      <a href="#">Xưởng 4 </a>
+                    </div>
+
+                    <div class="col-4">
+                      <a href="">Xưởng 5</a>
+                    </div>
+
+                    <div class="col-4">
+                      <a href="">Xưởng 6</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-bar__menu-link">
+                <a href="">
+                  <div class="icon">
+                    <i class="fas fa-tools"></i>
+                  </div>
+
+                  <span>Công cụ dụng cụ</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav-bar__cta d-flex align-center">
+            <div>
+              <a href="#" title="Khóa">
+                <i class="fas fa-lock"></i>
+              </a>
             </div>
 
-            <span>Kế hoạch</span>
+            <div class="position-relative">
+              <span title="Ghi chú" id="nav-note" class="nav-bar__cta-has-sub">
+                <i class="fas fa-th t-l-yellow"></i>
+              </span>
 
-            <div class="sub-menu">
-              <div class="d-flex-bw">
-                <div class="w-5">
-                  <a href="">Kế hoạch</a>
-                </div>
+              <div class="note-inner nav-bar__cta-sub">
+                <div class="note-inner__block">
+                  <div class="create-note fz-14">
+                    <span class="fw-5">Ghi chú</span>
+                    <button class="btn btn-blue fz-11">Tạo ghi chú mới</button>
+                  </div>
 
-                <div class="w-5">
-                  <a href="">CCDC</a>
-                </div>
+                  <div class="show-more-note">
+                    <span class="fz-16 fw-6 t-d-grey">Hiển thị thêm ghi chú</span>
 
-                <div class="w-5">
-                  <a href="">Gia Công</a>
-                </div>
-
-                <div class="w-5">
-                  <a href="">Cấp Hàng</a>
+                    <button>
+                      <i class="fas fa-cog fa-spin fz-18"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </li>
 
-          <li class="nav-bar__menu-link has-sub">
-            <div class="icon">
-              <i class="fas fa-briefcase"></i>
-            </div>
+            <div class="position-relative">
+              <span title="Thông báo" id="nav-notification" class="nav-bar__cta-has-sub">
+                <span class="noti-counter"></span>
+                <i class="fas fa-align-justify"></i>
+              </span>
 
-            <span>Kinh doanh</span>
+              <div class="notification-inner nav-bar__cta-sub">
+                <div class="notification-inner__block">
+                  <div class="notification-note fz-14">
+                    <span class="fw-6">Thông báo</span>
+                    <span class="fz-10 t-blue">Đánh dấu tất cả đã đọc</span>
+                  </div>
 
-            <div class="sub-menu d-flex-bw">
-              <div class="d-flex-bw">
-                <div class="w-5">
-                  <a href="kinhdoanhnoidia.html">Nội địa </a>
-                </div>
-
-                <div class="w-5">
-                  <a href="">Xuất khẩu</a>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <li class="nav-bar__menu-link">
-            <a href="">
-              <div class="icon">
-                <i class="fas fa-warehouse"></i>
-              </div>
-
-              <span>Kho</span>
-            </a>
-          </li>
-
-          <li class="nav-bar__menu-link has-sub">
-            <div class="icon">
-              <i class="fas fa-industry"></i>
-            </div>
-
-            <span>Xưởng</span>
-
-            <div class="sub-menu">
-              <div class="d-flex-bw">
-                <div class="col-4"><a href="">Xưởng 1</a></div>
-                <div class="col-4"><a href="">Xưởng 2</a></div>
-                <div class="col-4"><a href="">Xưởng 3</a></div>
-                <div class="col-4"><a href="">Xưởng 4</a></div>
-                <div class="col-4"><a href="">Xưởng 5</a></div>
-                <div class="col-4"><a href="">Xưởng 6</a></div>
-                <div class="col-4"><a href="">Xưởng 7</a></div>
-                <div class="col-4"><a href="">Xưởng 8</a></div>
-                <div class="col-4"><a href="">Xưởng 9</a></div>
-              </div>
-            </div>
-          </li>
-
-          <li class="nav-bar__menu-link has-sub">
-            <div class="icon">
-              <i class="far fa-id-card"></i>
-            </div>
-
-            <span>Kiểm định</span>
-
-            <div class="sub-menu">
-              <div class="d-flex-bw">
-                <div class="col-4">
-                  <a href="#">Xưởng 4 </a>
-                </div>
-
-                <div class="col-4">
-                  <a href="">Xưởng 5</a>
-                </div>
-
-                <div class="col-4">
-                  <a href="">Xưởng 6</a>
+                  <div class="show-more-notification text-center">
+                    <a class="fz-16 fw-6 t-d-grey" href="#">Xem thêm</a>
+                  </div>
                 </div>
               </div>
             </div>
-          </li>
 
-          <li class="nav-bar__menu-link">
-            <a href="">
-              <div class="icon">
-                <i class="fas fa-tools"></i>
+            <div class="position-relative">
+              <span title="Cấu hình chung" class="nav-bar__cta-has-sub" id="nav-setting">
+                <i class="fas fa-cogs"></i>
+              </span>
+
+              <div class="setting-inner nav-bar__cta-sub">
+                <div class="setting-inner__block">
+                  <ul>
+                    <li class="t-black fz-14 fw-5">Cấu hình chung</li>
+
+                    <li class="setting-inner__block-link">
+                      <a href="#">Quản lý tài khoản</a>
+                    </li>
+
+                    <li class="setting-inner__block-link">
+                      <a href="#">Phân quyền</a>
+                    </li>
+
+                    <li class="setting-inner__block-link">
+                      <a href="#">Quản lý đơn vị</a>
+                    </li>
+
+                    <li class="setting-inner__block-link">
+                      <a href="#">Cài đặt màn hình chính</a>
+                    </li>
+
+                    <li class="setting-inner__block-link">
+                      <a href="#">Quản lý thông báo</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
+            </div>
 
-              <span>Công cụ dụng cụ</span>
-            </a>
-          </li>
-        </ul>
+            <figure class="user-logo">
+              <span class="nav-bar__cta-has-sub" title="Tài khoản">
+                <img src="../../../asset/default_usr.png" alt="logo user" />
+                <p class="fz-12 fw-5">Admin</p>
+              </span>
+
+              <div class="user-logo__control nav-bar__cta-sub">
+                <ul class="user-logo__control-list">
+                  <li>
+                    <i class="fas fa-key"></i>
+                    <a href="#">Thay đổi mật khẩu</a>
+                  </li>
+
+                  <li>
+                    <i class="fas fa-pen-fancy"></i>
+                    <a href="#">Quản lý tài khoản</a>
+                  </li>
+
+                  <li>
+                    <i class="fas fa-sign-out-alt"></i>
+                    <a href="#">Đăng xuất</a>
+                  </li>
+                </ul>
+              </div>
+            </figure>
+          </div>
+        </div>
       </div>
 
-      <div class="nav-bar__cta d-flex align-center">
-        <div>
-          <a href="#" title="Khóa">
-            <i class="fas fa-lock"></i>
-          </a>
-        </div>
-
-        <div>
-          <a href="#" title="Ghi chú">
-            <i class="fas fa-th t-l-yellow"></i>
-          </a>
-        </div>
-
-        <div>
-          <a href="#" title="Thông báo">
-            <i class="fas fa-align-justify"></i>
-          </a>
-        </div>
-
-        <div>
-          <a href="" title="Cấu hình chung">
-            <i class="fas fa-cogs"></i>
-          </a>
-        </div>
-
-        <figure class="user-logo">
-          <img src="../../asset/default_usr.png" alt="logo user" />
-          <p class="fz-12 fw-5">Admin</p>
-        </figure>
-      </div>
+      <button id="show-nav-bar" class="show-for-tablet t-white">
+        <i class="fas fa-ellipsis-h"></i>
+      </button>
     </nav>
+
+    <div class="sidenav sidebar-hover" id="side-bar">
+      <div class="side_title d-flex align-center">
+        <img src="../../../asset/logo-trans.png" class="logo_size" />
+        <h2 class="show-on-hover">P.KINH DOANH - NỘI ĐỊA</h2>
+      </div>
+
+      <ul class="side-nav__menu">
+        <li class="active">
+          <a href="#" class="show-menu"
+            ><span class="icon-menu"><i class="fas fa-list-alt"></i></span>
+            <span class="show-on-hover">Quản lý Mua hàng</span>
+          </a>
+          <ul class="hidden-ul dropdown-btn" style="display: none">
+            <a href="#" class="back"><span class="show-on-hover">Quản lý Mua hàng</span> </a>
+
+
+            <li>
+              <a href="#" class="show-on-hover"
+                ><span><i class="fas fa-list-alt"></i></span>DS yêu cầu mua hàng</a
+              >
+            </li>
+
+            <li class="active">
+              <a href="#" class="show-on-hover"
+                ><span><i class="fas fa-clipboard-list"></i></span>Quản lý Phiếu mua hàng</a
+              >
+            </li>
+
+            <li>
+              <a href="#" class="show-on-hover"
+                ><span><i class="fas fa-clipboard-list"></i></span>Hóa đơn mua hàng</a
+              >
+            </li>
+            <li>
+              <a href="#" class="show-on-hover"
+                ><span><i class="fas fa-file-contract"></i></span>Quản lý Hợp đồng mua hàng</a
+              >
+            </li>
+            <li>
+              <a href="#" class="show-on-hover"
+                ><span><i class="fas fa-sticky-note"></i></span>Phiếu kiểm hóa</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" class="show-menu"
+            ><span class="icon-menu"><i class="fas fa-tag"></i></span>
+            <span class="show-on-hover">Quản lý Bán hàng</span>
+          </a>
+          <ul class="hidden-ul dropdown-btn" style="display: none">
+            <a href="#" class="back"><span class="show-on-hover">Quản lý Bán hàng</span> </a>
+            <li>
+              <a href="#" class="show-on-hover"
+                ><span><i class="fas fa-tag"></i></span>Đơn giá bán</a
+              >
+            </li>
+            <li>
+              <a href="#" class="show-on-hover"
+                ><span><i class="fas fa-clipboard-list"></i></span>Quản lý Phiếu đặt hàng</a
+              >
+            </li>
+
+            <li>
+              <a href="#" class="show-on-hover"
+                ><span><i class="fas fa-receipt"></i></span>Hóa đơn bán hàng</a
+              >
+            </li>
+            <li>
+              <a href="#" class="show-on-hover"
+                ><span><i class="fas fa-file-contract"></i></span>Hợp đồng bán hàng</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="show-menu"
+            ><span class="icon-menu"><i class="fas fa-file-invoice"></i></span>
+            <span class="show-on-hover">Báo cáo thống kê</span>
+          </a>
+          <ul class="hidden-ul dropdown-btn" style="display: none">
+            <a href="#" class="back"><span class="show-on-hover">Báo cáo thống kê</span> </a>
+            <li>
+              <a href="#" class="show-on-hover"
+                ><span><i class="far fa-eye"></i></span>Theo dõi nhập kho</a
+              >
+            </li>
+            <li>
+              <a href="#" class="show-on-hover"
+                ><span><i class="fas fa-cubes"></i></span>Báo cáo tồn kho thành phẩm</a
+              >
+            </li>
+
+            <li>
+              <a href="#" class="show-on-hover"
+                ><span><i class="fas fa-cubes"></i></span>Báo cáo thị trường</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" class="show-menu"
+            ><span class="icon-menu"><i class="fas fa-clipboard-list"></i></span>
+            <span class="show-on-hover">Quản lý Danh mục</span>
+          </a>
+          <ul class="hidden-ul dropdown-btn" style="display: none">
+            <a href="#" class="back"><span class="show-on-hover">Quản lý Danh mục</span> </a>
+            <li>
+              <a href="#" class="show-on-hover">Quản lý loại hình kinh doanh</a>
+            </li>
+            <li>
+              <a href="#" class="show-on-hover">Quản Lý Khách hàng</a>
+            </li>
+
+            <li>
+              <a href="#" class="show-on-hover">Quản lý Nhóm khách hàng</a>
+            </li>
+            <li>
+              <a href="#" class="show-on-hover">Quản lý danh mục cân</a>
+            </li>
+            <li>
+              <a href="#" class="show-on-hover">Quản lý Nhóm đơn giá bán</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
 
     <main id="quanly-danhsach-phieumuahang">
       <div class="page-container">
-        <h1 class="manage-page-title">Quản lý danh sách phiếu mua hàng</h1>
+        <div class="bread-cumb">
+          <h1 class="manage-page-title">Quản lý danh sách phiếu mua hàng
+            </h1>
+
+          <div class="bread-cumb__content">
+            <a class="root-page" href="../kinhdoanhnoidia.html"> Trang chủ </a>
+
+            <a href="./muahang-phieumuahang.html">Danh sách phiếu mua hàng</a>
+          </div>
+        </div>
 
         <div class="control-bar">
           <div class="d-flex-bw">
@@ -386,29 +613,24 @@
               <table class="w-10">
                 <thead>
                   <tr>
-                    <th>TT</th>
+                    <th>STT</th>
 
-                    <th class="sort">Số chứng từ <i class="fas fa-sort-up ml-5"></i></th>
+                    <th>Số đơn hàng (PO)</th>
 
-                    <th class="sort">Ngày lập <i class="fas fa-sort-up ml-5"></i></th>
+                    <th>Số PR (Số PYC)</th>
 
-                    <th class="sort">Khách hàng <i class="fas fa-sort-up ml-5"></i></th>
+                    <th>Ngày lập</th>
 
-                    <th class="sort">Số hợp đồng <i class="fas fa-sort-up ml-5"></i></th>
+                    <th>Nhà cung cấp</th>
 
-                    <th class="sort">Số hóa đơn <i class="fas fa-sort-up ml-5"></i></th>
-
-                    <th>Tổng SL</th>
-
-                    <th class="sort">Tổng tiền <i class="fas fa-sort-up ml-5"></i></th>
-
-                    <th>Nhóm ĐG</th>
+                    <th>Phiếu kiểm hóa</th>
 
                     <th>Ghi chú</th>
 
-                    <th>Trạng thái</th>
+                    <th>Tình trạng</th>
 
                     <th>Tác vụ</th>
+
                   </tr>
                 </thead>
 
@@ -416,664 +638,562 @@
                   <tr>
                     <td>1</td>
                     <td>
-                      <a href="#">DA200825852</a>
-                    </td>
-                    <td>25/08/2020</td>
-                    <td>Công ty TNHH MTV TM Nguyễn Oanh</td>
-
-                    <td>
-                      <a href="#"> 04/HĐĐL-20 </a>
+                      <a href="#">PO000298</a>
                     </td>
 
                     <td>
-                      <a href="#">002906</a>
+                      <a href="#">230/YC-KH-20</a>
                     </td>
 
-                    <td>550</td>
 
-                    <td>154.660.000</td>
+                    <td>
+                      31/08/2020
+                    </td>
+
+                    <td>
+                      Cty TNHH In ấn Nghĩa Hưng
+                    </td>
+
+                    <td>
+                     
+                    </td>
 
                     <td></td>
 
-                    <td></td>
-
                     <td>
-                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                      <span class="badge badge-warning">
+                        Đang chờ
+                      </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
-
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
+                    
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                    
+                       
+                        <button class="check">
+                          <i class="far fa-check-square"></i>
+                        </button>
+                        
+                      </div>
                     </td>
+                    
                   </tr>
 
                   <tr>
-                    <td>2</td>
+                    <td>1</td>
                     <td>
-                      <a href="#">DA200825852</a>
-                    </td>
-                    <td>25/08/2020</td>
-                    <td>Công Ty Cổ Phần Thương Nghiệp Tổng Hợp Cần Thơ</td>
-
-                    <td>
-                      <a href="#"> 04/HĐĐL-20 </a>
+                      <a href="#">PO000298</a>
                     </td>
 
                     <td>
-                      <a href="#">002906</a>
+                      <a href="#">230/YC-KH-20</a>
                     </td>
 
-                    <td>550</td>
 
-                    <td>154.660.000</td>
+                    <td>
+                      31/08/2020
+                    </td>
+
+                    <td>
+                      Cty TNHH In ấn Nghĩa Hưng
+                    </td>
+
+                    <td>
+                     
+                    </td>
 
                     <td></td>
 
-                    <td></td>
-
                     <td>
-                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                      <span class="badge badge-warning">
+                        Đang chờ
+                      </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
-
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
+                    
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                    
+                       
+                        <button class="check">
+                          <i class="far fa-check-square"></i>
+                        </button>
+                        
+                      </div>
                     </td>
+                    
                   </tr>
 
                   <tr>
-                    <td>3</td>
+                    <td>1</td>
                     <td>
-                      <a href="#">DA200825852</a>
-                    </td>
-                    <td>25/08/2020</td>
-                    <td>Công Ty Cổ Phần Thương Nghiệp Tổng Hợp Cần Thơ</td>
-
-                    <td>
-                      <a href="#"> 04/HĐĐL-20 </a>
+                      <a href="#">PO000298</a>
                     </td>
 
                     <td>
-                      <a href="#">002906</a>
+                      <a href="#">230/YC-KH-20</a>
                     </td>
 
-                    <td>550</td>
 
-                    <td>154.660.000</td>
+                    <td>
+                      31/08/2020
+                    </td>
+
+                    <td>
+                      Cty TNHH In ấn Nghĩa Hưng
+                    </td>
+
+                    <td>
+                     
+                    </td>
 
                     <td></td>
 
-                    <td></td>
-
                     <td>
-                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                      <span class="badge badge-warning">
+                        Đang chờ
+                      </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
-
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
+                    
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                    
+                       
+                        <button class="check">
+                          <i class="far fa-check-square"></i>
+                        </button>
+                        
+                      </div>
                     </td>
+                    
                   </tr>
 
                   <tr>
-                    <td>4</td>
+                    <td>1</td>
                     <td>
-                      <a href="#">DA200825852</a>
-                    </td>
-                    <td>25/08/2020</td>
-                    <td>DNTN Bùi Duy Thọ</td>
-
-                    <td>
-                      <a href="#"> 04/HĐĐL-20 </a>
+                      <a href="#">PO000298</a>
                     </td>
 
                     <td>
-                      <a href="#">002906</a>
+                      <a href="#">230/YC-KH-20</a>
                     </td>
 
-                    <td>550</td>
 
-                    <td>154.660.000</td>
+                    <td>
+                      31/08/2020
+                    </td>
+
+                    <td>
+                      Cty TNHH In ấn Nghĩa Hưng
+                    </td>
+
+                    <td>
+                     
+                    </td>
 
                     <td></td>
 
-                    <td></td>
-
                     <td>
-                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                      <span class="badge badge-warning">
+                        Đang chờ
+                      </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
-
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
+                    
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                    
+                       
+                        <button class="check">
+                          <i class="far fa-check-square"></i>
+                        </button>
+                        
+                      </div>
                     </td>
+                    
                   </tr>
 
                   <tr>
-                    <td>5</td>
+                    <td>1</td>
                     <td>
-                      <a href="#">DA200825852</a>
-                    </td>
-                    <td>25/08/2020</td>
-                    <td>DNTN Bùi Duy Thọ</td>
-
-                    <td>
-                      <a href="#"> 04/HĐĐL-20 </a>
+                      <a href="#">PO000298</a>
                     </td>
 
                     <td>
-                      <a href="#">002906</a>
+                      <a href="#">230/YC-KH-20</a>
                     </td>
 
-                    <td>550</td>
 
-                    <td>154.660.000</td>
+                    <td>
+                      31/08/2020
+                    </td>
+
+                    <td>
+                      Cty TNHH In ấn Nghĩa Hưng
+                    </td>
+
+                    <td>
+                     
+                    </td>
 
                     <td></td>
 
-                    <td></td>
-
                     <td>
-                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                      <span class="badge badge-warning">
+                        Đang chờ
+                      </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
-
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
+                    
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                    
+                       
+                        <button class="check">
+                          <i class="far fa-check-square"></i>
+                        </button>
+                        
+                      </div>
                     </td>
+                    
                   </tr>
 
                   <tr>
-                    <td>6</td>
+                    <td>1</td>
                     <td>
-                      <a href="#">DA200825852</a>
-                    </td>
-                    <td>25/08/2020</td>
-                    <td>DNTN Bùi Duy Thọ</td>
-
-                    <td>
-                      <a href="#"> 04/HĐĐL-20 </a>
+                      <a href="#">PO000298</a>
                     </td>
 
                     <td>
-                      <a href="#">002906</a>
+                      <a href="#">230/YC-KH-20</a>
                     </td>
 
-                    <td>550</td>
 
-                    <td>154.660.000</td>
+                    <td>
+                      31/08/2020
+                    </td>
+
+                    <td>
+                      Cty TNHH In ấn Nghĩa Hưng
+                    </td>
+
+                    <td>
+                     
+                    </td>
 
                     <td></td>
 
-                    <td></td>
-
                     <td>
-                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                      <span class="badge badge-warning">
+                        Đang chờ
+                      </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
-
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
+                    
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                    
+                       
+                        <button class="check">
+                          <i class="far fa-check-square"></i>
+                        </button>
+                        
+                      </div>
                     </td>
+                    
                   </tr>
 
                   <tr>
-                    <td>7</td>
+                    <td>1</td>
                     <td>
-                      <a href="#">DA200825852</a>
-                    </td>
-                    <td>25/08/2020</td>
-                    <td>DNTN Bùi Duy Thọ</td>
-
-                    <td>
-                      <a href="#"> 04/HĐĐL-20 </a>
+                      <a href="#">PO000298</a>
                     </td>
 
                     <td>
-                      <a href="#">002906</a>
+                      <a href="#">230/YC-KH-20</a>
                     </td>
 
-                    <td>550</td>
 
-                    <td>154.660.000</td>
+                    <td>
+                      31/08/2020
+                    </td>
+
+                    <td>
+                      Cty TNHH In ấn Nghĩa Hưng
+                    </td>
+
+                    <td>
+                     
+                    </td>
 
                     <td></td>
 
-                    <td></td>
-
                     <td>
-                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                      <span class="badge badge-warning">
+                        Đang chờ
+                      </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
-
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
+                    
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                    
+                       
+                        <button class="check">
+                          <i class="far fa-check-square"></i>
+                        </button>
+                        
+                      </div>
                     </td>
+                    
                   </tr>
 
                   <tr>
-                    <td>8</td>
+                    <td>1</td>
                     <td>
-                      <a href="#">DA200825852</a>
-                    </td>
-                    <td>25/08/2020</td>
-                    <td>DNTN Bùi Duy Thọ</td>
-
-                    <td>
-                      <a href="#"> 04/HĐĐL-20 </a>
+                      <a href="#">PO000298</a>
                     </td>
 
                     <td>
-                      <a href="#">002906</a>
+                      <a href="#">230/YC-KH-20</a>
                     </td>
 
-                    <td>550</td>
 
-                    <td>154.660.000</td>
+                    <td>
+                      31/08/2020
+                    </td>
+
+                    <td>
+                      Cty TNHH In ấn Nghĩa Hưng
+                    </td>
+
+                    <td>
+                     
+                    </td>
 
                     <td></td>
 
-                    <td></td>
-
                     <td>
-                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                      <span class="badge badge-warning">
+                        Đang chờ
+                      </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
-
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
+                    
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                    
+                       
+                        <button class="check">
+                          <i class="far fa-check-square"></i>
+                        </button>
+                        
+                      </div>
                     </td>
+                    
                   </tr>
 
                   <tr>
-                    <td>9</td>
+                    <td>1</td>
                     <td>
-                      <a href="#">DA200825852</a>
-                    </td>
-                    <td>25/08/2020</td>
-                    <td>DNTN Bùi Duy Thọ</td>
-
-                    <td>
-                      <a href="#"> 04/HĐĐL-20 </a>
+                      <a href="#">PO000298</a>
                     </td>
 
                     <td>
-                      <a href="#">002906</a>
+                      <a href="#">230/YC-KH-20</a>
                     </td>
 
-                    <td>550</td>
 
-                    <td>154.660.000</td>
+                    <td>
+                      31/08/2020
+                    </td>
+
+                    <td>
+                      Cty TNHH In ấn Nghĩa Hưng
+                    </td>
+
+                    <td>
+                     
+                    </td>
 
                     <td></td>
 
-                    <td></td>
-
                     <td>
-                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                      <span class="badge badge-warning">
+                        Đang chờ
+                      </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
-
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
+                    
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                    
+                       
+                        <button class="check">
+                          <i class="far fa-check-square"></i>
+                        </button>
+                        
+                      </div>
                     </td>
+                    
                   </tr>
 
                   <tr>
-                    <td>10</td>
+                    <td>1</td>
                     <td>
-                      <a href="#">DA200825852</a>
-                    </td>
-                    <td>25/08/2020</td>
-                    <td>DNTN Bùi Duy Thọ</td>
-
-                    <td>
-                      <a href="#"> 04/HĐĐL-20 </a>
+                      <a href="#">PO000298</a>
                     </td>
 
                     <td>
-                      <a href="#">002906</a>
+                      <a href="#">230/YC-KH-20</a>
                     </td>
 
-                    <td>550</td>
 
-                    <td>154.660.000</td>
+                    <td>
+                      31/08/2020
+                    </td>
+
+                    <td>
+                      Cty TNHH In ấn Nghĩa Hưng
+                    </td>
+
+                    <td>
+                     
+                    </td>
 
                     <td></td>
 
-                    <td></td>
-
                     <td>
-                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                      <span class="badge badge-warning">
+                        Đang chờ
+                      </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
-
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
+                    
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                    
+                       
+                        <button class="check">
+                          <i class="far fa-check-square"></i>
+                        </button>
+                        
+                      </div>
                     </td>
+                    
                   </tr>
 
                   <tr>
-                    <td>11</td>
+                    <td>1</td>
                     <td>
-                      <a href="#">DA200825852</a>
-                    </td>
-                    <td>25/08/2020</td>
-                    <td>DNTN Bùi Duy Thọ</td>
-
-                    <td>
-                      <a href="#"> 04/HĐĐL-20 </a>
+                      <a href="#">PO000298</a>
                     </td>
 
                     <td>
-                      <a href="#">002906</a>
+                      <a href="#">230/YC-KH-20</a>
                     </td>
 
-                    <td>550</td>
-
-                    <td>154.660.000</td>
-
-                    <td></td>
-
-                    <td></td>
 
                     <td>
-                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                      31/08/2020
                     </td>
 
                     <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
-
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>12</td>
-                    <td>
-                      <a href="#">DA200825852</a>
-                    </td>
-                    <td>25/08/2020</td>
-                    <td>DNTN Bùi Duy Thọ</td>
-
-                    <td>
-                      <a href="#"> 04/HĐĐL-20 </a>
+                      Cty TNHH In ấn Nghĩa Hưng
                     </td>
 
                     <td>
-                      <a href="#">002906</a>
+                     
                     </td>
-
-                    <td>550</td>
-
-                    <td>154.660.000</td>
-
-                    <td></td>
 
                     <td></td>
 
                     <td>
-                      <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
+                      <span class="badge badge-warning">
+                        Đang chờ
+                      </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
-
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
+                    
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                    
+                       
+                        <button class="check">
+                          <i class="far fa-check-square"></i>
+                        </button>
+                        
+                      </div>
                     </td>
-                  </tr>
-
-                  <tr>
-                    <td>13</td>
-                    <td>
-                      <a href="#">DA200825852</a>
-                    </td>
-                    <td>25/08/2020</td>
-                    <td>Công Ty TNHH Đầu Tư Và TM An Hòa</td>
-
-                    <td>
-                      <a href="#"> 04/HĐĐL-20 </a>
-                    </td>
-
-                    <td>
-                      <a href="#">002906</a>
-                    </td>
-
-                    <td>550</td>
-
-                    <td>154.660.000</td>
-
-                    <td></td>
-
-                    <td></td>
-
-                    <td>
-                      <span class="badge badge-success"> Đã thêm vào hợp đồng </span>
-                    </td>
-
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
-
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>14</td>
-                    <td>
-                      <a href="#">DA200825852</a>
-                    </td>
-                    <td>25/08/2020</td>
-                    <td>Công Ty TNHH Đầu Tư Và TM An Hòa</td>
-
-                    <td>
-                      <a href="#"> 04/HĐĐL-20 </a>
-                    </td>
-
-                    <td>
-                      <a href="#">002906</a>
-                    </td>
-
-                    <td>550</td>
-
-                    <td>154.660.000</td>
-
-                    <td></td>
-
-                    <td></td>
-
-                    <td>
-                      <span class="badge badge-success"> Đã thêm vào hợp đồng </span>
-                    </td>
-
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
-
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>15</td>
-                    <td>
-                      <a href="#">DA200825852</a>
-                    </td>
-                    <td>25/08/2020</td>
-                    <td>Công Ty TNHH Đầu Tư Và TM An Hòa</td>
-
-                    <td>
-                      <a href="#"> 04/HĐĐL-20 </a>
-                    </td>
-
-                    <td>
-                      <a href="#">002906</a>
-                    </td>
-
-                    <td>550</td>
-
-                    <td>154.660.000</td>
-
-                    <td></td>
-
-                    <td></td>
-
-                    <td>
-                      <span class="badge badge-success"> Đã thêm vào hợp đồng </span>
-                    </td>
-
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
-
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>16</td>
-                    <td>
-                      <a href="#">DA200825852</a>
-                    </td>
-                    <td>25/08/2020</td>
-                    <td>Công Ty TNHH Đầu Tư Và TM An Hòa</td>
-
-                    <td>
-                      <a href="#"> 04/HĐĐL-20 </a>
-                    </td>
-
-                    <td>
-                      <a href="#">002906</a>
-                    </td>
-
-                    <td>550</td>
-
-                    <td>154.660.000</td>
-
-                    <td></td>
-
-                    <td></td>
-
-                    <td>
-                      <span class="badge badge-success"> Đã thêm vào hợp đồng </span>
-                    </td>
-
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
-
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>18</td>
-                    <td>
-                      <a href="#">DA200825852</a>
-                    </td>
-                    <td>25/08/2020</td>
-                    <td>Công Ty TNHH Đầu Tư Và TM An Hòa</td>
-
-                    <td>
-                      <a href="#"> 04/HĐĐL-20 </a>
-                    </td>
-
-                    <td>
-                      <a href="#">002906</a>
-                    </td>
-
-                    <td>550</td>
-
-                    <td>154.660.000</td>
-
-                    <td></td>
-
-                    <td></td>
-
-                    <td>
-                      <span class="badge badge-success"> Đã thêm vào hợp đồng </span>
-                    </td>
-
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
-
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
-                    </td>
+                    
                   </tr>
                 </tbody>
               </table>
@@ -1139,9 +1259,10 @@
       </div>
     </main>
 
-    <script src="../../lib/jquery-3.5.1.min.js"></script>
-    <script src="../../lib/js/bootstrap-datepicker.js"></script>
-    <script src="../../js/datepicker.js"></script>
-    <script src="../../js/main.js"></script>
+    <script src="../../../lib/jquery-3.5.1.min.js"></script>
+    <script src="../../../lib/js/bootstrap-datepicker.js"></script>
+    <script src="../../../js/datepicker.js"></script>
+    <script src="../../../js/main.js"></script>
+    <script src="../../../js/nav.js"></script>
   </body>
 </html>

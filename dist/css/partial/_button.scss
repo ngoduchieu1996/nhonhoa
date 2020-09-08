@@ -65,6 +65,11 @@
     color: $success;
     background: linear-gradient(#28a74628, #28a74628);
   }
+
+  button.check:hover{
+    color:$primary;
+    background:linear-gradient(#4e72df2c,#4e72df2c);
+  }
 }
 
 .go-back {
