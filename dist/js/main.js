@@ -4,27 +4,31 @@ $(".has-sub").click(function () {
   $(this).find(".sub-menu").slideToggle(300);
 });
 
+/*================== Side bar ===================== */
 const shows = document.querySelectorAll(".show-menu");
-for (let show of shows) {
-  show.addEventListener("click", (q) => {
-    q.preventDefault();
-    const p = show.parentElement;
-    const ul = p.querySelector("ul");
-    if (ul.style.display === "none") {
-      ul.style.display = "block";
-      ul.style.animation = `bounceUp .5s both`;
-    }
-  });
-}
 
-const backs = document.querySelectorAll(".back");
-for (let back of backs) {
-  back.addEventListener("click", (e) => {
-    e.preventDefault();
-    const p = back.parentElement;
-    p.style.display = "none";
-    p.style.animation = "";
-  });
+if (shows) {
+  for (let show of shows) {
+    show.addEventListener("click", (q) => {
+      q.preventDefault();
+      const p = show.parentElement;
+      const ul = p.querySelector("ul");
+      if (ul.style.display === "none") {
+        ul.style.display = "block";
+        ul.style.animation = `bounceUp .5s both`;
+      }
+    });
+  }
+
+  const backs = document.querySelectorAll(".back");
+  for (let back of backs) {
+    back.addEventListener("click", (e) => {
+      e.preventDefault();
+      const p = back.parentElement;
+      p.style.display = "none";
+      p.style.animation = "";
+    });
+  }
 }
 
 //start login page js
@@ -102,4 +106,23 @@ if (btnControlSide) {
   });
 }
 
+/* == Click to show details in table */
+function ClickToShowDetails() {
+  const buttons = document.querySelectorAll(".main-table .show-sub");
+  let isShow = false;
+  if (buttons.length > 0) {
+    for (let button of buttons) {
+      button.addEventListener("click", () => {
+        if (isShow === false) {
+          button.innerHTML = `<i class="fas fa-minus-circle"></i>`;
+          isShow = true;
+        } else {
+          button.innerHTML = `<i class="fas fa-plus-circle"></i>`;
+          isShow = false;
+        }
+      });
+    }
+  }
+}
 
+ClickToShowDetails();

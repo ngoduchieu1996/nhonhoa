@@ -227,26 +227,27 @@
             ><span class="icon-menu"><i class="fas fa-tag"></i></span>
             <span class="show-on-hover">Quản lý Bán hàng</span>
           </a>
+
           <ul class="hidden-ul dropdown-btn" style="display: none">
             <a href="#" class="back"><span class="show-on-hover">Quản lý Bán hàng</span> </a>
             <li>
-              <a href="#" class="show-on-hover"
+              <a href="./dongiaban.html" class="show-on-hover"
                 ><span><i class="fas fa-tag"></i></span>Đơn giá bán</a
               >
             </li>
             <li>
-              <a href="#" class="show-on-hover"
+              <a href="./quanlyphieudathang.html" class="show-on-hover"
                 ><span><i class="fas fa-clipboard-list"></i></span>Quản lý Phiếu đặt hàng</a
               >
             </li>
 
             <li class="active">
-              <a href="#" class="show-on-hover"
+              <a href="./hoadonbanhang.html" class="show-on-hover"
                 ><span><i class="fas fa-receipt"></i></span>Hóa đơn bán hàng</a
               >
             </li>
             <li>
-              <a href="#" class="show-on-hover"
+              <a href="./hopdongbanhang.html" class="show-on-hover"
                 ><span><i class="fas fa-file-contract"></i></span>Hợp đồng bán hàng</a
               >
             </li>
@@ -312,9 +313,9 @@
           <h1 class="manage-page-title">Quản lý hóa đơn bán hàng</h1>
 
           <div class="bread-cumb__content">
-            <a class="root-page" href="../index.html"> Trang chủ </a>
+            <a class="root-page" href="../kinhdoanhnoidia.html"> Trang chủ </a>
 
-            <a href="quanlybanhang.html">Hóa đơn</a>
+            <a href="hoadonbanhang.html">Hóa đơn</a>
           </div>
         </div>
 
@@ -383,13 +384,13 @@
                   <div class="col-12 col-md-4 mb-15">
                     <div class="item d-flex-bw row">
                       <div class="col-6">
-                        <label for="pill-number" class="required"> Số hóa đơn : </label>
+                        <label for="" class="required"> Số hóa đơn : </label>
 
-                        <input type="text" name="" id="pill-number" class="form-control w-10" />
+                        <input type="text" name="" id="" class="form-control w-10" />
                       </div>
 
                       <div class="col-6">
-                        <label for="pill-number" class="required"> Ngày lập : </label>
+                        <label for="" class="required"> Ngày lập : </label>
 
                         <input
                           type="text"
@@ -404,9 +405,9 @@
                   <div class="col-12 col-md-8 mb-15">
                     <div class="item d-flex-bw row">
                       <div class="col-5 select-box">
-                        <label for="pill-number" class="required">Khách hàng : </label>
+                        <label for="" class="required">Khách hàng : </label>
 
-                        <select class="chosen-select-main w-10" id="" name="">
+                        <select class="chosen-select-main w-10" name="">
                           <option value="1">AG | Chi Cục TCĐLCL An Giang</option>
                           <option value="">Chọn khách hàng</option>
                           <option value="2">AH | Trần Quang Hải / BPKD</option>
@@ -456,9 +457,9 @@
                       </div>
 
                       <div class="col-5 select-box">
-                        <label for="pill-number" class="required">Chọn hợp đồng : </label>
+                        <label for="" class="required">Chọn hợp đồng : </label>
 
-                        <select class="chosen-select-main w-10" id="" name=""></select>
+                        <select class="chosen-select-main w-10" name=""></select>
 
                         <div class="chosen-container">
                           <a class="chosen-single d-flex-bw">
@@ -481,7 +482,7 @@
                       <div class="col-12 select-box">
                         <label for="pill-number" class="required">Chọn nhóm đơn giá bán : </label>
 
-                        <select class="chosen-select-main w-10" id="" name=""></select>
+                        <select class="chosen-select-main w-10" name=""></select>
 
                         <div class="chosen-container">
                           <a class="chosen-single d-flex-bw">
@@ -498,7 +499,7 @@
                       <div class="col-12">
                         <label for="">Ghi chú : </label>
 
-                        <textarea name="" id="" class="form-control w-10"></textarea>
+                        <textarea name="" class="form-control w-10"></textarea>
                       </div>
                     </div>
                   </div>
@@ -576,14 +577,16 @@
                       <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
 
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                      </div>
                     </td>
                   </tr>
 
@@ -615,14 +618,16 @@
                       <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
 
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                      </div>
                     </td>
                   </tr>
 
@@ -654,14 +659,16 @@
                       <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
 
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                      </div>
                     </td>
                   </tr>
 
@@ -693,14 +700,16 @@
                       <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
 
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                      </div>
                     </td>
                   </tr>
 
@@ -732,14 +741,16 @@
                       <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
 
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                      </div>
                     </td>
                   </tr>
 
@@ -771,14 +782,16 @@
                       <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
 
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                      </div>
                     </td>
                   </tr>
 
@@ -810,14 +823,16 @@
                       <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
 
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                      </div>
                     </td>
                   </tr>
 
@@ -848,15 +863,16 @@
                     <td>
                       <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
                     </td>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
-
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                      </div>
                     </td>
                   </tr>
 
@@ -888,14 +904,16 @@
                       <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
 
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                      </div>
                     </td>
                   </tr>
 
@@ -927,14 +945,16 @@
                       <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
 
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                      </div>
                     </td>
                   </tr>
 
@@ -966,14 +986,16 @@
                       <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
 
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                      </div>
                     </td>
                   </tr>
 
@@ -1005,14 +1027,16 @@
                       <span class="badge badge-label-warning"> Chưa thêm vào hợp đồng </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
 
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                      </div>
                     </td>
                   </tr>
 
@@ -1044,14 +1068,16 @@
                       <span class="badge badge-success"> Đã thêm vào hợp đồng </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
 
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                      </div>
                     </td>
                   </tr>
 
@@ -1083,14 +1109,16 @@
                       <span class="badge badge-success"> Đã thêm vào hợp đồng </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
 
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                      </div>
                     </td>
                   </tr>
 
@@ -1122,14 +1150,16 @@
                       <span class="badge badge-success"> Đã thêm vào hợp đồng </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
 
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                      </div>
                     </td>
                   </tr>
 
@@ -1161,14 +1191,16 @@
                       <span class="badge badge-success"> Đã thêm vào hợp đồng </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
 
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                      </div>
                     </td>
                   </tr>
 
@@ -1200,14 +1232,16 @@
                       <span class="badge badge-success"> Đã thêm vào hợp đồng </span>
                     </td>
 
-                    <td>
-                      <button class="edit">
-                        <i class="far fa-edit"></i>
-                      </button>
+                    <td class="btn-function">
+                      <div>
+                        <button class="edit">
+                          <i class="far fa-edit"></i>
+                        </button>
 
-                      <button class="delete">
-                        <i class="fas fa-trash-alt"></i>
-                      </button>
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                      </div>
                     </td>
                   </tr>
                 </tbody>
