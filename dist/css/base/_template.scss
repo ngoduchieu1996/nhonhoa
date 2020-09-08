@@ -188,6 +188,10 @@ i {
   .lh-#{$i} {
     line-height: 0.1rem * $i;
   }
+
+  .p-#{$i} {
+    padding: 0.1rem * $i;
+  }
 }
 
 .align {
