@@ -103,7 +103,7 @@ if (btnControlSide) {
 }
 
 /* == Click to show details in table */
-function ClickToShowDetails() {
+function clickToShowDetails() {
   const buttons = document.querySelectorAll(".main-table .show-sub");
   let isShow = false;
   if (buttons.length > 0) {
@@ -121,4 +121,86 @@ function ClickToShowDetails() {
   }
 }
 
-ClickToShowDetails();
+clickToShowDetails();
+
+function customSelectDropdown(){
+  const selects = document.querySelectorAll('.chosen-select-main');
+
+  if(selects.length >0 ){
+    for(let s of selects){
+      const container = s.parentElement.querySelector('.chosen-container');
+      const optList = s.querySelectorAll('option');
+      const arr = [...getOptionValue(optList)] ;
+      const data = returnData(arr);
+      const div = document.createElement('div');
+    
+      //add class to style
+      div.classList.add('chosen-inner');
+      data.classList.add('chosen-list');
+    
+      div.innerHTML = `
+        <div class="block">
+          <div class="search-select">
+          <input type="text" class="form-control  w-10"/>
+          </div>
+        </div>
+     `;
+    
+     div.querySelector('.block').appendChild(data);
+    
+      container.append(div);
+    }
+
+    const list = document.querySelectorAll('.chosen-list li');
+    
+    function returnData(arr){
+      let ul = document.createElement('ul');
+      for(let i = 0 ; i < arr.length ; i++){
+        let a = arr[i];
+        
+        let li = document.createElement('li');
+     
+        li.setAttribute('data-value',a.value);
+        li.innerHTML= a.inner;
+    
+    
+        ul.appendChild(li);
+    
+      };
+      return ul;
+    
+    }
+    
+    
+    function getOptionValue(list){
+      const info = {
+        value:"",
+        inner:"",
+      }
+    
+      const arr= [];
+    
+      for(let l of list){
+        let inner = l.innerHTML;
+        let value = l.getAttribute('value')
+    
+        l = info;
+        l.inner = inner;
+        l.value = value;
+    
+        arr.push(l);
+      }
+    
+      return arr;
+    }   
+  }
+}
+
+customSelectDropdown();
+
+$('.chosen-single').click(function(){
+  $(this).parent().find('.chosen-inner').slideToggle(300);
+})
+
+
+

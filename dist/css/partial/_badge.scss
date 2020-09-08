@@ -1,7 +1,7 @@
 .badge {
   border-radius: 0.4rem;
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   width: 90%;
   display: inline-flex;
@@ -9,28 +9,31 @@
   align-items: center;
   padding: 0.6rem 1rem;
   line-height: 1.3rem;
+  background-size:200% auto;
+  transition:0.5s;
+
+  &:hover{
+    background-position:right center;
+  }
 
   &-info {
-    background-color: $Info;
+    background-image: linear-gradient(to right, #4776E6 0%, #8E54E9 51%, #4776E6 100%);
   }
 
   &-warning {
-    background-color: $Warning;
+    background-image: linear-gradient(to right, #ffb347 0%, #ffcc33 51%, #ffb347 100%);
   }
 
   &-primary {
-    background-color: $primary;
+    background-image: linear-gradient(to right, #4776E6 0%, #8E54E9 51%, #4776E6 100%);
   }
 
-  &-danger {
-    background-color: $Danger;
-  }
 
   &-label-warning {
-    background-color: #e7804f;
+    background-image: linear-gradient(to right, #fd746c 0%, #ff9068 51%, #fd746c 100%);
   }
 
   &-success {
-    background-color: $success;
+    background-image: linear-gradient(to right, #76b852 0%, #8DC26F 51%, #76b852 100%);
   }
 }

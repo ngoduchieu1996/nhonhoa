@@ -29,154 +29,242 @@
         <i class="fas fa-bars t-white"></i>
       </button>
 
-      <div class="nav-bar__menu">
-        <ul>
-          <li class="nav-bar__menu-link has-sub">
-            <div class="icon">
-              <i class="fas fa-list"></i>
+      <div class="nav-bar__menu hide-for-tablet">
+        <div class="block">
+          <div class="nav-bar__menu-list">
+            <ul class="">
+              <li class="nav-bar__menu-link has-sub">
+                <div class="icon">
+                  <i class="fas fa-list"></i>
+                </div>
+
+                <span>Kế hoạch</span>
+
+                <div class="sub-menu">
+                  <div class="d-flex-bw">
+                    <div class="w-5">
+                      <a href="">Kế hoạch</a>
+                    </div>
+
+                    <div class="w-5">
+                      <a href="">CCDC</a>
+                    </div>
+
+                    <div class="w-5">
+                      <a href="">Gia Công</a>
+                    </div>
+
+                    <div class="w-5">
+                      <a href="">Cấp Hàng</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-bar__menu-link has-sub">
+                <div class="icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+
+                <span>Kinh doanh</span>
+
+                <div class="sub-menu d-flex-bw">
+                  <div class="d-flex-bw">
+                    <div class="w-5">
+                      <a href="kinhdoanhnoidia.html">Nội địa </a>
+                    </div>
+
+                    <div class="w-5">
+                      <a href="">Xuất khẩu</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-bar__menu-link">
+                <a href="">
+                  <div class="icon">
+                    <i class="fas fa-warehouse"></i>
+                  </div>
+
+                  <span>Kho</span>
+                </a>
+              </li>
+
+              <li class="nav-bar__menu-link has-sub">
+                <div class="icon">
+                  <i class="fas fa-industry"></i>
+                </div>
+
+                <span>Xưởng</span>
+
+                <div class="sub-menu">
+                  <div class="d-flex-bw">
+                    <div class="col-4"><a href="">Xưởng 1</a></div>
+                    <div class="col-4"><a href="">Xưởng 2</a></div>
+                    <div class="col-4"><a href="">Xưởng 3</a></div>
+                    <div class="col-4"><a href="">Xưởng 4</a></div>
+                    <div class="col-4"><a href="">Xưởng 5</a></div>
+                    <div class="col-4"><a href="">Xưởng 6</a></div>
+                    <div class="col-4"><a href="">Xưởng 7</a></div>
+                    <div class="col-4"><a href="">Xưởng 8</a></div>
+                    <div class="col-4"><a href="">Xưởng 9</a></div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-bar__menu-link has-sub">
+                <div class="icon">
+                  <i class="far fa-id-card"></i>
+                </div>
+
+                <span>Kiểm định</span>
+
+                <div class="sub-menu">
+                  <div class="d-flex-bw">
+                    <div class="col-4">
+                      <a href="#">Xưởng 4 </a>
+                    </div>
+
+                    <div class="col-4">
+                      <a href="">Xưởng 5</a>
+                    </div>
+
+                    <div class="col-4">
+                      <a href="">Xưởng 6</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-bar__menu-link">
+                <a href="">
+                  <div class="icon">
+                    <i class="fas fa-tools"></i>
+                  </div>
+
+                  <span>Công cụ dụng cụ</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav-bar__cta d-flex align-center">
+            <div>
+              <a href="#" title="Khóa">
+                <i class="fas fa-lock"></i>
+              </a>
             </div>
 
-            <span>Kế hoạch</span>
+            <div class="position-relative">
+              <span title="Ghi chú" id="nav-note" class="nav-bar__cta-has-sub">
+                <i class="fas fa-th t-l-yellow"></i>
+              </span>
 
-            <div class="sub-menu">
-              <div class="d-flex-bw">
-                <div class="w-5">
-                  <a href="">Kế hoạch</a>
-                </div>
+              <div class="note-inner nav-bar__cta-sub">
+                <div class="note-inner__block">
+                  <div class="create-note fz-14">
+                    <span class="fw-5">Ghi chú</span>
+                    <button class="btn btn-blue fz-11">Tạo ghi chú mới</button>
+                  </div>
 
-                <div class="w-5">
-                  <a href="">CCDC</a>
-                </div>
+                  <div class="show-more-note">
+                    <span class="fz-16 fw-6 t-d-grey">Hiển thị thêm ghi chú</span>
 
-                <div class="w-5">
-                  <a href="">Gia Công</a>
-                </div>
-
-                <div class="w-5">
-                  <a href="">Cấp Hàng</a>
+                    <button>
+                      <i class="fas fa-cog fa-spin fz-18"></i>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </li>
 
-          <li class="nav-bar__menu-link has-sub">
-            <div class="icon">
-              <i class="fas fa-briefcase"></i>
-            </div>
+            <div class="position-relative">
+              <span title="Thông báo" id="nav-notification" class="nav-bar__cta-has-sub">
+                <span class="noti-counter"></span>
+                <i class="fas fa-align-justify"></i>
+              </span>
 
-            <span>Kinh doanh</span>
+              <div class="notification-inner nav-bar__cta-sub">
+                <div class="notification-inner__block">
+                  <div class="notification-note fz-14">
+                    <span class="fw-6">Thông báo</span>
+                    <span class="fz-10 t-blue">Đánh dấu tất cả đã đọc</span>
+                  </div>
 
-            <div class="sub-menu d-flex-bw">
-              <div class="d-flex-bw">
-                <div class="w-5">
-                  <a href="kinhdoanhnoidia.html">Nội địa </a>
-                </div>
-
-                <div class="w-5">
-                  <a href="">Xuất khẩu</a>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <li class="nav-bar__menu-link">
-            <a href="">
-              <div class="icon">
-                <i class="fas fa-warehouse"></i>
-              </div>
-
-              <span>Kho</span>
-            </a>
-          </li>
-
-          <li class="nav-bar__menu-link has-sub">
-            <div class="icon">
-              <i class="fas fa-industry"></i>
-            </div>
-
-            <span>Xưởng</span>
-
-            <div class="sub-menu">
-              <div class="d-flex-bw">
-                <div class="col-4"><a href="">Xưởng 1</a></div>
-                <div class="col-4"><a href="">Xưởng 2</a></div>
-                <div class="col-4"><a href="">Xưởng 3</a></div>
-                <div class="col-4"><a href="">Xưởng 4</a></div>
-                <div class="col-4"><a href="">Xưởng 5</a></div>
-                <div class="col-4"><a href="">Xưởng 6</a></div>
-                <div class="col-4"><a href="">Xưởng 7</a></div>
-                <div class="col-4"><a href="">Xưởng 8</a></div>
-                <div class="col-4"><a href="">Xưởng 9</a></div>
-              </div>
-            </div>
-          </li>
-
-          <li class="nav-bar__menu-link has-sub">
-            <div class="icon">
-              <i class="far fa-id-card"></i>
-            </div>
-
-            <span>Kiểm định</span>
-
-            <div class="sub-menu">
-              <div class="d-flex-bw">
-                <div class="col-4">
-                  <a href="#">Xưởng 4 </a>
-                </div>
-
-                <div class="col-4">
-                  <a href="">Xưởng 5</a>
-                </div>
-
-                <div class="col-4">
-                  <a href="">Xưởng 6</a>
+                  <div class="show-more-notification text-center">
+                    <a class="fz-16 fw-6 t-d-grey" href="#">Xem thêm</a>
+                  </div>
                 </div>
               </div>
             </div>
-          </li>
 
-          <li class="nav-bar__menu-link">
-            <a href="">
-              <div class="icon">
-                <i class="fas fa-tools"></i>
+            <div class="position-relative">
+              <span title="Cấu hình chung" class="nav-bar__cta-has-sub" id="nav-setting">
+                <i class="fas fa-cogs"></i>
+              </span>
+
+              <div class="setting-inner nav-bar__cta-sub">
+                <div class="setting-inner__block">
+                  <ul>
+                    <li class="t-black fz-14 fw-5">Cấu hình chung</li>
+
+                    <li class="setting-inner__block-link">
+                      <a href="#">Quản lý tài khoản</a>
+                    </li>
+
+                    <li class="setting-inner__block-link">
+                      <a href="#">Phân quyền</a>
+                    </li>
+
+                    <li class="setting-inner__block-link">
+                      <a href="#">Quản lý đơn vị</a>
+                    </li>
+
+                    <li class="setting-inner__block-link">
+                      <a href="#">Cài đặt màn hình chính</a>
+                    </li>
+
+                    <li class="setting-inner__block-link">
+                      <a href="#">Quản lý thông báo</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
+            </div>
 
-              <span>Công cụ dụng cụ</span>
-            </a>
-          </li>
-        </ul>
+            <figure class="user-logo">
+              <span class="nav-bar__cta-has-sub" title="Tài khoản">
+                <img src="../../../asset/default_usr.png" alt="logo user" />
+                <p class="fz-12 fw-5">Admin</p>
+              </span>
+
+              <div class="user-logo__control nav-bar__cta-sub">
+                <ul class="user-logo__control-list">
+                  <li>
+                    <i class="fas fa-key"></i>
+                    <a href="#">Thay đổi mật khẩu</a>
+                  </li>
+
+                  <li>
+                    <i class="fas fa-pen-fancy"></i>
+                    <a href="#">Quản lý tài khoản</a>
+                  </li>
+
+                  <li>
+                    <i class="fas fa-sign-out-alt"></i>
+                    <a href="#">Đăng xuất</a>
+                  </li>
+                </ul>
+              </div>
+            </figure>
+          </div>
+        </div>
       </div>
 
-      <div class="nav-bar__cta d-flex align-center">
-        <div>
-          <a href="#" title="Khóa">
-            <i class="fas fa-lock"></i>
-          </a>
-        </div>
-
-        <div>
-          <a href="#" title="Ghi chú">
-            <i class="fas fa-th t-l-yellow"></i>
-          </a>
-        </div>
-
-        <div>
-          <a href="#" title="Thông báo">
-            <i class="fas fa-align-justify"></i>
-          </a>
-        </div>
-
-        <div>
-          <a href="" title="Cấu hình chung">
-            <i class="fas fa-cogs"></i>
-          </a>
-        </div>
-
-        <figure class="user-logo">
-          <img src="../../../asset/default_usr.png" alt="logo user" />
-          <p class="fz-12 fw-5">Admin</p>
-        </figure>
-      </div>
+      <button id="show-nav-bar" class="show-for-tablet t-white">
+        <i class="fas fa-ellipsis-h"></i>
+      </button>
     </nav>
 
     <div class="sidenav sidebar-hover" id="side-bar">
@@ -1422,5 +1510,6 @@
     <script src="../../../lib/js/bootstrap-datepicker.js"></script>
     <script src="../../../js/datepicker.js"></script>
     <script src="../../../js/main.js"></script>
+    <script src="../../../js/nav.js"></script>
   </body>
 </html>

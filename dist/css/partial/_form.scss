@@ -174,3 +174,58 @@ textarea.big {
   padding: 2rem 1.5rem;
   box-shadow: 0 0.3rem 1rem #ccc;
 }
+
+
+.chosen-container{
+  position: relative;
+
+  .chosen-inner{
+    @include absolute( left -.1rem);
+    top:calc(100% + .1rem);
+    width:calc(100% + .2rem);
+    z-index:50;
+    display: none;
+
+    .block{
+      border:.1rem solid #eee;
+      background-color:#fff;
+      box-shadow:0 .5rem 1rem #ccc;
+
+      .search-select{
+        position: sticky;
+        top:0rem;
+        padding:.5rem;
+        background-color:#fff;
+        margin-bottom: .5rem;
+
+        &:after{
+          content:"\f002";
+          font-family: $fontAwesome;
+          font-weight: 900;
+          @include absolute(top 50% right 1rem);
+          transform:translateY(-50%);
+          font-size: 1.4rem;
+          color:#757575;
+        }
+      }
+
+      .chosen-list{
+        max-height:20rem;
+        overflow-y:scroll;
+        padding-right:.5rem;
+        li{
+          font-size: 1.4rem;
+          color:#757575;
+          padding:.5rem .6rem;
+
+
+          &:hover{
+            background-color:$primary;
+            color:#f1f1f1;
+          }
+        }
+      }
+    }
+    
+  }
+}
