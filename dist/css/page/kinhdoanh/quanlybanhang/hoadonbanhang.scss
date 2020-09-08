@@ -1,0 +1,28 @@
+#hoadon-banhang {
+  //Bảng quản lý bán hàng
+  .table-quanly-banhang {
+    .table-wrapper {
+      margin-bottom: 0;
+    }
+
+    tbody tr:hover td:last-child {
+      background-color: #d7e6e6;
+    }
+
+    td:last-child {
+      background-color: #ebebeb;
+
+      width: 8%;
+    }
+
+    td:nth-last-child(2) {
+      text-align: center;
+      width: 10%;
+
+      span {
+        text-align: left;
+        font-size: 1.06rem;
+      }
+    }
+  }
+}

@@ -12,11 +12,6 @@ body {
   }
 }
 
-.form-control {
-  padding: 0.8rem 0.9rem;
-  border-radius: 0.2rem;
-}
-
 ::-webkit-scrollbar {
   width: 8px;
   height: 6px;
@@ -146,73 +141,11 @@ body {
   top: 5px;
 }
 
-.add-new-pill {
-  padding-top: 1rem;
+
+.filter {
+  @include fixed(top 0 left 0);
+  @include box(100%);
+  background: linear-gradient(#aaaaaabe, #aaaaaabe);
+  z-index: 100;
   display: none;
-
-  h2 {
-    background-color: #17a2b8;
-    padding: 0.5rem 1rem;
-    font-weight: 700;
-    font-size: 1.4rem;
-    line-height: 3.5rem;
-    color: #fff;
-  }
-
-  &__form {
-    padding: 1rem 1.5rem;
-    background-color: #fff;
-    box-shadow: 0 0.5rem 0.5rem #ccc;
-
-    .item {
-      height: 100%;
-    }
-
-    select {
-      display: none;
-    }
-
-    label {
-      font-size: 1.2rem;
-      font-weight: 600;
-      line-height: 1.8rem;
-      margin-bottom: 0.5rem;
-      display: flex;
-      align-items: center;
-
-      &.required::after {
-        content: "(*)";
-        color: red;
-        letter-spacing: 0.1rem;
-        margin-left: 0.5rem;
-      }
-    }
-
-    textarea,
-    button {
-      height: 3.4rem;
-      padding-left: 3rem;
-      padding-right: 3rem;
-    }
-
-    .select-box {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .chosen-container {
-      @extend .form-control;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      height: 3.4rem;
-      cursor: pointer;
-
-      .chosen-single {
-        font-size: 1.1rem;
-        width: 100%;
-      }
-    }
-  }
 }

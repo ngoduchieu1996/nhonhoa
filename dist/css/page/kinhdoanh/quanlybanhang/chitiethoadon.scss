@@ -1,0 +1,16 @@
+.table-chitiethoadon {
+  th:first-child {
+    width: 4%;
+  }
+
+  @for $i from 4 through 6 {
+    th:nth-child(#{$i}),
+    td:nth-child(#{$i}) {
+      text-align: right;
+    }
+  }
+
+  td:last-child {
+    background-color: #d3d3d3;
+  }
+}

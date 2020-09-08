@@ -1,0 +1,176 @@
+.form {
+  label {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  &-column {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    label {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &-control {
+    padding: 0.8rem 0.9rem;
+    border-radius: 0.2rem;
+  }
+
+  &-radio {
+    &-group {
+      display: flex;
+      align-items: center;
+      label {
+        margin-left: 0.5rem;
+        margin-bottom: 0;
+        cursor: pointer;
+
+        &:hover {
+          color: $blue;
+        }
+      }
+
+      input {
+        cursor: pointer;
+      }
+    }
+
+    &-group:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+}
+
+label.required {
+  &::after {
+    content: "(*)";
+    display: inline-block;
+    color: red;
+    margin-left: 0.5rem;
+    letter-spacing: 0.1rem;
+  }
+}
+
+input:read-only,
+textarea:read-only {
+  background-color: #fafafa;
+  color: #495057;
+
+  &:focus {
+    background-color: #fafafa;
+    border-color: #ced4da;
+    box-shadow: none;
+  }
+}
+
+select {
+  font-size: 1.2rem;
+  color: #495057;
+  height: 3.4rem;
+}
+
+textarea {
+  height: 3.4rem;
+}
+
+textarea.big {
+  height: 6.8rem;
+}
+
+.control-bar {
+  .date-input {
+    width: 15rem;
+  }
+
+  select {
+    height: 100%;
+  }
+}
+
+.add-new-pill {
+  padding-top: 1rem;
+  display: none;
+
+  &.show {
+    display: block;
+  }
+
+  h2 {
+    background-color: #17a2b8;
+    padding: 0.5rem 1rem;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 3.5rem;
+    color: #fff;
+  }
+
+  &__form {
+    padding: 1rem 1.5rem;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 0.5rem #ccc;
+
+    .item {
+      height: 100%;
+    }
+
+    select {
+      display: none;
+    }
+
+    label {
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 1.8rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+
+      &.required::after {
+        content: "(*)";
+        color: red;
+        letter-spacing: 0.1rem;
+        margin-left: 0.5rem;
+      }
+    }
+
+    textarea,
+    button {
+      height: 3.4rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+    textarea.big {
+      height: 6.8rem;
+    }
+
+    .select-box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .chosen-container {
+      @extend .form-control;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      height: 3.4rem;
+      cursor: pointer;
+
+      .chosen-single {
+        font-size: 1.1rem;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.details {
+  background-color: #fff;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 0.3rem 1rem #ccc;
+}
