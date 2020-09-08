@@ -1,0 +1,28 @@
+.tab-panel-1 {
+}
+
+@media (max-width: 1400px) {
+  .tab-panel-1 {
+    .kehoachsanxuat,
+    .xuat-nhap-kho {
+      overflow-x: auto;
+    }
+
+    svg {
+      width: 57rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .tab-panel-1 {
+    .kehoachsanxuat,
+    .xuat-nhap-kho {
+      overflow-x: visible;
+    }
+
+    svg {
+      width: 100%;
+    }
+  }
+}
