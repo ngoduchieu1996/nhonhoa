@@ -22,6 +22,10 @@
   .table-content {
     overflow-y: auto;
     max-height: 37rem;
+
+    @media (max-width: 1200px) {
+      overflow-x: auto;
+    }
   }
 
   .table-link-detail {
@@ -43,6 +47,10 @@
     font-size: 1.4rem;
     position: relative;
     font-family: $fontRoboto;
+
+    @media (max-width: 1200px) {
+      width: 120rem;
+    }
   }
 
   table.lock {
@@ -75,6 +83,14 @@
     padding: 0.3rem 0.5rem;
   }
 
+  th.sort {
+    cursor: pointer;
+    i {
+      margin-left: 0.5rem;
+      transform: translateY(0.3rem);
+    }
+  }
+
   td {
     font-weight: 500;
 
@@ -85,7 +101,6 @@
 
   th:first-child,
   td:first-child {
-    width: 4%;
     text-align: center;
   }
 
@@ -155,22 +170,5 @@
   th:nth-last-child(2),
   td:nth-last-child(2) {
     width: 15%;
-  }
-}
-
-//Bảng hóa đơn
-.table-pill {
-  td:last-child {
-    text-align: center;
-
-    span.badge {
-      font-size: 1.1rem;
-      text-align: left;
-    }
-  }
-
-  th:nth-child(4),
-  td:nth-child(4) {
-    width: 30%;
   }
 }

@@ -28,6 +28,11 @@
 .btn-function {
   text-align: center;
 
+  & > div {
+    display: flex;
+    justify-content: center;
+  }
+
   button {
     color: #808080;
     padding: 0.6rem;
@@ -54,5 +59,29 @@
   button.copy:hover {
     color: $Info;
     background: linear-gradient(#36b8cc23, #36b8cc23);
+  }
+
+  button.switch:hover {
+    color: $success;
+    background: linear-gradient(#28a74628, #28a74628);
+  }
+}
+
+.go-back {
+  background-color: #fcfcfc;
+  padding: 0.8rem 1.2rem;
+  font-weight: 500;
+  display: inline-flex;
+  font-size: 1.4rem;
+  align-items: center;
+
+  &:before {
+    content: "";
+    background-image: url("../asset/104-undo2.svg");
+    background-size: cover;
+    background-position: center;
+    margin-right: 1rem;
+    @include box(1.6rem);
+    display: inline-block;
   }
 }

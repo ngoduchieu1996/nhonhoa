@@ -5,43 +5,14 @@
       margin-bottom: 0;
     }
 
-    th {
-      i {
-        transform: translateY(0.3rem);
-      }
-    }
-
     tbody tr:hover td:last-child {
       background-color: #d7e6e6;
     }
 
     td:last-child {
       background-color: #ebebeb;
-      text-align: center;
+
       width: 8%;
-
-      button {
-        color: #808080;
-        padding: 0.6rem;
-      }
-
-      button i {
-        font-size: 1.6rem;
-      }
-
-      button:not(:last-child) {
-        margin-right: 0.5rem;
-      }
-
-      button.edit:hover {
-        color: $Warning;
-        background: linear-gradient(#f6c23e6c, #f6c23e6c);
-      }
-
-      button.delete:hover {
-        color: $Danger;
-        background: linear-gradient(#e7493b4d, #e7493b4d);
-      }
     }
 
     td:nth-last-child(2) {
