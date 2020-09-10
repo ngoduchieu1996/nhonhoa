@@ -1,4 +1,4 @@
-/*================== Side bar ===================== */
+/*================== START Side bar  START===================== */
 const shows = document.querySelectorAll(".show-menu");
 
 if (shows) {
@@ -24,6 +24,8 @@ if (shows) {
     });
   }
 }
+
+/*============== END side bar END =============== */
 
 //start login page js
 const loginPage = document.getElementById("login-page");
@@ -243,7 +245,6 @@ function animateSortIcon() {
 
 animateSortIcon();
 
-//TODO : Control table column
 function showHideTableColumn() {
   const form = document.querySelector(".form-control-showhide-column");
 
@@ -254,23 +255,10 @@ function showHideTableColumn() {
     const close2 = form.querySelector(".select-close button");
     const table = form.closest("body").querySelector(".table-can-disableCol");
     const selectAll = form.querySelector(".select-all input");
-    let isShow = true;
 
     selectAll.checked = true;
 
-    selectAll.addEventListener("click", () => {
-      if (isShow == true) {
-        table.style.display = "none";
-        isShow = false;
-        selectAll.checked = false;
-      } else {
-        table.style.display = "";
-        isShow = true;
-        selectAll.checked = true;
-      }
-    });
-
-    //Click to open form
+    //START: Click to open form
     button.addEventListener("click", () => {
       filter.style.display = "block";
       form.style.display = "block";
@@ -292,23 +280,15 @@ function showHideTableColumn() {
       form.style.animation = "";
     }
 
+    /* ============ START : Function control show/hide table column ============ */
+
     const multiInputs = form.querySelectorAll(".select-multi input");
     const tableRowHeads = table.querySelectorAll("thead th");
+    let status = 1;
 
-    for (let i = 0; i < tableRowHeads.length; i++) {
-      tableRowHeads[i].setAttribute(
-        "data-column",
-        `${tableRowHeads[i].innerText
-          .replace(" ", "_")
-          .trim()
-          .replace(/\ /g, "_")
-          .replace(/\./, "_")}`
-      );
-
-      const tableRowsData = table.querySelectorAll(`tbody td:nth-child(${i + 1})`);
-
-      for (let t of tableRowsData) {
-        t.setAttribute(
+    function setDataColumnForTableRowHeads() {
+      for (let i = 0; i < tableRowHeads.length; i++) {
+        tableRowHeads[i].setAttribute(
           "data-column",
           `${tableRowHeads[i].innerText
             .replace(" ", "_")
@@ -316,8 +296,23 @@ function showHideTableColumn() {
             .replace(/\ /g, "_")
             .replace(/\./, "_")}`
         );
+
+        const tableRowsData = table.querySelectorAll(`tbody td:nth-child(${i + 1})`);
+
+        for (let t of tableRowsData) {
+          t.setAttribute(
+            "data-column",
+            `${tableRowHeads[i].innerText
+              .replace(" ", "_")
+              .trim()
+              .replace(/\ /g, "_")
+              .replace(/\./, "_")}`
+          );
+        }
       }
     }
+
+    setDataColumnForTableRowHeads();
 
     for (let i = 0; i < multiInputs.length; i++) {
       multiInputs[i].setAttribute(
@@ -342,23 +337,82 @@ function showHideTableColumn() {
       const data = ip.getAttribute("data-control");
 
       const all_col = table.querySelectorAll(`[data-column=${data}]`);
-      if (ip.value == "show") {
-        for (let c of all_col) {
-          c.style.display = "none";
-        }
 
-        ip.value = "hide";
+      if (ip.getAttribute("data-value") == "show") {
+        toggleDisplayListItems(all_col, "none");
+
+        ip.setAttribute("data-value", "hide");
+
         ip.checked = false;
-        selectAll.checked = false;
-      } else {
-        for (let c of all_col) {
-          c.style.display = "";
-        }
 
-        ip.value = "show";
+        checkLengthOfMultiInputs();
+      } else {
+        toggleDisplayListItems(all_col);
+
+        ip.setAttribute("data-value", "show");
+
         ip.checked = true;
+
+        checkLengthOfMultiInputs();
       }
     }
+
+    function toggleDisplayListItems(list, style = "") {
+      for (let l of list) {
+        l.style.display = style;
+      }
+    }
+
+    function checkLengthOfMultiInputs() {
+      const dataShow = form.querySelector(".select-multi");
+      const inputs = dataShow.querySelectorAll(`[data-value='hide']`);
+
+      if (inputs.length > 0) {
+        selectAll.checked = false;
+        status = 3;
+      } else {
+        status = 1;
+        selectAll.checked = true;
+      }
+    }
+
+    function checkToggleAll() {
+      const all_col = table.querySelectorAll(`[data-column]`);
+      selectAll.addEventListener("change", () => {
+        if (status == 1) {
+          toggleDisplayListItems(all_col, "none");
+          status = 2;
+
+          for (let ip of multiInputs) {
+            ip.setAttribute("data-value", "hide");
+            ip.checked = false;
+          }
+        } else if (status == 2) {
+          toggleDisplayListItems(all_col);
+          status = 1;
+
+          for (let ip of multiInputs) {
+            ip.setAttribute("data-value", "show");
+            ip.checked = true;
+          }
+        } else if (status == 3) {
+          toggleDisplayListItems(all_col);
+
+          selectAll.checked = true;
+
+          for (let ip of multiInputs) {
+            ip.value = "show";
+            ip.checked = true;
+          }
+
+          status = 1;
+        }
+      });
+    }
+
+    checkToggleAll();
+
+    /* ============ END function control show/hide table column END============ */
   }
 }
 
