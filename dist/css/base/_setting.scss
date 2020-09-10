@@ -44,11 +44,23 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+  }
 
   .manage-page-title {
     font-size: 2rem;
     font-weight: 700;
     line-height: 2rem;
+
+    @media (max-width: 768px) {
+      flex-basis: 100%;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__content {
@@ -59,6 +71,10 @@ body {
     font-weight: 600;
     display: flex;
     align-items: center;
+
+    @media (max-width: 768px) {
+      margin-bottom: 1.5rem;
+    }
 
     a:hover {
       color: $primary;
@@ -89,8 +105,15 @@ body {
   box-shadow: none !important;
   font-family: $fontRoboto !important;
 
-  &-days {
+  &.datepicker-orient-top .datepicker-days {
     margin-top: 1rem;
+  }
+
+  &.datepicker-orient-bottom .datepicker-days {
+    margin-bottom: 1rem;
+  }
+
+  &-days {
     background-color: #fff;
     border: 0.1rem solid #ccc;
     box-shadow: 0 0 0.3rem #ccc;
@@ -102,6 +125,16 @@ body {
     padding: 0.8rem 1rem !important;
     @include box(3rem);
     font-size: 1.2rem;
+  }
+}
+
+.datepicker-dropdown.datepicker-orient-bottom {
+  &::before {
+    bottom: 4px;
+  }
+
+  &::after {
+    bottom: 5px;
   }
 }
 

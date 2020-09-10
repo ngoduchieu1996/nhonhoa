@@ -118,6 +118,12 @@
     }
   }
 
+  .position-relative {
+    @media (max-width: 460px) {
+      position: static;
+    }
+  }
+
   &-sub {
     @include absolute(right 0);
     top: calc(100% + 1.2rem);
@@ -126,6 +132,11 @@
     width: 30rem;
     display: none;
     background-color: #fff;
+
+    @media (max-width: 460px) {
+      right: 50%;
+      transform: translateX(50%);
+    }
   }
 
   .note-inner {
@@ -194,6 +205,10 @@
     cursor: pointer;
     position: relative;
     padding: 0.5rem 0;
+
+    @media (max-width: 460px) {
+      position: static;
+    }
 
     img {
       @include box(3rem);

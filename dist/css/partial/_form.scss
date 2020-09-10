@@ -102,17 +102,17 @@ textarea.big {
     height: 100%;
   }
 
-  & > div {
-    @media (max-width: 950px) {
-      display: block;
-    }
-  }
-
   .left-form {
+    .d-flex {
+      flex-wrap: wrap;
+    }
+
     .form-item {
       display: flex;
       align-items: center;
       margin-right: 0.5rem;
+      margin-bottom: 2rem;
+      position: relative;
     }
 
     .form-control {
@@ -142,10 +142,6 @@ textarea.big {
       margin-bottom: 0;
     }
 
-    @media (max-width: 950px) {
-      margin-bottom: 3rem;
-    }
-
     &__advanced {
       margin-top: 1.5rem;
       display: none;
@@ -159,6 +155,8 @@ textarea.big {
 
   .right-form {
     display: flex;
+    margin-left: auto;
+    margin-bottom: 2rem;
 
     select {
       height: unset;
