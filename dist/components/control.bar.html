@@ -1,0 +1,149 @@
+<div class="control-bar">
+  <div class="d-flex-bw">
+    <div class="left-form">
+      <form action="" class="h-10">
+        <div class="d-flex h-10">
+          <div class="form-item">
+            <label for="" class="">Tìm kiếm</label>
+            <input
+              class="form-control"
+              type="text"
+              name=""
+              id="search"
+              placeholder="Nội dung tìm kiếm"
+            />
+          </div>
+
+          <div class="form-item">
+            <label for="from-date">Từ ngày</label>
+            <input
+              class="form-control date-input"
+              type="text"
+              data-provide="datepicker"
+              name=""
+              id="from-date"
+            />
+          </div>
+
+          <div class="form-item">
+            <label for="end-date">Đến ngày</label>
+            <input
+              class="form-control date-input"
+              type="text"
+              data-provide="datepicker"
+              name=""
+              id="end-date"
+            />
+          </div>
+
+          <div class="form-item">
+            <button class="btn-blue btn">Tìm kiếm</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="right-form">
+      <button class="btn-blue h-10 btn" id="open-add-form">
+        <i class="fas fa-plus fz-18"></i>
+      </button>
+
+      <select class="form-control">
+        <option value="20">20</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="add-new-pill">
+    <h2>Thêm mới phiếu đặt hàng</h2>
+
+    <div class="add-new-pill__form">
+      <form action="" class="form">
+        <div class="d-flex-bw row">
+          <div class="col-12 col-md-2 mb-15">
+            <div class="form-column item">
+              <label for=""> Mã phiếu: </label>
+
+              <input readonly type="text" name="" class="form-control w-10" value="PDH00894" />
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4 mb-15">
+            <div class="form-column item">
+              <div class="select-box w-10">
+                <label for="" class="required">Khách hàng: </label>
+
+                <select class="chosen-select-main w-10" name=""></select>
+
+                <div class="chosen-container">
+                  <a class="chosen-single d-flex-bw">
+                    <span>Chọn khách hàng</span>
+                    <i class="fas fa-caret-down"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-2 mb-15">
+            <div class="form-column item">
+              <div class="select-box w-10">
+                <label for="">Số hợp đồng: </label>
+
+                <select class="chosen-select-main w-10" name="">
+                  <option value="">Chọn hợp đồng</option>
+                </select>
+
+                <div class="chosen-container">
+                  <a class="chosen-single d-flex-bw">
+                    <span>Chọn hợp đồng</span>
+                    <i class="fas fa-caret-down"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-2 mb-15">
+            <div class="form-column item">
+              <div class="col-12">
+                <label for="" class="required">Ngày đặt : </label>
+
+                <input
+                  class="form-control date-input"
+                  type="text"
+                  data-provide="datepicker"
+                  name=""
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-2 mb-15">
+            <div class="form-column d-flex-bw row">
+              <div class="col-12">
+                <label for="" class="required">Ngày xuất : </label>
+
+                <input
+                  class="form-control date-input"
+                  type="text"
+                  data-provide="datepicker"
+                  name=""
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 text-center">
+            <button class="btn-danger btn">
+              <i class="fas fa-plus-circle mr-5"></i>
+              <span>Lưu</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
