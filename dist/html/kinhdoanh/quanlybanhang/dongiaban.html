@@ -22,7 +22,7 @@
   <body id="dongiaban-page">
     <nav class="nav-bar t-white">
       <div class="logo fz-26 fw-7 text-upper">
-        <a href="#">NHƠN HÒA</a>
+        <a href="../kinhdoanhnoidia.html">NHƠN HÒA</a>
       </div>
 
       <button id="open-side-bar">
@@ -281,15 +281,19 @@
             ><span class="icon-menu"><i class="fas fa-list-alt"></i></span>
             <span class="show-on-hover">Quản lý Mua hàng</span>
           </a>
+
+
           <ul class="hidden-ul dropdown-btn" style="display: none">
             <a href="#" class="back"><span class="show-on-hover">Quản lý Mua hàng</span> </a>
+
             <li>
               <a href="#" class="show-on-hover"
                 ><span><i class="fas fa-list-alt"></i></span>DS yêu cầu mua hàng</a
               >
             </li>
+
             <li>
-              <a href="#" class="show-on-hover"
+              <a href="../quanlymuahang/muahang-phieumuahang.html" class="show-on-hover"
                 ><span><i class="fas fa-clipboard-list"></i></span>Quản lý Phiếu mua hàng</a
               >
             </li>
@@ -425,8 +429,18 @@
                   </div>
 
                   <div class="form-item">
-                    <select class="form-control" name="" id="">
+                    <select class="form-control" name="" >
                       <option value="Nhóm đơn giá bán" selected>Nhóm đơn giá bán</option>
+                    </select>
+                  </div>
+
+                  <div class="form-item">
+                    <select name="" class="form-control">
+                      <option value="" selected>Ngày tạo</option>
+
+                      <option value="">Ngày áp dụng</option>
+
+                      <option value="">Ngày kết thúc</option>
                     </select>
                   </div>
 
@@ -513,7 +527,9 @@
                       <div class="col-6 select-box">
                         <label for="" class="required">Nhóm đơn giá bán: </label>
 
-                        <select class="chosen-select-main w-10" name=""></select>
+                        <select class="chosen-select-main w-10" name="">
+                          <option value="">Chọn nhóm đơn giá bán</option>
+                        </select>
 
                         <div class="chosen-container">
                           <a class="chosen-single d-flex-bw">

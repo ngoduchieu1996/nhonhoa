@@ -1,0 +1,58 @@
+.form-control-showhide-column {
+  @include fixed(top 50% left 50%);
+  z-index: 150;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  display: none;
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 2.1rem;
+    padding: 1.4rem 1.6rem;
+    background-image: linear-gradient(to right, #3ca55c 0%, #b5ac49 51%, #3ca55c 100%);
+  }
+
+  button.close {
+    @include absolute(top 1.4rem right 1.6rem);
+    font-size: 2rem;
+    color: #fff;
+  }
+
+  &-table {
+    background-color: #fff;
+
+    label {
+      font-weight: 600;
+      font-size: 1.4rem;
+      margin-left: 0.3rem;
+      display: inline-block;
+      transform: translateY(-0.2rem);
+    }
+
+    .select-all {
+      text-align: center;
+      padding: 1.5rem 0;
+      border-bottom: 0.1rem solid #ddd;
+
+      label {
+        color: $Danger;
+      }
+    }
+
+    .select-multi {
+      padding: 2rem;
+      border-bottom: 0.1rem solid #ddd;
+
+      .col-12 > div:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    .select-close {
+      padding: 2rem;
+      text-align: right;
+    }
+  }
+}

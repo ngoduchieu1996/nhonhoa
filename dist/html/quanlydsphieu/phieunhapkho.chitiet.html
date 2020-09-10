@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHI TIẾT PHIẾU NHẬP KHO</title>
+
+    <!-- CSS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../lib/css/datepicker.css" />
+    <link rel="stylesheet" href="../../font/fontawesome-free-5.14.0-web/css/all.css" />
+    <link rel="stylesheet" href="../../css/style.css" />
+  </head>
+  <body id="chitietphieunhapkho-page">
+    <nav class="nav-bar t-white">
+      <div class="logo fz-26 fw-7 text-upper">
+        <a href="../index.html">NHƠN HÒA</a>
+      </div>
+
+      <button id="open-side-bar">
+        <i class="fas fa-bars t-white"></i>
+      </button>
+
+      <div class="nav-bar__menu hide-for-tablet">
+        <div class="block">
+          <div class="nav-bar__menu-list">
+            <ul class="">
+              <li class="nav-bar__menu-link has-sub">
+                <div class="icon">
+                  <i class="fas fa-list"></i>
+                </div>
+
+                <span>Kế hoạch</span>
+
+                <div class="sub-menu">
+                  <div class="d-flex-bw">
+                    <div class="w-5">
+                      <a href="../index.html">Kế hoạch</a>
+                    </div>
+
+                    <div class="w-5">
+                      <a href="">CCDC</a>
+                    </div>
+
+                    <div class="w-5">
+                      <a href="">Gia Công</a>
+                    </div>
+
+                    <div class="w-5">
+                      <a href="">Cấp Hàng</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-bar__menu-link has-sub">
+                <div class="icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+
+                <span>Kinh doanh</span>
+
+                <div class="sub-menu d-flex-bw">
+                  <div class="d-flex-bw">
+                    <div class="w-5">
+                      <a href="../kinhdoanh/kinhdoanhnoidia.html">Nội địa </a>
+                    </div>
+
+                    <div class="w-5">
+                      <a href="">Xuất khẩu</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-bar__menu-link">
+                <a href="">
+                  <div class="icon">
+                    <i class="fas fa-warehouse"></i>
+                  </div>
+
+                  <span>Kho</span>
+                </a>
+              </li>
+
+              <li class="nav-bar__menu-link has-sub">
+                <div class="icon">
+                  <i class="fas fa-industry"></i>
+                </div>
+
+                <span>Xưởng</span>
+
+                <div class="sub-menu">
+                  <div class="d-flex-bw">
+                    <div class="col-4"><a href="">Xưởng 1</a></div>
+                    <div class="col-4"><a href="">Xưởng 2</a></div>
+                    <div class="col-4"><a href="">Xưởng 3</a></div>
+                    <div class="col-4"><a href="">Xưởng 4</a></div>
+                    <div class="col-4"><a href="">Xưởng 5</a></div>
+                    <div class="col-4"><a href="">Xưởng 6</a></div>
+                    <div class="col-4"><a href="">Xưởng 7</a></div>
+                    <div class="col-4"><a href="">Xưởng 8</a></div>
+                    <div class="col-4"><a href="">Xưởng 9</a></div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-bar__menu-link has-sub">
+                <div class="icon">
+                  <i class="far fa-id-card"></i>
+                </div>
+
+                <span>Kiểm định</span>
+
+                <div class="sub-menu">
+                  <div class="d-flex-bw">
+                    <div class="col-4">
+                      <a href="#">Xưởng 4 </a>
+                    </div>
+
+                    <div class="col-4">
+                      <a href="">Xưởng 5</a>
+                    </div>
+
+                    <div class="col-4">
+                      <a href="">Xưởng 6</a>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li class="nav-bar__menu-link">
+                <a href="">
+                  <div class="icon">
+                    <i class="fas fa-tools"></i>
+                  </div>
+
+                  <span>Công cụ dụng cụ</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="nav-bar__cta d-flex align-center">
+            <div>
+              <a href="#" title="Khóa">
+                <i class="fas fa-lock"></i>
+              </a>
+            </div>
+
+            <div class="position-relative">
+              <span title="Ghi chú" id="nav-note" class="nav-bar__cta-has-sub">
+                <i class="fas fa-th t-l-yellow"></i>
+              </span>
+
+              <div class="note-inner nav-bar__cta-sub">
+                <div class="note-inner__block">
+                  <div class="create-note fz-14">
+                    <span class="fw-5">Ghi chú</span>
+                    <button class="btn btn-blue fz-11">Tạo ghi chú mới</button>
+                  </div>
+
+                  <div class="show-more-note">
+                    <span class="fz-16 fw-6 t-d-grey">Hiển thị thêm ghi chú</span>
+
+                    <button>
+                      <i class="fas fa-cog fa-spin fz-18"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="position-relative">
+              <span title="Thông báo" id="nav-notification" class="nav-bar__cta-has-sub">
+                <span class="noti-counter"></span>
+                <i class="fas fa-align-justify"></i>
+              </span>
+
+              <div class="notification-inner nav-bar__cta-sub">
+                <div class="notification-inner__block">
+                  <div class="notification-note fz-14">
+                    <span class="fw-6">Thông báo</span>
+                    <span class="fz-10 t-blue">Đánh dấu tất cả đã đọc</span>
+                  </div>
+
+                  <div class="show-more-notification text-center">
+                    <a class="fz-16 fw-6 t-d-grey" href="#">Xem thêm</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="position-relative">
+              <span title="Cấu hình chung" class="nav-bar__cta-has-sub" id="nav-setting">
+                <i class="fas fa-cogs"></i>
+              </span>
+
+              <div class="setting-inner nav-bar__cta-sub">
+                <div class="setting-inner__block">
+                  <ul>
+                    <li class="t-black fz-14 fw-5">Cấu hình chung</li>
+
+                    <li class="setting-inner__block-link">
+                      <a href="#">Quản lý tài khoản</a>
+                    </li>
+
+                    <li class="setting-inner__block-link">
+                      <a href="#">Phân quyền</a>
+                    </li>
+
+                    <li class="setting-inner__block-link">
+                      <a href="#">Quản lý đơn vị</a>
+                    </li>
+
+                    <li class="setting-inner__block-link">
+                      <a href="#">Cài đặt màn hình chính</a>
+                    </li>
+
+                    <li class="setting-inner__block-link">
+                      <a href="#">Quản lý thông báo</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <figure class="user-logo">
+              <span class="nav-bar__cta-has-sub" title="Tài khoản">
+                <img src="../../asset/default_usr.png" alt="logo user" />
+                <p class="fz-12 fw-5">Admin</p>
+              </span>
+
+              <div class="user-logo__control nav-bar__cta-sub">
+                <ul class="user-logo__control-list">
+                  <li>
+                    <i class="fas fa-key"></i>
+                    <a href="#">Thay đổi mật khẩu</a>
+                  </li>
+
+                  <li>
+                    <i class="fas fa-pen-fancy"></i>
+                    <a href="#">Quản lý tài khoản</a>
+                  </li>
+
+                  <li>
+                    <i class="fas fa-sign-out-alt"></i>
+                    <a href="#">Đăng xuất</a>
+                  </li>
+                </ul>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+
+      <button id="show-nav-bar" class="show-for-tablet t-white">
+        <i class="fas fa-ellipsis-h"></i>
+      </button>
+    </nav>
+
+    <div class="sidenav sidebar-hover" id="side-bar">
+      <div class="side_title d-flex align-center">
+        <img src="../../asset/logo-trans.png" class="logo_size" />
+        <h2 class="show-on-hover">P.KẾ HOẠCH</h2>
+      </div>
+
+      <ul class="side-nav__menu">
+        <li>
+          <a href="#" class="show-menu">
+            <span class="icon-menu">
+              <i class="fas fa-clipboard-list"></i>
+            </span>
+            <span class="show-on-hover"> Quản lý Danh mục </span>
+          </a>
+
+          <ul class="hidden-ul dropdown-btn" style="display: none">
+            <a href="#" class="back show-on-hover">
+              <span class="show-on-hover">Quản lý Danh mục</span>
+            </a>
+
+            <li>
+              <a href="/LoaiVatTu"><span class="show-on-hover">Quản lý Loại vật tư</span></a>
+            </li>
+
+            <li>
+              <a href="/ChiTietVatTu"><span class="show-on-hover">Quản lý Chi tiết vật tư</span></a>
+            </li>
+
+            <li>
+              <a href="/KhoTinhTonChiTiet/SoDuDauKy"
+                ><span class="show-on-hover">Quản lý Số dư ban đầu</span></a
+              >
+            </li>
+
+            <li>
+              <a href="/IsoConfig"><span class="show-on-hover">Quản lý Phiếu ISO</span></a>
+            </li>
+
+            <li>
+              <a href="/Tole"><span class="show-on-hover">Quản lý Tole</span></a>
+            </li>
+
+            <li>
+              <a href="/NhomSanPham/NhomVatTu"
+                ><span class="show-on-hover">Quản lý Nhóm vật tư</span></a
+              >
+            </li>
+
+            <li>
+              <a href="/NhomSanPham" class="h-65"
+                ><span class="show-on-hover">Quản lý Nhóm sản phẩm Mua hàng</span></a
+              >
+            </li>
+
+            <li>
+              <a href="/CoPhanCapXuong"
+                ><span class="show-on-hover">Quản lý Cơ phận cấp xưởng 2-3</span></a
+              >
+            </li>
+
+            <li>
+              <a href="/KyTen"><span class="show-on-hover">Quản lý Ký tên</span></a>
+            </li>
+
+            <li>
+              <a href="/DanhMucKhachHang"><span class="show-on-hover">Quản lý Khách hàng</span> </a>
+            </li>
+
+            <li>
+              <a href="/LyDoXuat"><span class="show-on-hover">Quản lý Lý do nhập - xuất</span></a>
+            </li>
+
+            <li>
+              <a href="/LoaiHinhKinhDoanh"
+                ><span class="show-on-hover">Quản lý Loại Hình Kinh Doanh</span></a
+              >
+            </li>
+
+            <li>
+              <a href="/NhomKhachHang"
+                ><span class="show-on-hover">Quản lý Nhóm Khách Hàng</span></a
+              >
+            </li>
+
+            <li>
+              <a href="/DonVi" app-detail="/BoPhan"
+                ><span class="show-on-hover">Quản lý Đơn vị</span></a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" class="show-menu"
+            ><span class="icon-menu">
+              <i class="fa fa-list-alt"></i>
+            </span>
+            <span class="show-on-hover">Lập kế hoạch</span>
+          </a>
+          <ul class="hidden-ul dropdown-btn" style="display: none">
+            <a href="#" class="back"><span class="show-on-hover">Lập kế hoạch</span> </a>
+            <li>
+              <a
+                href="/PKHKeHoachSXNKXH"
+                app-detail="/PKHKeHoachSXNKXHDetail;/PKHKeHoachSXNKXHDetail/KeHoachXuatKhau;/PKHKeHoachSXNKXHDetail/KeHoachSanXuatPreview"
+              >
+                <span class="show-on-hover">Kế Hoạch SX-NK-XH</span></a
+              >
+            </li>
+            <li>
+              <a href="/PKHKeHoachSXNKXH/KeHoachSX" app-detail="/PKHKeHoachSXNKXHXuongLapRap"
+                ><span class="show-on-hover">Kế Hoạch Sản xuất tuần</span></a
+              >
+            </li>
+
+            <li>
+              <a href="/PKHKeHoachSXNKXH/KeHoachSXLapRap" app-detail="/PKHKeHoachXuongDetail"
+                ><span class="show-on-hover">Kế Hoạch xưởng lắp ráp</span></a
+              >
+            </li>
+
+            <li>
+              <a
+                href="/PKHKeHoachSXNKXH/KeHoachSXLapChiTiet"
+                app-detail="/PKHKeHoachXuongDetail/XuongChiTiet"
+                ><span class="show-on-hover">Kế Hoạch SX xưởng chi tiết</span></a
+              >
+            </li>
+
+            <li>
+              <a href="/PKHKeHoachXuong/KeHoachTuan" app-detail="/PKHKeHoachSXTuanDetail"
+                ><span class="show-on-hover">KH SX tuần của xưởng</span></a
+              >
+            </li>
+
+            <li>
+              <a href="/PKHKeHoachXuong/KeHoachGiaoHang" app-detail="/PKHKeHoachGiaoHangDetail"
+                ><span class="show-on-hover">Quản lý Kế hoạch giao hàng</span></a
+              >
+            </li>
+
+            <li>
+              <a
+                href="/PKHKeHoachSXNKXH/QuanLyYeuCauCapHang"
+                app-detail="/PKHKeHoachXuongDetail/ChiTietYeuCauCapHang"
+                ><span class="show-on-hover">Quản lý Yêu cầu cấp hàng</span></a
+              >
+            </li>
+
+            <li style="display: none">
+              <a href="/YeuCauMuaHang" app-detail="/YeuCauMuaHangDetail"
+                ><span class="show-on-hover">Quản lý Yêu cầu mua hàng</span></a
+              >
+            </li>
+
+            <li>
+              <a
+                class="h-65"
+                href="/PKHKeHoachXuong/KeHoachNhapKhoThanhPham"
+                app-detail="/PKHKeHoachNhapKhoThanhPhamDetail"
+                ><span class="show-on-hover">Kế hoạch nhập kho thành phẩm</span>
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="/PKHKeHoachXuatKhau"
+                app-detail="/PKHKeHoachXuatKhauDetail/KeHoachXuatKhauDetail"
+                ><span class="show-on-hover">Kế hoạch xuất khẩu</span></a
+              >
+            </li>
+
+            <li>
+              <a href="/PKHKeHoachCatTole" app-detail="/PKHKeHoachCatToleDetail"
+                ><span class="show-on-hover">Kế hoạch cắt tole</span></a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li class="active">
+          <a href="#" class="show-menu"
+            ><span class="icon-menu"><i class="far fa-copy"></i></span>
+            <span class="show-on-hover">Quản lý Danh sách phiếu</span>
+          </a>
+
+          <ul class="hidden-ul dropdown-btn" style="display: none">
+            <a href="#" class="back">
+              <span class="show-on-hover">Quản lý Danh sách phiếu</span>
+            </a>
+
+            <li>
+              <a
+                href="/PKHPhieuYeuCauCapHang"
+                app-detail="/PKHPhieuYeuCauCapHangDetail"
+                class="show-on-hover"
+                ><span><i class="far fa-copy"></i></span>Phiếu yêu cầu cấp hàng</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="/PKHPhieuYeuCauMuaHang"
+                app-detail="/PKHPhieuYeuCauMuaHangDetail"
+                class="show-on-hover"
+                ><span><i class="fas fa-clipboard-list"></i></span>Phiếu yêu cầu mua hàng</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="/PKHPhieuYeuCauXuatHang/PKHPhieuYeuCauXH"
+                app-detail="/PKHPhieuYeuCauXuatHangDetail"
+                class="show-on-hover"
+                ><span><i class="far fa-copy"></i></span>Phiếu yêu cầu xuất hàng</a
+              >
+            </li>
+
+            <li class="active">
+              <a href="./phieunhapkho.html" class="show-on-hover"
+                ><span><i class="far fa-copy"></i></span>Phiếu nhập kho</a
+              >
+            </li>
+
+            <li>
+              <a href="./phieuxuatkho.html" class="show-on-hover"
+                ><span><i class="far fa-copy"></i></span>Phiếu xuất kho</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="/PKHDieuChuyenVatTu"
+                app-detail="/PKHDieuChuyenVatTuDetail"
+                class="show-on-hover"
+                ><span><i class="far fa-copy"></i></span>Phiếu điều chuyển vật tư</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="/PKHKiemHoa"
+                app-detail="/PKHKiemHoaDetail/ChiTietPhieuKiemHoaVatTu"
+                detail="/PKHKiemHoaDetail/ChiTietPhieuKiemHoaTole"
+                class="show-on-hover"
+                ><span><i class="far fa-copy"></i></span>Phiếu kiểm hóa</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="/PKDPhieuMuaHang/IndexPKH"
+                app-detail="/PKDPhieuMuaHangDetail/IndexPKH"
+                class="show-on-hover"
+                ><span><i class="far fa-copy"></i></span>Theo dõi phiếu mua hàng</a
+              >
+            </li>
+            <li>
+              <a
+                href="/PKDHoaDon/IndexPKH"
+                app-detail="/PKDHoaDonDetail/IndexPKH"
+                class="show-on-hover"
+                ><span><i class="far fa-copy"></i></span>Theo dõi hóa đơn bán hàng</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" class="show-menu"
+            ><span class="icon-menu"><i class="fas fa-file-invoice"></i></span>
+            <span class="show-on-hover">Báo cáo thống kê</span>
+          </a>
+          <ul class="hidden-ul dropdown-btn" style="display: none">
+            <a href="#" class="back"><span class="show-on-hover">Báo cáo thống kê</span> </a>
+            <li><a href="/PKHBaoCao/BangCanDoi" class="show-on-hover">Báo cáo bảng cân đối</a></li>
+
+            <li>
+              <a href="/PKHBaoCao/BCBangCanDoiSuDung" class="show-on-hover"
+                >Báo cáo bảng cân đối sử dụng</a
+              >
+            </li>
+
+            <li>
+              <a href="/PKHBaoCao/BCTongHopVatTuTheoTuan" class="h-65 show-on-hover"
+                >Báo cáo tổng hợp vật tư theo tuần</a
+              >
+            </li>
+
+            <li>
+              <a href="/PKHBaoCao/BCBangKeChiTietVatTu" class="show-on-hover"
+                >Báo cáo bảng kê chi tiết</a
+              >
+            </li>
+
+            <li>
+              <a href="/PKHBaoCao/BCTimSoTonAm" class="show-on-hover">Báo cáo tìm số tồn âm</a>
+            </li>
+
+            <li>
+              <a href="/PKHBaoCao/NguoiNhanKho" class="h-65 show-on-hover"
+                >Báo cáo bảng tổng hợp vật tư theo người nhận</a
+              >
+            </li>
+
+            <li>
+              <a href="/PKHKeHoachCatTole/BCTongHopToleGiaCong" class="show-on-hover"
+                >Báo cáo tổng hợp tole gia công</a
+              >
+            </li>
+
+            <li><a href="/PKHBaoCao/BCThiTruong" class="show-on-hover">Báo cáo thị trường</a></li>
+            <li>
+              <a class="h-65 show-on-hover" href="/PKHBaoCao/BCSoSanhSanLuongNhap"
+                >Báo cáo so sánh sản lượng nhập</a
+              >
+            </li>
+            <li>
+              <a href="/PKHBaoCao/BCTonKhoThanhPham" class="show-on-hover"
+                >Báo cáo tồn kho thành phẩm</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" class="show-menu"
+            ><span class="icon-menu"><i class="fas fa-car-alt"></i></span>
+            <span class="show-on-hover">Điều chuyển quyết toán</span>
+          </a>
+          <ul class="hidden-ul dropdown-btn" style="display: none">
+            <a href="#" class="back"><span class="show-on-hover"> Điều chuyển quết toán</span> </a>
+            <li>
+              <a
+                href="/PKHDieuChuyenVatTu/DieuChuyenGiaCong"
+                app-detail="/PKHDieuChuyenVatTuDetail"
+                class="show-on-hover"
+                >Quản lý Điều chuyển gia công</a
+              >
+            </li>
+            <li>
+              <a
+                href="/PKHDieuChuyenVatTu/QuyetToanGiaCong"
+                app-detail="/DanhSachDieuChuyenQuyetToan/DanhSachQuyetToanGiaCong"
+                class="show-on-hover"
+                >Quản lý Quyết toán gia công</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#" class="show-menu"
+            ><span class="icon-menu"><i class="far fa-chart-bar"></i></span>
+            <span class="show-on-hover">Định mức</span>
+          </a>
+          <ul class="hidden-ul dropdown-btn" style="display: none">
+            <a href="#" class="back"><span class="show-on-hover"> Định mức</span> </a>
+            <li>
+              <a href="/DinhMucSanXuat?type=1" app-detail="/DanhSachChiTiet" class="show-on-hover"
+                >Quản lý Định mức sản xuất</a
+              >
+            </li>
+            <li>
+              <a
+                href="/DinhMucCatTole"
+                app-detail="/DanhSachChiTiet/DinhMucCatTole"
+                class="show-on-hover"
+                >Quản lý Định mức cắt Tole</a
+              >
+            </li>
+            <li><a href="/DinhMucTuan" class="show-on-hover">Quản lý Định mức tuần</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#"
+            ><span class="icon-menu"><i class="fas fa-gift"></i></span
+            ><span class="show-on-hover">Quản lý kho</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#" class="show-menu"
+            ><span class="icon-menu"><i class="fas fa-warehouse"></i></span>
+            <span class="show-on-hover">Quản lý xưởng</span>
+          </a>
+          <ul class="hidden-ul dropdown-btn" style="display: none">
+            <a href="#" class="back"><span class="show-on-hover"> Quản lý xưởng</span> </a>
+            <li><a href="/Xuong" class="show-on-hover">Quản lý Danh sách Xưởng</a></li>
+
+            <li><a href="/ThanhPhamXuong" class="show-on-hover">Quản lý Thành phẩm xưởng</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#"
+            ><span class="icon-menu"><i class="fas fa-calculator"></i></span>
+            <span class="show-on-hover">Quản lý số N</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#"
+            ><span class="icon-menu"><i class="far fa-address-book"></i></span>
+            <span class="show-on-hover">Sổ chi tiết vật tư</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <main>
+      <div class="page-container">
+        <div class="bread-cumb">
+          <h1 class="manage-page-title">Quản lý Chi tiết phiếu nhập kho</h1>
+
+          <div class="bread-cumb__content">
+            <a class="root-page" href="../index.html"> Trang chủ </a>
+
+            <a class="mr-5" href="./phieunhapkho.html">Phiếu nhập kho &nbsp; /</a>
+
+            <a href="./phieunhapkho.chitiet.html">Chi tiết phiếu nhập kho</a>
+          </div>
+        </div>
+
+        <div class="details mb-20">
+          <form action="" class="w-10 form">
+            <div class="d-flex-bw row">
+              <div class="col-12 col-md-3 mb-15">
+                <div class="form-column">
+                  <label for="">Số chứng từ</label>
+                  <input class="form-control w-10" type="text" readonly value="TCX000860" />
+                </div>
+              </div>
+
+              <div class="col-12 col-md-3 mb-15">
+                <div class="form-column">
+                  <label for=""><span>Mã kho:</span></label>
+                  <input type="text" readonly value="X5A" class="form-control w-10" />
+                </div>
+              </div>
+
+              <div class="col-12 col-md-3 mb-15">
+                <div class="form-column">
+                  <label for="">
+                    <span>Ngày lập :</span>
+                  </label>
+
+                  <input type="text" class="form-control w-10" readonly value="09/09/2020" />
+                </div>
+              </div>
+
+              <div class="col-12 col-md-3 mb-15">
+                <div class="form-column">
+                  <label for="">
+                    <span>Mã kiểm hóa :</span>
+                  </label>
+
+                  <input type="text" readonly value="20090303/PKH" class="form-control w-10" />
+                </div>
+              </div>
+
+              <div class="col-12 col-md-6 mb-15">
+                <div class="form-column">
+                  <label for="">
+                    <span>Khách hàng:</span>
+                  </label>
+
+                  <input
+                    type="text"
+                    readonly
+                    value="CCA10 | Xí nghiệp bán lẻ xăng dầu"
+                    class="form-control w-10"
+                  />
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="d-flex-bw mb-20">
+          <div>
+            <a href="./phieunhapkho.html" class="go-back">Quay lại</a>
+          </div>
+
+          <div class="d-flex">
+            <button class="btn btn-blue mr-10">
+              <i class="far fa-calendar-plus mr-5"></i>
+              <span>Duyệt phiếu</span>
+            </button>
+
+            <button class="btn btn-blue">
+              <i class="far fa-calendar-plus mr-5"></i>
+              <span>In phiếu nhập</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="main-table table-noidung-phieuxuatkho">
+          <div class="table-wrapper">
+            <div class="table-content">
+              <table>
+                <thead>
+                  <tr>
+                    <th>STT</th>
+                    <th>Vật tư</th>
+                    <th>Số lượng</th>
+                    <th>Số tồn</th>
+                    <th>Số N</th>
+                    <th>Tác vụ</th>
+                  </tr>
+                </thead>
+
+                <tbody class="counter">
+                  <tr>
+                    <td></td>
+
+                    <td>
+                      <div class="w-10">
+                        <select name="" class="chosen-select-main w-10">
+                          <option value="">Chọn vật tư</option>
+                          <option selected="" value="4184">I1B085-901 | Kẽm xõ chì</option>
+                          <option value="3862">
+                            I1AX16-901 | Cụm giá đở, tấm GK cân 1 .. 5 kg/6"
+                          </option>
+                          <option value="3863">
+                            I1AX16-902 | Cụm giá đở, tấm GK cân 1 .. 5kg/6"/bil
+                          </option>
+                          <option value="3864">
+                            I1AX16-903 | Cụm giá đở, tấm GK cân 500gr/6"/bil
+                          </option>
+                          <option value="3865">I1AX17-901 | Cụm đòn truyền lực cân 6"/bil</option>
+                          <option value="3866">I1AX35-901 | Cụm hộp số cân 1,2,5 kg/6"</option>
+                          <option value="3867">
+                            I1AX62-901 | Cụm nắp hộp cân 1..5 kg/6"/granite
+                          </option>
+                          <option value="3874">I1AZ04-902 | Đế giá ĐD cân 1,2,5 /granite</option>
+                          <option value="3875">
+                            I1AZ04-903 | Đế giá đỡ dĩa cân 1,2,5 kg/ trắng
+                          </option>
+                          <option value="3876">I1AZ04-952 | Đế giá đở dĩa cân 6" / beige</option>
+                          <option value="3877">I1AZ04-953 | Đế giá đở dĩa cân 6'' / blue</option>
+                          <option value="3882">I1AZ05-901 | TH / Khung tải cân 6"/4lỗ/ Btp</option>
+                          <option value="3883">
+                            I1AZ05-902 | TH / Khung tải cân 6"/2lổ /granite
+                          </option>
+                          <option value="3884">
+                            I1AZ05-903 | TH / khung tải cân 6"/ 2lổ /White
+                          </option>
+                          <option value="3887">I1AZ05-952 | TH/ Khung tải cân 6" / Beige</option>
+                          <option value="3888">I1AZ05-953 | TH/ Khung tải cân 6"/2 lổ /blue</option>
+                          <option value="3889">
+                            I1AZ05-954 | TH / Khung tải cân 6"/ Detecto/Trắng
+                          </option>
+                          <option value="3890">
+                            I1AZ05-955 | TH / Khung tải cân 500 gr/6"/ Detecto/Trắng
+                          </option>
+                          <option value="3904">I1AZ06-902 | TH / Thùng cân 1,2,5 / granite</option>
+                          <option value="3905">I1AZ06-903 | TH/ Thùng cân 1,2,5 kg/6"/trắng</option>
+                          <option value="3906">I1AZ06-904 | TH/Thùng cân 6"/ lỗ M4/granite</option>
+                          <option value="3909">I1AZ06-952 | TH/ Thùng cân 6" / Beige</option>
+                          <option value="3910">I1AZ06-953 | TH/ Thùng cân 6" /blue</option>
+                          <option value="3911">I1AZ06-954 | TH / Thùng cân 6"/Detecto/trắng</option>
+                          <option value="3912">
+                            I1AZ06-955 | TH / Thùng cân 6" /Detecto/trắng
+                          </option>
+                          <option value="3916">I1AZ08-901 | Mặt lưng cân 6"/TQ/granite</option>
+                          <option value="3917">I1AZ10-901 | Mặt chụp có decal cân 6"/TQ</option>
+                          <option value="3920">I1AZ12-901 | Bộ kim chỉ thị cân 6"/ 0,5 mm</option>
+                          <option value="3929">I1AZ20-901 | Bộ tấm đổi tâm cân 6"/bimetal</option>
+                          <option value="3930">I1AZ21-901 | Bộ cây dọi cân 500gr .. 5kg/6"</option>
+                          <option value="3934">I1AZ35-903 | Bộ hộp số cân 1 .. 5 kg/6"</option>
+                          <option value="3935">I1AZ35-951 | Bộ hộp số cân 500 gr</option>
+                          <option value="3937">I1AZ44-901 | Bộ móc treo cân 1, 2kg/6"</option>
+                          <option value="3941">I1AZ45-901 | Bộ lò xo tải cân 1 kg/6"</option>
+                          <option value="3942">I1AZ45-902 | Bộ lò xo tải cân 2 kg/6"</option>
+                          <option value="3943">I1AZ45-903 | Bộ lò xo tải cân 5 kg/6"</option>
+                          <option value="3946">I1AZ53-902 | Mặt hông phải 1,2,5 kg/granite</option>
+                          <option value="3955">I1AZ54-901 | Đế cân 6"/TQ/granite</option>
+                          <option value="3956">I1AZ57-902 | Mặt hông trái 1,2,5 kg/granite</option>
+                          <option value="3965">I1AZ62-902 | Nắp hộp cân 1,2,5 /granite</option>
+                          <option value="4187">I1BX05-902 | Cụm Khung tải cân 12kg/granite</option>
+                          <option value="4188">I1BX05-951 | Cụm Khung tải cân 12 kg/beige</option>
+                          <option value="4189">
+                            I1BX05-953 | Cụm Khung tải cân 8''/Harvest/ nâu
+                          </option>
+                          <option value="4194">
+                            I1BX05-959 | Cụm KT, sắt BCTG cân 8''/Harvest/stone beige
+                          </option>
+                          <option value="4195">
+                            I1BX05-960 | Cụm KT, sắt BCTG cân 12kg/Yamato
+                          </option>
+                          <option value="4209">I1BX16-901 | Cụm giá đở TGK cân 4 .. 15 kg</option>
+                          <option value="4210">
+                            I1BX16-951 | Cụm giá đở TGK cân 0.9 .. 22 kg/8"/Harvest
+                          </option>
+                          <option value="4211">
+                            I1BX16-952 | Cụm giá đở TGK cân 0,9 .. 2,2 kg/8"/Harvest
+                          </option>
+                          <option value="4212">
+                            I1BX16-953 | Cụm giá đở TGK cân 2, 4 kg/8"/Yamato
+                          </option>
+                          <option value="4215">I1BX17-901 | Cụm đòn TL cân 4 .. 100 kg</option>
+                          <option value="4217">I1BX35-901 | Cụm hộp số cân 10 ..30kg</option>
+                          <option value="4219">I1BX41-901 | Cụm đòn gánh cân 4 .. 30 kg</option>
+                          <option value="4220">
+                            I1BX62-901 | Bộ nắp hộp cân 4 .. 30kg/granite
+                          </option>
+                          <option value="4222">
+                            I1BX62-951 | Bộ nắp hộp cân 4 .. 30kg/HK/beige
+                          </option>
+                          <option value="4224">
+                            I1BX62-953 | Bộ nắp hộp cân 4,5..22 kg/Harvest/nâu
+                          </option>
+                          <option value="4229">
+                            I1BX62-959 | Bộ nắp hộp cân 4,5..22kg/Har/c.p.sữa
+                          </option>
+                          <option value="4230">
+                            I1BX62-960 | Bộ nắp hộp cân 0,9 ..2,2 kg/Harvest/nâu
+                          </option>
+                          <option value="4237">I1BZ01-951 | Dĩa 250 x 250 x 1,5 ly ( sơn )</option>
+                          <option value="4240">
+                            I1BZ02-953 | TH / Cánh giá trên, dưới cân 8" / HK
+                          </option>
+                          <option value="4243">I1BZ05-902 | TH/ Khung tải cân 8"/củ/granite</option>
+                          <option value="4244">I1BZ05-903 | TH / Khung tải cân 8" / White</option>
+                          <option value="4247">I1BZ05-951 | TH/ Khung tải cân 8" / Beige</option>
+                          <option value="4248">
+                            I1BZ05-952 | TH/ Khung tải cân 2...12 kg / Yamato
+                          </option>
+                          <option value="4249">
+                            I1BZ05-953 | TH/ Khung tải cân 8" / Harvest/ nâu
+                          </option>
+                          <option value="4250">
+                            I1BZ05-954 | TH/ Khung tải cân 8" / Harvest/ trắng
+                          </option>
+                          <option value="4251">
+                            I1BZ05-955 | TH/ Khung tải cân 4, 8, 15 (XK - HUG)
+                          </option>
+                          <option value="4252">
+                            I1BZ05-956 | TH /Khung tải cân 8"/Harvest/vàng lúa
+                          </option>
+                          <option value="4253">
+                            I1BZ05-957 | TH/Khung tải cân 0,9 .. 10 kg / Harvest/ màu bạc
+                          </option>
+                          <option value="4254">I1BZ05-958 | TH / Khung tải cân 8"/blue</option>
+                          <option value="4255">
+                            I1BZ05-959 | TH/ Khung tải cân 8" /Harvest/c.p.sữa
+                          </option>
+                          <option value="4256">I1BZ05-960 | TH / Khung tải cân 8"/Detecto</option>
+                          <option value="4257">I1BZ05-961 | TH/Khung tảI cân 8"/xám</option>
+                          <option value="4261">
+                            I1BZ06-903 | TH/ Thùng cân 4.. 20 Kg /granite
+                          </option>
+                          <option value="4265">I1BZ06-951 | TH/ Thùng cân 8" /beige</option>
+                          <option value="4266">I1BZ06-952 | TH/ Thùng cân 2 .. 12 kg/Yamato</option>
+                          <option value="4267">I1BZ06-953 | TH/ Thùng cân 8"/ Harvest/ nâu</option>
+                          <option value="4268">
+                            I1BZ06-954 | TH/ Thùng cân 8"/ Harvest/ trắng
+                          </option>
+                          <option value="4269">
+                            I1BZ06-955 | Tổ hợp thùng cân 4, 8, 15 (XK - HUG)
+                          </option>
+                          <option value="4270">
+                            I1BZ06-956 | TH/ Thùng cân 8"/Harvest/vàng lúa
+                          </option>
+                          <option value="4271">
+                            I1BZ06-957 | TH/ Thùng cân 0,9...10 Kg / Harvest/ màu bạc
+                          </option>
+                          <option value="4272">I1BZ06-958 | TH/ Thùng cân 8"/blue</option>
+                          <option value="4273">
+                            I1BZ06-959 | TH/ Thùng cân 8" /Harvest /C.F. sữa
+                          </option>
+                          <option value="4274">I1BZ06-960 | TH/ Thùng cân 8"/Detecto</option>
+                          <option value="4275">I1BZ06-961 | TH / Thùng cân 8"/xám</option>
+                          <option value="4276">I1BZ06-962 | TH/ Thùng cân 4 .. 20kg/8"/CPTQ</option>
+                          <option value="4277">I1BZ06-963 | TH/ Thùng cân 8"/White</option>
+                          <option value="4278">
+                            I1BZ08-901 | Mặt lưng cân 4 .. 20kg/8"/granite
+                          </option>
+                          <option value="4288">I1BZ10-902 | Mặt chụp nhựa 8"/có decal</option>
+                          <option value="4293">I1BZ12-901 | Bộ kim chỉ thị cân 12 .. 30 kg</option>
+                          <option value="4294">I1BZ12-902 | Bộ kim chỉ thị cân 4..10 kg</option>
+                          <option value="4307">
+                            I1BZ17-901 | Bộ đòn truyền lực cân 4 .. 100kg
+                          </option>
+                          <option value="4309">
+                            I1BZ18-901 | Bộ sắt bắt chốt TG cân 4...30 kg
+                          </option>
+                          <option value="4310">
+                            I1BZ18-951 | Bộ sắt bắt chốt TG cân 4 .. 30 ( Yamato )
+                          </option>
+                          <option value="4312">I1BZ20-901 | Bộ tấm đổi tâm cân 4.. 100 kg</option>
+                          <option value="4315">I1BZ21-901 | Bộ cây dọi cân 4 .. 30 kg</option>
+                          <option value="4320">I1BZ35-903 | Bộ hộp số cân 4 ...30 kg</option>
+                          <option value="4321">
+                            I1BZ35-951 | Bộ hộp số cân 0,9 .. 22 kg/8"/Harvest
+                          </option>
+                          <option value="4322">I1BZ35-952 | Bộ hộp số cân 2,4 kg /8"/Yamato</option>
+                          <option value="4325">I1BZ44-901 | Bộ móc treo cân 4 .. 15 kg</option>
+                          <option value="4326">
+                            I1BZ44-902 | Bộ móc treo cân 4 .. 15 kg/ có mủ
+                          </option>
+                          <option value="4327">I1BZ44-951 | Bộ móc treo cân 22 kg/Harvest</option>
+                        </select>
+
+                        <div class="chosen-container">
+                          <a class="chosen-single d-flex-bw">
+                            <span>Chọn vật tư</span>
+                            <i class="fas fa-caret-down"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="w-10">
+                        <input
+                          type="number"
+                          min="0"
+                          class="form-control__no-border form-control w-10 text-right"
+                        />
+                      </div>
+                    </td>
+
+                    <td>
+                      <span>Kho xuất :</span>
+                      <span class="khoxuat">150</span>
+                    </td>
+
+                    <td></td>
+
+                    <td class="btn-function">
+                      <div>
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td></td>
+
+                    <td>
+                      <div class="w-10">
+                        <select name="" class="chosen-select-main w-10">
+                          <option value="">Chọn vật tư</option>
+                          <option selected="" value="4184">I1B085-901 | Kẽm xõ chì</option>
+                          <option value="3862">
+                            I1AX16-901 | Cụm giá đở, tấm GK cân 1 .. 5 kg/6"
+                          </option>
+                          <option value="3863">
+                            I1AX16-902 | Cụm giá đở, tấm GK cân 1 .. 5kg/6"/bil
+                          </option>
+                          <option value="3864">
+                            I1AX16-903 | Cụm giá đở, tấm GK cân 500gr/6"/bil
+                          </option>
+                          <option value="3865">I1AX17-901 | Cụm đòn truyền lực cân 6"/bil</option>
+                          <option value="3866">I1AX35-901 | Cụm hộp số cân 1,2,5 kg/6"</option>
+                          <option value="3867">
+                            I1AX62-901 | Cụm nắp hộp cân 1..5 kg/6"/granite
+                          </option>
+                          <option value="3874">I1AZ04-902 | Đế giá ĐD cân 1,2,5 /granite</option>
+                          <option value="3875">
+                            I1AZ04-903 | Đế giá đỡ dĩa cân 1,2,5 kg/ trắng
+                          </option>
+                          <option value="3876">I1AZ04-952 | Đế giá đở dĩa cân 6" / beige</option>
+                          <option value="3877">I1AZ04-953 | Đế giá đở dĩa cân 6'' / blue</option>
+                          <option value="3882">I1AZ05-901 | TH / Khung tải cân 6"/4lỗ/ Btp</option>
+                          <option value="3883">
+                            I1AZ05-902 | TH / Khung tải cân 6"/2lổ /granite
+                          </option>
+                          <option value="3884">
+                            I1AZ05-903 | TH / khung tải cân 6"/ 2lổ /White
+                          </option>
+                          <option value="3887">I1AZ05-952 | TH/ Khung tải cân 6" / Beige</option>
+                          <option value="3888">I1AZ05-953 | TH/ Khung tải cân 6"/2 lổ /blue</option>
+                          <option value="3889">
+                            I1AZ05-954 | TH / Khung tải cân 6"/ Detecto/Trắng
+                          </option>
+                          <option value="3890">
+                            I1AZ05-955 | TH / Khung tải cân 500 gr/6"/ Detecto/Trắng
+                          </option>
+                          <option value="3904">I1AZ06-902 | TH / Thùng cân 1,2,5 / granite</option>
+                          <option value="3905">I1AZ06-903 | TH/ Thùng cân 1,2,5 kg/6"/trắng</option>
+                          <option value="3906">I1AZ06-904 | TH/Thùng cân 6"/ lỗ M4/granite</option>
+                          <option value="3909">I1AZ06-952 | TH/ Thùng cân 6" / Beige</option>
+                          <option value="3910">I1AZ06-953 | TH/ Thùng cân 6" /blue</option>
+                          <option value="3911">I1AZ06-954 | TH / Thùng cân 6"/Detecto/trắng</option>
+                          <option value="3912">
+                            I1AZ06-955 | TH / Thùng cân 6" /Detecto/trắng
+                          </option>
+                          <option value="3916">I1AZ08-901 | Mặt lưng cân 6"/TQ/granite</option>
+                          <option value="3917">I1AZ10-901 | Mặt chụp có decal cân 6"/TQ</option>
+                          <option value="3920">I1AZ12-901 | Bộ kim chỉ thị cân 6"/ 0,5 mm</option>
+                          <option value="3929">I1AZ20-901 | Bộ tấm đổi tâm cân 6"/bimetal</option>
+                          <option value="3930">I1AZ21-901 | Bộ cây dọi cân 500gr .. 5kg/6"</option>
+                          <option value="3934">I1AZ35-903 | Bộ hộp số cân 1 .. 5 kg/6"</option>
+                          <option value="3935">I1AZ35-951 | Bộ hộp số cân 500 gr</option>
+                          <option value="3937">I1AZ44-901 | Bộ móc treo cân 1, 2kg/6"</option>
+                          <option value="3941">I1AZ45-901 | Bộ lò xo tải cân 1 kg/6"</option>
+                          <option value="3942">I1AZ45-902 | Bộ lò xo tải cân 2 kg/6"</option>
+                          <option value="3943">I1AZ45-903 | Bộ lò xo tải cân 5 kg/6"</option>
+                          <option value="3946">I1AZ53-902 | Mặt hông phải 1,2,5 kg/granite</option>
+                          <option value="3955">I1AZ54-901 | Đế cân 6"/TQ/granite</option>
+                          <option value="3956">I1AZ57-902 | Mặt hông trái 1,2,5 kg/granite</option>
+                          <option value="3965">I1AZ62-902 | Nắp hộp cân 1,2,5 /granite</option>
+                          <option value="4187">I1BX05-902 | Cụm Khung tải cân 12kg/granite</option>
+                          <option value="4188">I1BX05-951 | Cụm Khung tải cân 12 kg/beige</option>
+                          <option value="4189">
+                            I1BX05-953 | Cụm Khung tải cân 8''/Harvest/ nâu
+                          </option>
+                          <option value="4194">
+                            I1BX05-959 | Cụm KT, sắt BCTG cân 8''/Harvest/stone beige
+                          </option>
+                          <option value="4195">
+                            I1BX05-960 | Cụm KT, sắt BCTG cân 12kg/Yamato
+                          </option>
+                          <option value="4209">I1BX16-901 | Cụm giá đở TGK cân 4 .. 15 kg</option>
+                          <option value="4210">
+                            I1BX16-951 | Cụm giá đở TGK cân 0.9 .. 22 kg/8"/Harvest
+                          </option>
+                          <option value="4211">
+                            I1BX16-952 | Cụm giá đở TGK cân 0,9 .. 2,2 kg/8"/Harvest
+                          </option>
+                          <option value="4212">
+                            I1BX16-953 | Cụm giá đở TGK cân 2, 4 kg/8"/Yamato
+                          </option>
+                          <option value="4215">I1BX17-901 | Cụm đòn TL cân 4 .. 100 kg</option>
+                          <option value="4217">I1BX35-901 | Cụm hộp số cân 10 ..30kg</option>
+                          <option value="4219">I1BX41-901 | Cụm đòn gánh cân 4 .. 30 kg</option>
+                          <option value="4220">
+                            I1BX62-901 | Bộ nắp hộp cân 4 .. 30kg/granite
+                          </option>
+                          <option value="4222">
+                            I1BX62-951 | Bộ nắp hộp cân 4 .. 30kg/HK/beige
+                          </option>
+                          <option value="4224">
+                            I1BX62-953 | Bộ nắp hộp cân 4,5..22 kg/Harvest/nâu
+                          </option>
+                          <option value="4229">
+                            I1BX62-959 | Bộ nắp hộp cân 4,5..22kg/Har/c.p.sữa
+                          </option>
+                          <option value="4230">
+                            I1BX62-960 | Bộ nắp hộp cân 0,9 ..2,2 kg/Harvest/nâu
+                          </option>
+                          <option value="4237">I1BZ01-951 | Dĩa 250 x 250 x 1,5 ly ( sơn )</option>
+                          <option value="4240">
+                            I1BZ02-953 | TH / Cánh giá trên, dưới cân 8" / HK
+                          </option>
+                          <option value="4243">I1BZ05-902 | TH/ Khung tải cân 8"/củ/granite</option>
+                          <option value="4244">I1BZ05-903 | TH / Khung tải cân 8" / White</option>
+                          <option value="4247">I1BZ05-951 | TH/ Khung tải cân 8" / Beige</option>
+                          <option value="4248">
+                            I1BZ05-952 | TH/ Khung tải cân 2...12 kg / Yamato
+                          </option>
+                          <option value="4249">
+                            I1BZ05-953 | TH/ Khung tải cân 8" / Harvest/ nâu
+                          </option>
+                          <option value="4250">
+                            I1BZ05-954 | TH/ Khung tải cân 8" / Harvest/ trắng
+                          </option>
+                          <option value="4251">
+                            I1BZ05-955 | TH/ Khung tải cân 4, 8, 15 (XK - HUG)
+                          </option>
+                          <option value="4252">
+                            I1BZ05-956 | TH /Khung tải cân 8"/Harvest/vàng lúa
+                          </option>
+                          <option value="4253">
+                            I1BZ05-957 | TH/Khung tải cân 0,9 .. 10 kg / Harvest/ màu bạc
+                          </option>
+                          <option value="4254">I1BZ05-958 | TH / Khung tải cân 8"/blue</option>
+                          <option value="4255">
+                            I1BZ05-959 | TH/ Khung tải cân 8" /Harvest/c.p.sữa
+                          </option>
+                          <option value="4256">I1BZ05-960 | TH / Khung tải cân 8"/Detecto</option>
+                          <option value="4257">I1BZ05-961 | TH/Khung tảI cân 8"/xám</option>
+                          <option value="4261">
+                            I1BZ06-903 | TH/ Thùng cân 4.. 20 Kg /granite
+                          </option>
+                          <option value="4265">I1BZ06-951 | TH/ Thùng cân 8" /beige</option>
+                          <option value="4266">I1BZ06-952 | TH/ Thùng cân 2 .. 12 kg/Yamato</option>
+                          <option value="4267">I1BZ06-953 | TH/ Thùng cân 8"/ Harvest/ nâu</option>
+                          <option value="4268">
+                            I1BZ06-954 | TH/ Thùng cân 8"/ Harvest/ trắng
+                          </option>
+                          <option value="4269">
+                            I1BZ06-955 | Tổ hợp thùng cân 4, 8, 15 (XK - HUG)
+                          </option>
+                          <option value="4270">
+                            I1BZ06-956 | TH/ Thùng cân 8"/Harvest/vàng lúa
+                          </option>
+                          <option value="4271">
+                            I1BZ06-957 | TH/ Thùng cân 0,9...10 Kg / Harvest/ màu bạc
+                          </option>
+                          <option value="4272">I1BZ06-958 | TH/ Thùng cân 8"/blue</option>
+                          <option value="4273">
+                            I1BZ06-959 | TH/ Thùng cân 8" /Harvest /C.F. sữa
+                          </option>
+                          <option value="4274">I1BZ06-960 | TH/ Thùng cân 8"/Detecto</option>
+                          <option value="4275">I1BZ06-961 | TH / Thùng cân 8"/xám</option>
+                          <option value="4276">I1BZ06-962 | TH/ Thùng cân 4 .. 20kg/8"/CPTQ</option>
+                          <option value="4277">I1BZ06-963 | TH/ Thùng cân 8"/White</option>
+                          <option value="4278">
+                            I1BZ08-901 | Mặt lưng cân 4 .. 20kg/8"/granite
+                          </option>
+                          <option value="4288">I1BZ10-902 | Mặt chụp nhựa 8"/có decal</option>
+                          <option value="4293">I1BZ12-901 | Bộ kim chỉ thị cân 12 .. 30 kg</option>
+                          <option value="4294">I1BZ12-902 | Bộ kim chỉ thị cân 4..10 kg</option>
+                          <option value="4307">
+                            I1BZ17-901 | Bộ đòn truyền lực cân 4 .. 100kg
+                          </option>
+                          <option value="4309">
+                            I1BZ18-901 | Bộ sắt bắt chốt TG cân 4...30 kg
+                          </option>
+                          <option value="4310">
+                            I1BZ18-951 | Bộ sắt bắt chốt TG cân 4 .. 30 ( Yamato )
+                          </option>
+                          <option value="4312">I1BZ20-901 | Bộ tấm đổi tâm cân 4.. 100 kg</option>
+                          <option value="4315">I1BZ21-901 | Bộ cây dọi cân 4 .. 30 kg</option>
+                          <option value="4320">I1BZ35-903 | Bộ hộp số cân 4 ...30 kg</option>
+                          <option value="4321">
+                            I1BZ35-951 | Bộ hộp số cân 0,9 .. 22 kg/8"/Harvest
+                          </option>
+                          <option value="4322">I1BZ35-952 | Bộ hộp số cân 2,4 kg /8"/Yamato</option>
+                          <option value="4325">I1BZ44-901 | Bộ móc treo cân 4 .. 15 kg</option>
+                          <option value="4326">
+                            I1BZ44-902 | Bộ móc treo cân 4 .. 15 kg/ có mủ
+                          </option>
+                          <option value="4327">I1BZ44-951 | Bộ móc treo cân 22 kg/Harvest</option>
+                        </select>
+
+                        <div class="chosen-container">
+                          <a class="chosen-single d-flex-bw">
+                            <span>Chọn vật tư</span>
+                            <i class="fas fa-caret-down"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="w-10">
+                        <input
+                          type="number"
+                          min="0"
+                          class="form-control__no-border form-control w-10 text-right"
+                        />
+                      </div>
+                    </td>
+
+                    <td>
+                      <span>Kho xuất :</span>
+                      <span class="khoxuat">150</span>
+                    </td>
+
+                    <td></td>
+
+                    <td class="btn-function">
+                      <div>
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td></td>
+
+                    <td>
+                      <div class="w-10">
+                        <select name="" class="chosen-select-main w-10">
+                          <option value="">Chọn vật tư</option>
+                          <option selected="" value="4184">I1B085-901 | Kẽm xõ chì</option>
+                          <option value="3862">
+                            I1AX16-901 | Cụm giá đở, tấm GK cân 1 .. 5 kg/6"
+                          </option>
+                          <option value="3863">
+                            I1AX16-902 | Cụm giá đở, tấm GK cân 1 .. 5kg/6"/bil
+                          </option>
+                          <option value="3864">
+                            I1AX16-903 | Cụm giá đở, tấm GK cân 500gr/6"/bil
+                          </option>
+                          <option value="3865">I1AX17-901 | Cụm đòn truyền lực cân 6"/bil</option>
+                          <option value="3866">I1AX35-901 | Cụm hộp số cân 1,2,5 kg/6"</option>
+                          <option value="3867">
+                            I1AX62-901 | Cụm nắp hộp cân 1..5 kg/6"/granite
+                          </option>
+                          <option value="3874">I1AZ04-902 | Đế giá ĐD cân 1,2,5 /granite</option>
+                          <option value="3875">
+                            I1AZ04-903 | Đế giá đỡ dĩa cân 1,2,5 kg/ trắng
+                          </option>
+                          <option value="3876">I1AZ04-952 | Đế giá đở dĩa cân 6" / beige</option>
+                          <option value="3877">I1AZ04-953 | Đế giá đở dĩa cân 6'' / blue</option>
+                          <option value="3882">I1AZ05-901 | TH / Khung tải cân 6"/4lỗ/ Btp</option>
+                          <option value="3883">
+                            I1AZ05-902 | TH / Khung tải cân 6"/2lổ /granite
+                          </option>
+                          <option value="3884">
+                            I1AZ05-903 | TH / khung tải cân 6"/ 2lổ /White
+                          </option>
+                          <option value="3887">I1AZ05-952 | TH/ Khung tải cân 6" / Beige</option>
+                          <option value="3888">I1AZ05-953 | TH/ Khung tải cân 6"/2 lổ /blue</option>
+                          <option value="3889">
+                            I1AZ05-954 | TH / Khung tải cân 6"/ Detecto/Trắng
+                          </option>
+                          <option value="3890">
+                            I1AZ05-955 | TH / Khung tải cân 500 gr/6"/ Detecto/Trắng
+                          </option>
+                          <option value="3904">I1AZ06-902 | TH / Thùng cân 1,2,5 / granite</option>
+                          <option value="3905">I1AZ06-903 | TH/ Thùng cân 1,2,5 kg/6"/trắng</option>
+                          <option value="3906">I1AZ06-904 | TH/Thùng cân 6"/ lỗ M4/granite</option>
+                          <option value="3909">I1AZ06-952 | TH/ Thùng cân 6" / Beige</option>
+                          <option value="3910">I1AZ06-953 | TH/ Thùng cân 6" /blue</option>
+                          <option value="3911">I1AZ06-954 | TH / Thùng cân 6"/Detecto/trắng</option>
+                          <option value="3912">
+                            I1AZ06-955 | TH / Thùng cân 6" /Detecto/trắng
+                          </option>
+                          <option value="3916">I1AZ08-901 | Mặt lưng cân 6"/TQ/granite</option>
+                          <option value="3917">I1AZ10-901 | Mặt chụp có decal cân 6"/TQ</option>
+                          <option value="3920">I1AZ12-901 | Bộ kim chỉ thị cân 6"/ 0,5 mm</option>
+                          <option value="3929">I1AZ20-901 | Bộ tấm đổi tâm cân 6"/bimetal</option>
+                          <option value="3930">I1AZ21-901 | Bộ cây dọi cân 500gr .. 5kg/6"</option>
+                          <option value="3934">I1AZ35-903 | Bộ hộp số cân 1 .. 5 kg/6"</option>
+                          <option value="3935">I1AZ35-951 | Bộ hộp số cân 500 gr</option>
+                          <option value="3937">I1AZ44-901 | Bộ móc treo cân 1, 2kg/6"</option>
+                          <option value="3941">I1AZ45-901 | Bộ lò xo tải cân 1 kg/6"</option>
+                          <option value="3942">I1AZ45-902 | Bộ lò xo tải cân 2 kg/6"</option>
+                          <option value="3943">I1AZ45-903 | Bộ lò xo tải cân 5 kg/6"</option>
+                          <option value="3946">I1AZ53-902 | Mặt hông phải 1,2,5 kg/granite</option>
+                          <option value="3955">I1AZ54-901 | Đế cân 6"/TQ/granite</option>
+                          <option value="3956">I1AZ57-902 | Mặt hông trái 1,2,5 kg/granite</option>
+                          <option value="3965">I1AZ62-902 | Nắp hộp cân 1,2,5 /granite</option>
+                          <option value="4187">I1BX05-902 | Cụm Khung tải cân 12kg/granite</option>
+                          <option value="4188">I1BX05-951 | Cụm Khung tải cân 12 kg/beige</option>
+                          <option value="4189">
+                            I1BX05-953 | Cụm Khung tải cân 8''/Harvest/ nâu
+                          </option>
+                          <option value="4194">
+                            I1BX05-959 | Cụm KT, sắt BCTG cân 8''/Harvest/stone beige
+                          </option>
+                          <option value="4195">
+                            I1BX05-960 | Cụm KT, sắt BCTG cân 12kg/Yamato
+                          </option>
+                          <option value="4209">I1BX16-901 | Cụm giá đở TGK cân 4 .. 15 kg</option>
+                          <option value="4210">
+                            I1BX16-951 | Cụm giá đở TGK cân 0.9 .. 22 kg/8"/Harvest
+                          </option>
+                          <option value="4211">
+                            I1BX16-952 | Cụm giá đở TGK cân 0,9 .. 2,2 kg/8"/Harvest
+                          </option>
+                          <option value="4212">
+                            I1BX16-953 | Cụm giá đở TGK cân 2, 4 kg/8"/Yamato
+                          </option>
+                          <option value="4215">I1BX17-901 | Cụm đòn TL cân 4 .. 100 kg</option>
+                          <option value="4217">I1BX35-901 | Cụm hộp số cân 10 ..30kg</option>
+                          <option value="4219">I1BX41-901 | Cụm đòn gánh cân 4 .. 30 kg</option>
+                          <option value="4220">
+                            I1BX62-901 | Bộ nắp hộp cân 4 .. 30kg/granite
+                          </option>
+                          <option value="4222">
+                            I1BX62-951 | Bộ nắp hộp cân 4 .. 30kg/HK/beige
+                          </option>
+                          <option value="4224">
+                            I1BX62-953 | Bộ nắp hộp cân 4,5..22 kg/Harvest/nâu
+                          </option>
+                          <option value="4229">
+                            I1BX62-959 | Bộ nắp hộp cân 4,5..22kg/Har/c.p.sữa
+                          </option>
+                          <option value="4230">
+                            I1BX62-960 | Bộ nắp hộp cân 0,9 ..2,2 kg/Harvest/nâu
+                          </option>
+                          <option value="4237">I1BZ01-951 | Dĩa 250 x 250 x 1,5 ly ( sơn )</option>
+                          <option value="4240">
+                            I1BZ02-953 | TH / Cánh giá trên, dưới cân 8" / HK
+                          </option>
+                          <option value="4243">I1BZ05-902 | TH/ Khung tải cân 8"/củ/granite</option>
+                          <option value="4244">I1BZ05-903 | TH / Khung tải cân 8" / White</option>
+                          <option value="4247">I1BZ05-951 | TH/ Khung tải cân 8" / Beige</option>
+                          <option value="4248">
+                            I1BZ05-952 | TH/ Khung tải cân 2...12 kg / Yamato
+                          </option>
+                          <option value="4249">
+                            I1BZ05-953 | TH/ Khung tải cân 8" / Harvest/ nâu
+                          </option>
+                          <option value="4250">
+                            I1BZ05-954 | TH/ Khung tải cân 8" / Harvest/ trắng
+                          </option>
+                          <option value="4251">
+                            I1BZ05-955 | TH/ Khung tải cân 4, 8, 15 (XK - HUG)
+                          </option>
+                          <option value="4252">
+                            I1BZ05-956 | TH /Khung tải cân 8"/Harvest/vàng lúa
+                          </option>
+                          <option value="4253">
+                            I1BZ05-957 | TH/Khung tải cân 0,9 .. 10 kg / Harvest/ màu bạc
+                          </option>
+                          <option value="4254">I1BZ05-958 | TH / Khung tải cân 8"/blue</option>
+                          <option value="4255">
+                            I1BZ05-959 | TH/ Khung tải cân 8" /Harvest/c.p.sữa
+                          </option>
+                          <option value="4256">I1BZ05-960 | TH / Khung tải cân 8"/Detecto</option>
+                          <option value="4257">I1BZ05-961 | TH/Khung tảI cân 8"/xám</option>
+                          <option value="4261">
+                            I1BZ06-903 | TH/ Thùng cân 4.. 20 Kg /granite
+                          </option>
+                          <option value="4265">I1BZ06-951 | TH/ Thùng cân 8" /beige</option>
+                          <option value="4266">I1BZ06-952 | TH/ Thùng cân 2 .. 12 kg/Yamato</option>
+                          <option value="4267">I1BZ06-953 | TH/ Thùng cân 8"/ Harvest/ nâu</option>
+                          <option value="4268">
+                            I1BZ06-954 | TH/ Thùng cân 8"/ Harvest/ trắng
+                          </option>
+                          <option value="4269">
+                            I1BZ06-955 | Tổ hợp thùng cân 4, 8, 15 (XK - HUG)
+                          </option>
+                          <option value="4270">
+                            I1BZ06-956 | TH/ Thùng cân 8"/Harvest/vàng lúa
+                          </option>
+                          <option value="4271">
+                            I1BZ06-957 | TH/ Thùng cân 0,9...10 Kg / Harvest/ màu bạc
+                          </option>
+                          <option value="4272">I1BZ06-958 | TH/ Thùng cân 8"/blue</option>
+                          <option value="4273">
+                            I1BZ06-959 | TH/ Thùng cân 8" /Harvest /C.F. sữa
+                          </option>
+                          <option value="4274">I1BZ06-960 | TH/ Thùng cân 8"/Detecto</option>
+                          <option value="4275">I1BZ06-961 | TH / Thùng cân 8"/xám</option>
+                          <option value="4276">I1BZ06-962 | TH/ Thùng cân 4 .. 20kg/8"/CPTQ</option>
+                          <option value="4277">I1BZ06-963 | TH/ Thùng cân 8"/White</option>
+                          <option value="4278">
+                            I1BZ08-901 | Mặt lưng cân 4 .. 20kg/8"/granite
+                          </option>
+                          <option value="4288">I1BZ10-902 | Mặt chụp nhựa 8"/có decal</option>
+                          <option value="4293">I1BZ12-901 | Bộ kim chỉ thị cân 12 .. 30 kg</option>
+                          <option value="4294">I1BZ12-902 | Bộ kim chỉ thị cân 4..10 kg</option>
+                          <option value="4307">
+                            I1BZ17-901 | Bộ đòn truyền lực cân 4 .. 100kg
+                          </option>
+                          <option value="4309">
+                            I1BZ18-901 | Bộ sắt bắt chốt TG cân 4...30 kg
+                          </option>
+                          <option value="4310">
+                            I1BZ18-951 | Bộ sắt bắt chốt TG cân 4 .. 30 ( Yamato )
+                          </option>
+                          <option value="4312">I1BZ20-901 | Bộ tấm đổi tâm cân 4.. 100 kg</option>
+                          <option value="4315">I1BZ21-901 | Bộ cây dọi cân 4 .. 30 kg</option>
+                          <option value="4320">I1BZ35-903 | Bộ hộp số cân 4 ...30 kg</option>
+                          <option value="4321">
+                            I1BZ35-951 | Bộ hộp số cân 0,9 .. 22 kg/8"/Harvest
+                          </option>
+                          <option value="4322">I1BZ35-952 | Bộ hộp số cân 2,4 kg /8"/Yamato</option>
+                          <option value="4325">I1BZ44-901 | Bộ móc treo cân 4 .. 15 kg</option>
+                          <option value="4326">
+                            I1BZ44-902 | Bộ móc treo cân 4 .. 15 kg/ có mủ
+                          </option>
+                          <option value="4327">I1BZ44-951 | Bộ móc treo cân 22 kg/Harvest</option>
+                        </select>
+
+                        <div class="chosen-container">
+                          <a class="chosen-single d-flex-bw">
+                            <span>Chọn vật tư</span>
+                            <i class="fas fa-caret-down"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </td>
+
+                    <td>
+                      <div class="w-10">
+                        <input
+                          type="number"
+                          min="0"
+                          class="form-control__no-border form-control w-10 text-right"
+                        />
+                      </div>
+                    </td>
+
+                    <td>
+                      <span>Kho xuất :</span>
+                      <span class="khoxuat">150</span>
+                    </td>
+
+                    <td></td>
+
+                    <td class="btn-function">
+                      <div>
+                        <button class="delete">
+                          <i class="fas fa-trash-alt"></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Script -->
+    <script src="../../lib/jquery-3.5.1.min.js"></script>
+    <script src="../../lib/js/bootstrap-datepicker.js"></script>
+    <script src="../../js/datepicker.js"></script>
+    <script src="../../js/table.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js/nav.js"></script>
+  </body>
+</html>
