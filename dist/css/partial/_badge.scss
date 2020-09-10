@@ -17,7 +17,7 @@
   }
 
   &-info {
-    background-image: linear-gradient(to right, #4776E6 0%, #8E54E9 51%, #4776E6 100%);
+    background-image: linear-gradient(to right, #6190E8 0%, #A7BFE8 51%, #6190E8 100%);
   }
 
   &-warning {
@@ -25,11 +25,11 @@
   }
 
   &-primary {
-    background-image: linear-gradient(to right, #4776E6 0%, #8E54E9 51%, #4776E6 100%);
+    background-image: linear-gradient(to right, #6190E8 0%, #A7BFE8 51%, #6190E8 100%);
   }
 
 
-  &-label-warning {
+  &-label-warning , &-danger {
     background-image: linear-gradient(to right, #fd746c 0%, #ff9068 51%, #fd746c 100%);
   }
 

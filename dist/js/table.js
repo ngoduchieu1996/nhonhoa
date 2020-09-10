@@ -16,16 +16,25 @@ function getSum() {
     }
 
     function convertNumToCurrency(a) {
-      return a.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
+      return a.toString().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1.");
     }
 
     const sumE = tableChiTietHoaDon.querySelector(".sum");
-
-    sum = arr.reduce(function (a, b) {
+    const taxE =  tableChiTietHoaDon.querySelector('.tax');
+    const totalE = tableChiTietHoaDon.querySelector('.total');
+ 
+    const sum = arr.reduce(function (a, b) {
       return a + b;
     }, 0);
 
+    const tax = (sum / 100) * 10;
+
+    const total = sum + tax;
+
     sumE.innerHTML = convertNumToCurrency(sum);
+    taxE.innerHTML = convertNumToCurrency(tax);
+    totalE.innerHTML = convertNumToCurrency(total);
+
   }
 }
 

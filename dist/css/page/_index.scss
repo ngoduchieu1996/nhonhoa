@@ -3,10 +3,22 @@
   background-color: #f2f3f8;
   padding: 4rem;
   transition: all 0.5s;
+
+  &.lock{
+    margin-left:30rem;
+  }
+
+  @media(max-width:768px){
+    margin-left:0;
+
+    &.lock{
+      margin-left:0rem;
+    }
+  }
+
+  @media (max-width:550px){
+    padding:2rem 1.5rem;
+  }
 }
 
-.kehoachsanxuat,
-.xuat-nhap-kho {
-  padding: 1rem;
-  background-color: #fff;
-}
+

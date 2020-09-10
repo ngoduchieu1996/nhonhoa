@@ -1,0 +1,82 @@
+
+//Kế hoạch nhập kho thành phẩm
+.table-nhap-kho {
+  th:nth-last-child(2),
+  td:nth-last-child(2) {
+    width: 30%;
+  }
+
+  td:last-child {
+    text-align: center;
+  }
+}
+
+//Kế hoạch sx tuần của xưởng
+
+.table-plan {
+  th:nth-last-child(4),
+  td:nth-last-child(4) {
+    width: 23%;
+  }
+
+  th:last-child,
+  td:last-child {
+    width: 30%;
+  }
+
+  td:nth-child(3),
+  td:nth-child(4) {
+    background-color: #f2f2f2;
+  }
+}
+
+//Kế hoạch xuất khẩu
+.table-export {
+    table {
+      font-size: 1.3rem;
+    }
+  }
+  
+//Kế hoạch SX-NK-Xk
+.table-plan-product {
+    th:last-child,
+    td:last-child {
+      text-align: center;
+    }
+  
+    th:nth-last-child(2),
+    td:nth-last-child(2) {
+      width: 40%;
+    }
+
+    td:nth-child(3),
+    td:nth-child(4){
+      background-color:#F2F2F2;
+    }
+}
+  
+  //Kế hoạch sản xuất tuần
+  .table-weak-plan {
+    td:last-child {
+      text-align: center;
+    }
+  
+    th:nth-last-child(2),
+    td:nth-last-child(2) {
+      width: 15%;
+    }
+
+    td:nth-child(3),
+    td:nth-child(4){
+      background-color:#F2F2F2;
+    }
+
+    td:nth-child(5){
+      text-align:center;
+    }
+
+    td:nth-child(7),td:nth-child(8){
+      text-align:right;
+    }
+  }
+  

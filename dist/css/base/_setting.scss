@@ -1,5 +1,7 @@
 body {
+  background-color: #f2f3f8;
   font-family: $fontRobotoCondensed;
+  min-height: 101vh;
 }
 
 .t {
@@ -76,48 +78,6 @@ body {
         font-weight: 600;
         margin-left: 0.8rem;
       }
-    }
-  }
-}
-
-.control-bar {
-  .left-form {
-    .form-item {
-      display: flex;
-      align-items: center;
-      margin-right: 0.5rem;
-    }
-
-    .form-control {
-      height: 100%;
-      position: relative;
-    }
-
-    ::placeholder {
-      font-size: 1.1rem;
-    }
-
-    ::-webkit-input-placeholder {
-      font-size: 1rem;
-    }
-
-    label {
-      margin-right: 0.5rem;
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 0;
-    }
-  }
-
-  .right-form {
-    display: flex;
-
-    .form-control {
-      margin-left: 1rem;
-    }
-
-    button i {
-      transition: transform 0.5s;
     }
   }
 }

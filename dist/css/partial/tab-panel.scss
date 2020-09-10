@@ -1,4 +1,8 @@
-.tab-panel-1 {
+.kehoachsanxuat,
+.xuat-nhap-kho {
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0 0.3rem .5rem #ccc;
 }
 
 @media (max-width: 1400px) {
@@ -19,6 +23,10 @@
     .kehoachsanxuat,
     .xuat-nhap-kho {
       overflow-x: visible;
+    }
+
+    .kehoachsanxuat{
+      margin-bottom: 3rem;
     }
 
     svg {
