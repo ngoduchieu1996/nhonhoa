@@ -1,5 +1,7 @@
 body {
-  font-family: $fontRoboto;
+  background-color: #f2f3f8;
+  font-family: $fontRobotoCondensed;
+  min-height: 101vh;
 }
 
 .t {
@@ -9,6 +11,18 @@ body {
 
   &-l-yellow {
     color: yellow;
+  }
+
+  &-d-grey {
+    color: #757575;
+  }
+
+  &-blue {
+    color: $blue;
+  }
+
+  &-black {
+    color: #232323;
   }
 }
 
@@ -68,48 +82,6 @@ body {
   }
 }
 
-.control-bar {
-  .left-form {
-    .form-item {
-      display: flex;
-      align-items: center;
-      margin-right: 0.5rem;
-    }
-
-    .form-control {
-      height: 100%;
-      position: relative;
-    }
-
-    ::placeholder {
-      font-size: 1.1rem;
-    }
-
-    ::-webkit-input-placeholder {
-      font-size: 1rem;
-    }
-
-    label {
-      margin-right: 0.5rem;
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 0;
-    }
-  }
-
-  .right-form {
-    display: flex;
-
-    .form-control {
-      margin-left: 1rem;
-    }
-
-    button i {
-      transition: transform 0.5s;
-    }
-  }
-}
-
 .datepicker {
   padding: 0;
   border: none !important;
@@ -141,11 +113,32 @@ body {
   top: 5px;
 }
 
-
 .filter {
   @include fixed(top 0 left 0);
   @include box(100%);
   background: linear-gradient(#aaaaaabe, #aaaaaabe);
   z-index: 100;
   display: none;
+}
+
+.show {
+  &-for-tablet {
+    display: none;
+
+    @media (max-width: 1200px) {
+      display: block;
+    }
+  }
+}
+
+.hide {
+  &-for-tablet {
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+}
+
+.position-relative {
+  position: relative;
 }

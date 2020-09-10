@@ -2,7 +2,7 @@
   width: 5rem;
   height: 100vh;
   position: fixed;
-  z-index: 1;
+  z-index: 80;
   top: 5.7rem;
   left: 0;
   background-color: white;
@@ -10,14 +10,13 @@
   box-shadow: 0 0 1rem #ccc;
   overflow-x: hidden;
   overflow-y: scroll;
-  z-index: 1;
 
   &::-webkit-scrollbar {
     display: none;
   }
 
   a {
-    font-size: 14px;
+    font-size: 1.35rem;
     color: rgba(117, 117, 117, 0.9);
     display: inline-flex;
     align-items: center;
@@ -157,13 +156,41 @@
   padding-left: 0px;
   width: calc(100% - 5rem);
   left: 5rem;
+  display: none;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .hidden-ul li a {
-  padding-left: 5rem;
+  padding-left: 4rem;
   line-height: 1.6;
 
   & > span {
     margin-right: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidenav {
+    left: -30rem;
+    width: 30rem;
+    transition: all 0.5s;
+
+    .show-on-hover {
+      display: block;
+    }
+  }
+
+  .sidebar-hover {
+    .show-on-hover {
+      display: block;
+    }
+  }
+
+  .sidenav-lock {
+    left: 0;
   }
 }
