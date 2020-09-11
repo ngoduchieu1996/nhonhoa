@@ -213,6 +213,7 @@ function customSelectDropdown() {
 customSelectDropdown();
 
 $(".chosen-single").click(function () {
+  $(this).closest($(".page-container")).find($(".chosen-inner")).slideUp(300);
   $(this).parent().find(".chosen-inner").slideToggle(300);
 });
 
@@ -297,18 +298,7 @@ function showHideTableColumn() {
             .replace(/\./, "_")}`
         );
 
-        const tableRowsData = table.querySelectorAll(`tbody td:nth-child(${i + 1})`);
-
-        for (let t of tableRowsData) {
-          t.setAttribute(
-            "data-column",
-            `${tableRowHeads[i].innerText
-              .replace(" ", "_")
-              .trim()
-              .replace(/\ /g, "_")
-              .replace(/\./, "_")}`
-          );
-        }
+        tableRowHeads[i].setAttribute("data-index", i + 1);
       }
     }
 
@@ -336,9 +326,13 @@ function showHideTableColumn() {
 
       const data = ip.getAttribute("data-control");
 
-      const all_col = table.querySelectorAll(`[data-column=${data}]`);
+      const col = table.querySelector(`[data-column=${data}]`);
+      let index = col.getAttribute("data-index");
+
+      const all_col = table.querySelectorAll(`tbody td:nth-child(${index})`);
 
       if (ip.getAttribute("data-value") == "show") {
+        toggleDisplayItem(col, "none");
         toggleDisplayListItems(all_col, "none");
 
         ip.setAttribute("data-value", "hide");
@@ -347,6 +341,7 @@ function showHideTableColumn() {
 
         checkLengthOfMultiInputs();
       } else {
+        toggleDisplayItem(col);
         toggleDisplayListItems(all_col);
 
         ip.setAttribute("data-value", "show");
@@ -361,6 +356,10 @@ function showHideTableColumn() {
       for (let l of list) {
         l.style.display = style;
       }
+    }
+
+    function toggleDisplayItem(item, style = "") {
+      item.style.display = style;
     }
 
     function checkLengthOfMultiInputs() {
@@ -378,9 +377,11 @@ function showHideTableColumn() {
 
     function checkToggleAll() {
       const all_col = table.querySelectorAll(`[data-column]`);
+      const all_td = table.querySelectorAll("table td");
       selectAll.addEventListener("change", () => {
         if (status == 1) {
           toggleDisplayListItems(all_col, "none");
+          toggleDisplayListItems(all_td, "none");
           status = 2;
 
           for (let ip of multiInputs) {
@@ -389,6 +390,7 @@ function showHideTableColumn() {
           }
         } else if (status == 2) {
           toggleDisplayListItems(all_col);
+          toggleDisplayListItems(all_td);
           status = 1;
 
           for (let ip of multiInputs) {
@@ -397,6 +399,7 @@ function showHideTableColumn() {
           }
         } else if (status == 3) {
           toggleDisplayListItems(all_col);
+          toggleDisplayListItems(all_td);
 
           selectAll.checked = true;
 
