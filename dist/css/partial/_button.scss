@@ -91,3 +91,15 @@
     display: inline-block;
   }
 }
+
+.bill-control-buttons {
+  @media (max-width: 380px) {
+    flex-direction: column;
+  }
+
+  .btn-cta {
+    @media (max-width: 380px) {
+      margin-top: 1.5rem;
+    }
+  }
+}
